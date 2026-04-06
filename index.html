@@ -20,7 +20,7 @@
       pointer-events: none;
     }
     .logo-container { position: relative; z-index: 1; margin-bottom: 16px; }
-    .logo-container svg { width: 80px; height: 80px; }
+    .logo-container img { width: 90px; height: 90px; object-fit: contain; }
     .header h1 { font-size: 2rem; font-weight: 800; letter-spacing: 0.02em; position: relative; z-index: 1; }
     .header p { font-size: 1.05rem; opacity: 0.8; margin-top: 6px; position: relative; z-index: 1; }
 
@@ -64,11 +64,7 @@
 <body>
   <div class="header">
     <div class="logo-container">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <!-- NDV Bear Logo -->
-        <path d="M30 50 L60 20 L85 50 L100 35 L115 50 L140 20 L170 50 L170 120 L140 120 L140 100 L125 115 L100 95 L75 115 L60 100 L60 120 L30 120 Z" fill="white"/>
-        <text x="100" y="170" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="52" font-weight="800" fill="white">NDV</text>
-      </svg>
+      <img src="logo.png" alt="NDV">
     </div>
     <h1>Дайджест фондового рынка</h1>
     <p>Автоматический AI-обзор рынка акций</p>

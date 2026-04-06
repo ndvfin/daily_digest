@@ -19,7 +19,7 @@
       pointer-events: none;
     }
     .logo-sm { position: relative; z-index: 1; margin-bottom: 12px; }
-    .logo-sm svg { width: 52px; height: 52px; }
+    .logo-sm img { width: 60px; height: 60px; object-fit: contain; }
     .header h1 { font-size: 1.6rem; font-weight: 800; position: relative; z-index: 1; letter-spacing: 0.03em; }
     .header .meta { font-size: 0.95rem; opacity: 0.8; margin-top: 6px; position: relative; z-index: 1; }
     .header .tickers { margin-top: 14px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; position: relative; z-index: 1; }
@@ -95,10 +95,7 @@
 <body>
   <div class="header">
     <div class="logo-sm">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M30 50 L60 20 L85 50 L100 35 L115 50 L140 20 L170 50 L170 120 L140 120 L140 100 L125 115 L100 95 L75 115 L60 100 L60 120 L30 120 Z" fill="white"/>
-        <text x="100" y="170" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="52" font-weight="800" fill="white">NDV</text>
-      </svg>
+      <img src="../logo.png" alt="NDV">
     </div>
     <h1>ДАЙДЖЕСТ ФОНДОВОГО РЫНКА</h1>
     <div class="meta">27 марта — 2 апреля 2026</div>
