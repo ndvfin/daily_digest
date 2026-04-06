@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дайджест фондового рынка</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.6; }
+    .header { background: linear-gradient(135deg, #1B3A5C 0%, #2E5C8A 100%); color: white; padding: 48px 24px; text-align: center; }
+    .header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+    .header p { font-size: 1.1rem; opacity: 0.85; }
+    .container { max-width: 900px; margin: 0 auto; padding: 32px 24px; }
+    .digest-list { list-style: none; }
+    .digest-item { background: white; border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.15s, box-shadow 0.15s; }
+    .digest-item:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .digest-item a { text-decoration: none; color: inherit; display: block; }
+    .digest-date { font-size: 0.85rem; color: #6b7280; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+    .digest-title { font-size: 1.25rem; font-weight: 600; color: #1B3A5C; margin: 6px 0; }
+    .digest-meta { font-size: 0.9rem; color: #6b7280; }
+    .digest-tickers { display: inline-flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+    .ticker-badge { background: #e8f0fe; color: #1B3A5C; padding: 2px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+    .empty-state { text-align: center; padding: 80px 24px; color: #6b7280; }
+    .footer { text-align: center; padding: 32px 24px; color: #9ca3af; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Дайджест фондового рынка</h1>
+    <p>Автоматический AI-обзор рынка акций</p>
+  </div>
+  <div class="container">
+    <ul class="digest-list" id="digestList"></ul>
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <p>Дайджесты пока не опубликованы</p>
+    </div>
+  </div>
+  <div class="footer">
+    Создано с помощью Claude AI &middot; Данные: FMP, Finnhub, Massive Market Data, Perplexity Finance
+  </div>
+  <script>
+    fetch('digests/index.json')
+      .then(r => r.json())
+      .then(items => {
+        const list = document.getElementById('digestList');
+        if (!items.length) { document.getElementById('emptyState').style.display = 'block'; return; }
+        items.sort((a, b) => b.date.localeCompare(a.date));
+        items.forEach(item => {
+          const li = document.createElement('li');
+          li.className = 'digest-item';
+          const tickers = (item.tickers || []).map(t => `<span class="ticker-badge">${t}</span>`).join('');
+          li.innerHTML = `<a href="digests/${item.file}">
+            <div class="digest-date">${item.date}</div>
+            <div class="digest-title">${item.title}</div>
+            <div class="digest-meta">${item.mode} &middot; ${item.period}</div>
+            ${tickers ? `<div class="digest-tickers">${tickers}</div>` : ''}
+          </a>`;
+          list.appendChild(li);
+        });
+      })
+      .catch(() => { document.getElementById('emptyState').style.display = 'block'; });
+  </script>
+</body>
+</html>
