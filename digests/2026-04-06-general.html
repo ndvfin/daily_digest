@@ -1,661 +1,429 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дайджест фондового рынка · 5–6 апреля 2026</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: #F0F2F8;
-            color: #2C3E50;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #3333FF 0%, #5555FF 100%);
-            color: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 15px rgba(51, 51, 255, 0.2);
-            text-align: center;
-        }
-
-        .header-logo {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 16px;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #3333FF;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        h2 {
-            color: #2020CC;
-            font-size: 22px;
-            margin-bottom: 20px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        h3 {
-            color: #2020CC;
-            font-size: 18px;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        h3:first-child {
-            margin-top: 0;
-        }
-
-        h4 {
-            color: #2020CC;
-            font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #2C3E50;
-        }
-
-        em {
-            color: #7F8C8D;
-            font-style: italic;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 14px;
-        }
-
-        th {
-            background-color: #ECEEFF;
-            color: #2020CC;
-            padding: 12px;
-            text-align: left;
-            font-weight: 600;
-            border: 1px solid #E0E0E8;
-        }
-
-        td {
-            padding: 12px;
-            border: 1px solid #E0E0E8;
-        }
-
-        tr:nth-child(even) {
-            background-color: #F9F9FC;
-        }
-
-        .green {
-            color: #1B7A3D;
-            font-weight: 600;
-        }
-
-        .red {
-            color: #C0392B;
-            font-weight: 600;
-        }
-
-        .news-item {
-            background: white;
-            border-left: 4px solid #3333FF;
-            border-radius: 8px;
-            padding: 18px;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-        }
-
-        .source {
-            font-size: 12px;
-            color: #7F8C8D;
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid #ECEEFF;
-        }
-
-        .source a {
-            color: #3333FF;
-            text-decoration: none;
-            margin-right: 20px;
-        }
-
-        .source a:hover {
-            text-decoration: underline;
-        }
-
-        .report-card {
-            background: #FAFBFF;
-            border-left: 4px solid #3333FF;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 16px;
-        }
-
-        .report-meta {
-            font-size: 12px;
-            color: #7F8C8D;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .report-summary {
-            font-size: 14px;
-            line-height: 1.7;
-            color: #2C3E50;
-        }
-
-        .report-summary p {
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
-
-        .report-summary p:last-child {
-            margin-bottom: 0;
-        }
-
-        .report-ideas {
-            margin-top: 12px;
-            padding: 10px 14px;
-            background: #F0F2FF;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #2020CC;
-        }
-
-        .calendar-table {
-            font-size: 13px;
-        }
-
-        .calendar-table td {
-            padding: 10px;
-        }
-
-        footer {
-            text-align: center;
-            color: #7F8C8D;
-            font-size: 12px;
-            margin-top: 50px;
-            padding: 30px 0;
-        }
-
-        footer a {
-            color: #3333FF;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-
-            header {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            section {
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-
-            table {
-                font-size: 12px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дайджест фондового рынка — 5–6 апреля 2026</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F0F2F8; color: #1a1a2e; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #2828E0 0%, #4040FF 50%, #2828E0 100%); color: white; padding: 32px 20px; text-align: center; }
+.header img { height: 60px; margin-bottom: 12px; }
+.header h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+.header .subtitle { font-size: 16px; opacity: 0.9; }
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.back-link { display: inline-block; margin-bottom: 16px; color: #3333FF; text-decoration: none; font-size: 14px; }
+.back-link:hover { text-decoration: underline; }
+.section { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 28px; margin-bottom: 20px; }
+.section h2 { color: #2020CC; font-size: 22px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #ECEEFF; }
+.section h3 { color: #2020CC; font-size: 18px; margin: 20px 0 10px 0; }
+.section p { margin-bottom: 12px; }
+table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 8px; overflow: hidden; margin: 16px 0; }
+th { background: #ECEEFF; color: #2020CC; padding: 10px 14px; text-align: left; font-size: 14px; }
+td { padding: 10px 14px; border-bottom: 1px solid #E0E0E8; font-size: 14px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #FAFBFF; }
+.green { color: #1B7A3D; font-weight: 600; }
+.red { color: #C0392B; font-weight: 600; }
+.news-item { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #F0F0F5; }
+.news-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.news-item h4 { font-size: 16px; color: #1a1a2e; margin-bottom: 4px; }
+.news-item .source { font-size: 13px; color: #6B7280; margin-top: 4px; }
+.news-item .source a { color: #3333FF; text-decoration: none; }
+.news-item .source a:hover { text-decoration: underline; }
+.no-news { color: #9CA3AF; font-style: italic; padding: 8px 0; }
+.report-card { background: #FAFBFF; border-left: 4px solid #3333FF; border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+.report-card h3 { color: #1a1a2e; margin: 0 0 6px 0; font-size: 17px; }
+.report-meta { font-size: 13px; color: #6B7280; margin-bottom: 12px; }
+.report-summary p { margin-bottom: 10px; font-size: 15px; }
+.report-ideas { margin-top: 12px; padding: 10px 14px; background: #F0F2FF; border-radius: 6px; font-size: 14px; }
+.calendar-event { padding: 6px 0; border-bottom: 1px solid #F0F0F5; font-size: 14px; }
+.calendar-event:last-child { border-bottom: none; }
+.calendar-date { font-weight: 600; color: #2020CC; }
+.footer { text-align: center; padding: 24px; color: #9CA3AF; font-size: 13px; }
+@media (max-width: 600px) {
+  .header h1 { font-size: 22px; }
+  .section { padding: 18px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px; }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <a href="../index.html" class="back-link">← Назад</a>
 
-        <header>
-            <div class="header-logo">NDV</div>
-            <h1>Дайджест фондового рынка</h1>
-            <p class="subtitle">Общий обзор · 5–6 апреля 2026</p>
-        </header>
+<div class="header">
+  <img src="../logo.png" alt="NDV">
+  <h1>Дайджест фондового рынка</h1>
+  <div class="subtitle">Общий обзор · 5–6 апреля 2026</div>
+</div>
 
-        <!-- SECTION 1: Обзор рынка -->
-        <section>
-            <h2>📊 Обзор рынка</h2>
-            <p>Рынки завершили укороченную торговую неделю (Good Friday 4 апреля) на умеренно позитивной ноте. S&P 500 прибавил 0,11%, отыграв внутридневное падение на фоне осторожного оптимизма вокруг переговоров о прекращении огня между Ираном и США при посредничестве Пакистана. Nasdaq показал лучшую динамику (+0,18%), тогда как Dow Jones незначительно снизился (−0,13%). Фьючерсы на S&P 500 выросли на 0,3% в воскресенье утром после появления новостей о мирном плане, но затем умерили рост после угроз Трампа превратить Иран в «ад». CNN Fear &amp; Greed Index остаётся в зоне Extreme Fear. Впереди — ключевая неделя: FOMC Minutes, GDP, Core PCE и CPI за март.</p>
+<div class="container">
+<a href="../index.html" class="back-link">← Все дайджесты</a>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Индекс</th>
-                        <th>Значение</th>
-                        <th>Изменение</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>S&P 500</td>
-                        <td>6 582,69</td>
-                        <td class="green">+0,11%</td>
-                    </tr>
-                    <tr>
-                        <td>Dow Jones</td>
-                        <td>46 504,67</td>
-                        <td class="red">−0,13%</td>
-                    </tr>
-                    <tr>
-                        <td>Nasdaq Composite</td>
-                        <td>21 879,18</td>
-                        <td class="green">+0,18%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+<div class="section">
+<h2>📊 Обзор рынка</h2>
+<p>Рынки завершили укороченную торговую неделю (Good Friday 4 апреля) на умеренно позитивной ноте. S&P 500 прибавил 0,11%, отыграв внутридневное падение на фоне осторожного оптимизма вокруг переговоров о прекращении огня между Ираном и США при посредничестве Пакистана. Nasdaq показал лучшую динамику (+0,18%), тогда как Dow Jones незначительно снизился (−0,13%). Фьючерсы на S&P 500 выросли на 0,3% в воскресенье утром после появления новостей о мирном плане, но затем умерили рост после угроз Трампа превратить Иран в «ад». CNN Fear &amp; Greed Index остаётся в зоне Extreme Fear. Впереди — ключевая неделя: FOMC Minutes, GDP, Core PCE и CPI за март.</p>
 
-        <!-- SECTION 2: Макроэкономика -->
-        <section>
-            <h2>🌍 Макроэкономика</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Индекс</th>
+            <th>Значение</th>
+            <th>Изменение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>S&P 500</td>
+            <td>6 582,69</td>
+            <td class="green">+0,11%</td>
+        </tr>
+        <tr>
+            <td>Dow Jones</td>
+            <td>46 504,67</td>
+            <td class="red">−0,13%</td>
+        </tr>
+        <tr>
+            <td>Nasdaq Composite</td>
+            <td>21 879,18</td>
+            <td class="green">+0,18%</td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
-            <div class="news-item">
-                <h4>Иран и США получили план прекращения огня — 45-дневное перемирие (5 апреля)</h4>
-                <p>Иран и США получили через пакистанских посредников план немедленного прекращения огня и 45-дневного перемирия с возможным открытием Ормузского пролива. Фьючерсы на S&P 500 выросли на 0,3%, emerging markets прибавили 0,7%. Однако формальных соглашений пока нет, а источники Reuters указывают, что шансы на сделку до вторника невелики.</p>
-                <div class="source">
-                    <a href="https://www.reuters.com/">Reuters, 5 апреля</a>
-                    <a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html">CNBC, 5 апреля</a>
-                </div>
-            </div>
+<div class="section">
+<h2>🌍 Макроэкономика</h2>
 
-            <div class="news-item">
-                <h4>Трамп угрожает «адом» для Ирана в случае отказа открыть Ормузский пролив (5 апреля)</h4>
-                <p>Президент Трамп дал Ирану ультиматум до вечера вторника: открыть Ормузский пролив для всех судов или столкнуться с ударами по электростанциям и мостам. Заявление, сделанное в Пасхальное воскресенье, вызвало скачок нефти выше $114 за баррель, прежде чем цены откатились. Доходность 10-летних Treasuries выросла на 36 б.п. с начала конфликта.</p>
-                <div class="source">
-                    <a href="https://www.cnbc.com/2026/04/06/us-treasury-bond-yields-note-trump-extends-tuesday-deadline.html">CNBC, 5 апреля</a>
-                    <a href="https://www.bloomberg.com/news/articles/2026-04-05/trading-open-shadowed-by-trump-escalation-threats-markets-wrap">Bloomberg, 5 апреля</a>
-                </div>
-            </div>
-
-            <div class="news-item">
-                <h4>50%-ные тарифы на сталь, алюминий и медь — новая структура вступает в силу (6 апреля)</h4>
-                <p>Администрация Трампа сохраняет ставку 50% на импорт стали, алюминия и меди, одновременно упрощая тарифную структуру для товаров с минимальным содержанием этих металлов. Алюминий вырос на ~12% с начала конфликта, медь потеряла 7%. Аналитики ожидают давления на маржинальность промышленных потребителей.</p>
-                <div class="source">
-                    <a href="https://www.bloomberg.com/news/articles/2026-04-02/trump-revamps-steel-aluminum-copper-tariffs-but-keeps-50-rate">Bloomberg, 6 апреля</a>
-                </div>
-            </div>
-
-            <div class="news-item">
-                <h4>Рынок труда: 178 000 новых рабочих мест в марте, но ФРС остаётся в паузе (5 апреля)</h4>
-                <p>Мартовский отчёт по занятости показал 178 000 новых рабочих мест и рост зарплат на 3,5% — сильнее ожиданий. Это крупнейший прирост за 15 месяцев. Однако ФРС сохраняет ставку на уровне 3,50–3,75%, а JPMorgan прогнозирует отсутствие снижений в 2026 году с возможным повышением в 2027.</p>
-                <div class="source">
-                    <a href="https://www.reuters.com/">Reuters, 5 апреля</a>
-                    <a href="https://www.thestreet.com/latest-news/stock-market-today-apr-6-2026-updates">TheStreet, 6 апреля</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: Секторальные новости -->
-        <section>
-            <h2>📈 Секторальные новости</h2>
-
-            <h3>🖥️ Software</h3>
-            <p><em>За указанный период (5–6 апреля) значимых новостей по софтверному сектору не обнаружено.</em> Из околопериодных событий: Microsoft 2 апреля представила три новые фундаментальные AI-модели (текст, голос, изображения), продолжая конкуренцию с AI-лабораториями.</p>
-
-            <h3>🔬 Semiconductors</h3>
-            <p><em>За указанный период (5–6 апреля) значимых новостей по полупроводниковому сектору не обнаружено.</em> Из околопериодных событий: Intel выкупила 49% в Ireland Fab Joint Venture, получив полный контроль над Fab 34. Рыночная доля NVIDIA в Китае снизилась ниже 60% на фоне роста поставок китайских AI-чипов.</p>
-
-            <h3>⛏️ Materials</h3>
-
-            <div class="news-item">
-                <h4>50%-ные тарифы на сталь и алюминий: новая структура пошлин (6 апреля)</h4>
-                <p>Администрация Трампа сохраняет ставку 50% на импорт стали, алюминия и меди с введением многоуровневой системы тарифов. Алюминий прибавил ~12% с начала ирано-американского конфликта, тогда как медь потеряла 7%. NUE и AA — потенциальные бенефициары роста внутренних цен.</p>
-                <div class="source">
-                    <a href="https://www.bloomberg.com/news/articles/2026-04-02/trump-revamps-steel-aluminum-copper-tariffs-but-keeps-50-rate">Bloomberg, 6 апреля</a>
-                </div>
-            </div>
-
-            <div class="news-item">
-                <h4>Золото снижается на фоне сильного доллара и данных по занятости (5 апреля)</h4>
-                <p>Золото отступило от рекордных уровней после выхода сильных данных по рынку труда, поддержавших доллар. С начала ирано-американского конфликта золото потеряло ~9%, серебро — 17–19%. Тем не менее, инвесторы сохраняют интерес к защитным активам на фоне неопределённости вокруг Ормузского пролива.</p>
-                <div class="source">
-                    <a href="https://www.reuters.com/">Reuters, 5 апреля</a>
-                </div>
-            </div>
-
-            <h3>⚡ Energy</h3>
-
-            <div class="news-item">
-                <h4>OPEC+ увеличивает добычу на 206 000 б/с, но пролив остаётся закрытым (5 апреля)</h4>
-                <p>Восемь членов OPEC+ договорились об увеличении добычи на 206 000 б/с с мая 2026. Однако неясно, как нефть попадёт на мировой рынок при закрытом Ормузском проливе. WTI торгуется на уровне $109,7/барр., Brent — $108,3/барр. Крупнейшее прерывание поставок за всю историю: 12–15 млн б/с выведено из оборота.</p>
-                <div class="source">
-                    <a href="https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html">CNBC, 5 апреля</a>
-                </div>
-            </div>
-
-            <div class="news-item">
-                <h4>Иранские дроны атаковали нефтяные объекты Кувейта — Kuwait Petroleum сообщает об ущербе (5 апреля)</h4>
-                <p>Kuwait Petroleum Corp сообщила о значительных повреждениях на нескольких объектах после атак иранских дронов. Также пострадали объекты Bahrain's Gulf Petrochemical Industries (пожар) и Borouge plant в Абу-Даби (обломки). OPEC+ предупредила, что ремонт инфраструктуры «требует значительных затрат и времени».</p>
-                <div class="source">
-                    <a href="https://www.reuters.com/">Reuters, 5 апреля</a>
-                </div>
-            </div>
-
-            <div class="news-item">
-                <h4>Индия впервые за 7 лет покупает иранскую нефть без проблем с оплатой (6 апреля)</h4>
-                <p>Индия совершила первую за семь лет покупку иранской нефти без проблем с платежами, несмотря на риски вторичных санкций. Южная Корея также балансирует риски поставок. Два индийских LPG-танкера покинули Персидский залив, а катарские LNG-суда развернулись, не дойдя до пролива.</p>
-                <div class="source">
-                    <a href="https://www.reuters.com/">Reuters, 6 апреля</a>
-                </div>
-            </div>
-
-            <h3>🏦 Finance</h3>
-
-            <div class="news-item">
-                <h4>Джейми Даймон (JPM) предупреждает: война с Ираном разгонит инфляцию и ставки (6 апреля)</h4>
-                <p>Глава JPMorgan Джейми Даймон предупредил, что война в Иране создаёт риск нефтяного и товарного шока, который удержит инфляцию на высоком уровне и вынудит ФРС поднять ставки выше, чем ожидает рынок. Даймон назвал инфляцию «скунсом на вечеринке». JPMorgan снизил таргет по S&P 500 с 7 500 до 7 200.</p>
-                <div class="source">
-                    <a href="https://www.reuters.com/business/finance/jpmorgans-dimon-warns-iran-war-may-drive-inflation-interest-rates-higher-2026-04-06/">Reuters, 6 апреля</a>
-                    <a href="https://www.thestreet.com/latest-news/stock-market-today-apr-6-2026-updates">TheStreet, 6 апреля</a>
-                </div>
-            </div>
-
-            <div class="news-item">
-                <h4>ФРС сохраняет ставку 3,50–3,75% второй раз подряд, рынок исключает снижение (5 апреля)</h4>
-                <p>FOMC проголосовал 11-1 за сохранение ставки. Рынок оценивает вероятность снижения в мае в ~15%, в июне — 35%. JPMorgan ожидает отсутствие снижений в 2026 году с возможным повышением в 2027. Пять стран ЕС призвали ввести налог на сверхприбыли энергетических компаний.</p>
-                <div class="source">
-                    <a href="https://www.cnbc.com/2026/04/06/us-treasury-bond-yields-note-trump-extends-tuesday-deadline.html">CNBC, 6 апреля</a>
-                    <a href="https://finance.yahoo.com/news/j-p-morgan-predicts-fed-035700750.html">Yahoo Finance</a>
-                </div>
-            </div>
-
-            <div class="news-item">
-                <h4>Корпоративные инсайдеры наращивают покупки акций вопреки общим распродажам (6 апреля)</h4>
-                <p>По данным MarketWatch, ключевой индикатор показывает, что офицеры и директора компаний увеличивают свои позиции в акциях, делая ставку на временный характер недавней распродажи. Индекс CNN Fear &amp; Greed остаётся в зоне «Extreme Fear», что исторически совпадает с хорошими точками входа.</p>
-                <div class="source">
-                    <a href="https://www.marketwatch.com/story/corporate-insiders-stock-market-moves-dont-match-the-headlines-heres-what-theyre-seeing-cf33fefc">MarketWatch, 6 апреля</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 4: Обзоры отчётов -->
-        <section>
-            <h2>📋 Обзоры отчётов</h2>
-
-            <div class="report-card">
-                <h3>1Q26 Preview: A healthier valuation backdrop, but macro uncertainty may create 2H earnings risk</h3>
-                <div class="report-meta">Goldman Sachs · Americas Banks · 6 апреля 2026</div>
-                <div class="report-summary">
-                    <p>Отчёт подготовлен командой GS Equity Research (Richard Ramsden, James Yaro) для институциональных инвесторов перед сезоном отчётностей 1Q26 крупнейших банков. Фокус на четырёх дискуссиях: перспективы NII, риски торговых доходов, влияние высоких цен на энергоносители на кредитное качество и использование избыточного капитала.</p>
-                    <p>GS ожидает рост NII на 8%/7% г/г в 2026/27E при отсутствии снижений ставки ФРС. Каждое повышение на 25 б.п. добавляет ~50 б.п. к NII и ~70 б.п. к EPS группы. Банки торгуются с P/E ~10,6x — 45-й процентиль за 5 лет, при 61% мультипликатора S&amp;P 500.</p>
-                    <p>Основные риски: торговые доходы могут пострадать при дегроссинге клиентов (прайм-леверидж на 11-летнем максимуме). Высокие цены на нефть угрожают ростом резервов: GS снизил прогноз реального ВВП на ~40 б.п. Пересмотр Basel III Endgame увеличивает избыточный капитал группы с ~$140 млрд до ~$200 млрд.</p>
-                    <p>После распродажи на 7% с начала года оценка стала привлекательнее. Прогнозы EPS выросли на 2%, что контрастирует с негативным ценовым движением.</p>
-                    <p>Ключевой вывод: банки предлагают привлекательную точку входа, особенно с чувствительностью к ставкам и низкой экспозицией на capital markets.</p>
-                </div>
-                <div class="report-ideas">WFC: BUY · BAC: BUY · C: BUY</div>
-            </div>
-
-            <div class="report-card">
-                <h3>MercadoLibre Inc. (MELI): 1Q26 Preview</h3>
-                <div class="report-meta">Goldman Sachs · Equity Research · 6 апреля 2026</div>
-                <div class="report-summary">
-                    <p>Отчёт GS (Irma Sgarz) перед публикацией результатов MELI за 1Q26. Цель — задать ожидания по GMV, TPV, кредитному портфелю и маржинальности в условиях инвестиционного цикла.</p>
-                    <p>GS прогнозирует EBIT $603 млн с маржой 7,0% — ниже консенсуса ($688 млн, 8,3%). GMV +39% г/г. Кредитный портфель $14 млрд (+80% г/г). Выручка $8,588 млн (+45% г/г).</p>
-                    <p>Давление на маржу: маркетинг +64% г/г, рост провизий +320 б.п., запуск кредитных карт в Аргентине с незрелыми когортами. 1Q26 — минимум маржи с 2022.</p>
-                    <p>Долгосрочно: возврат маржи EBIT к двузначным уровням к 2029E за счёт масштабирования кредитования и операционного рычага.</p>
-                    <p>Краткосрочное давление на маржу не меняет конструктивный взгляд GS на MELI.</p>
-                </div>
-                <div class="report-ideas">MELI: BUY (целевая $2 440)</div>
-            </div>
-
-            <div class="report-card">
-                <h3>Microsoft Corp. (MSFT): 3QFY Preview &amp; framing M365 using SOTP</h3>
-                <div class="report-meta">Goldman Sachs · Americas Software · 6 апреля 2026</div>
-                <div class="report-summary">
-                    <p>Отчёт GS (Gabriela Borges) перед результатами за 3QFY (март 2026) 29 апреля. Акция −23% с 2Q. Анализ risk/reward и ключевых вопросов: Azure, capex, дезинтермедиация M365.</p>
-                    <p>GS ожидает рост Azure на 37,5–39,0% cc. Capex повышен до $200/$241 млрд на FY27/28E. Выручка 6/26E $328,6 млрд, EPS $16,63. PT $600, апсайд 60,7%. P/E 22,5x.</p>
-                    <p>Два фактора для ре-рейтинга: нормализация supply для Azure и улучшение метрик Copilot. Сегмент M365 оценивается в ~4x EV/27 EBIT — значительный дисконт к 14x app software.</p>
-                    <p>Microsoft — ключевой бенефициар AI-инвестиционного цикла. Hyperscalers повысили capex на 24%/27% с начала года.</p>
-                    <p>На текущих уровнях risk/reward благоприятно. GS видит Microsoft как лучшую позицию для компаундной AI-стратегии.</p>
-                </div>
-                <div class="report-ideas">MSFT: BUY (целевая $600)</div>
-            </div>
-
-            <div class="report-card">
-                <h3>Netflix Inc. (NFLX): Q1'26 Preview — Upgrade to Buy</h3>
-                <div class="report-meta">Goldman Sachs · Americas Internet · 5 апреля 2026</div>
-                <div class="report-summary">
-                    <p>GS (Eric Sheridan) повышает рейтинг до Buy с Neutral. PT $120 (с $100). Ставка на устойчивый рост выручки в double digits и расширение маржинальности.</p>
-                    <p>Выручка 12/26E $51,7 млрд (+14,4%). EBIT-маржа 31,9%. Рекламная выручка: $1,5 млрд (2025) → $4,5 млрд (2027E) → $9,5 млрд (2030E).</p>
-                    <p>Три драйвера: (1) рост подписчиков ~M-HSD% + price increases; (2) операционный рычаг ~250 б.п./год + FCF-конверсия 70–75%; (3) buyback 20–25% market cap за 5 лет.</p>
-                    <p>Акции −18% за 6 мес (vs S&amp;P −2%). PT $120 → ~29x 2027 GAAP EPS, ~1,1x PEG при CAGR EPS ~27%.</p>
-                    <p>Netflix трансформируется в мультиканальную платформу с растущей рекламной вертикалью. Текущая оценка не учитывает потенциал FCF.</p>
-                </div>
-                <div class="report-ideas">NFLX: BUY (целевая $120, повышение с Neutral)</div>
-            </div>
-
-            <div class="report-card">
-                <h3>Strait of Hormuz: A Citrini Field Trip</h3>
-                <div class="report-meta">Citrini Research · Полевой отчёт · 5 апреля 2026</div>
-                <div class="report-summary">
-                    <p>Уникальный полевой отчёт — аналитик Citrini Research отправился непосредственно в Ормузский пролив для оценки реальной ситуации. Цель — предоставить инвесторам информацию из первых рук о судоходстве и контроле КСИР.</p>
-                    <p>Аналитик пересёк Оман на лодке, наблюдал дроны Shahed, патрульные катера КСИР и де-факто систему контроля, где Иран определяет, кто проходит через пролив.</p>
-                    <p>Отчёт опровергает упрощённую формулу «пролив открыт/закрыт», демонстрируя нюансированную реальность с де-факто иранским контролем, рисками задержания судов и неопределённостью для страховщиков.</p>
-                    <p>Нефтяная премия за риск может сохраняться дольше, чем закладывает рынок. Релевантно для XOM, CVX, OXY и нефтесервиса.</p>
-                    <p>Ормузский пролив в зоне де-факто иранского контроля — постоянный риск для ~21% мировых поставок нефти. Стоит закладывать повышенную геополитическую премию.</p>
-                </div>
-            </div>
-
-            <div class="report-card">
-                <h3>The way forward for Alt Managers: Reframing growth and valuation</h3>
-                <div class="report-meta">Goldman Sachs · Americas Asset Managers · 6 апреля 2026</div>
-                <div class="report-summary">
-                    <p>GS (Alexander Blostein) переоценивает инвестиционный тезис по альтернативным управляющим после обвала сектора на 30% с начала года. Три вопроса: Wealth-канал, Private Credit, Private Equity.</p>
-                    <p>Группа на ~18X NTM P/E — на 20% ниже исторических ~23X. Средний органический рост management fee CAGR ~15% за 2025–2028E. При стресс-сценарии downside к DE/share 14% в 2026E.</p>
-                    <p>Три риска: замедление Wealth-канала, проблемы Direct Lending + AI disruption для портфельных software-компаний, затяжные PE fundraising-циклы.</p>
-                    <p>Растущая дисперсия: CG, APO, TPG, BAM ускоряются; OWL, STEP, HLNE, BX теряют growth expectations. PT подразумевают ~30% средний апсайд.</p>
-                    <p>Сектор перепродан. Даже при стрессовых предпосылках, alt managers торгуются ниже исторических мультипликаторов.</p>
-                </div>
-                <div class="report-ideas">STEP: BUY · HLNE: BUY · CG: BUY · TPG: BUY · ARES: BUY</div>
-            </div>
-
-            <div class="report-card">
-                <h3>Americas Technology: Semiconductors — SIA data shows memory driving above-seasonal trends</h3>
-                <div class="report-meta">Goldman Sachs · Americas Technology · 6 апреля 2026</div>
-                <div class="report-summary">
-                    <p>Дата-отчёт GS (James Schneider) анализирует февральские данные SIA для оценки фазы полупроводникового цикла.</p>
-                    <p>Отгрузки IC (без памяти) −10% м/м, ниже сезонности. DRAM +32% м/м, NAND +16% м/м — единственные сегменты выше нормы. Revenue +25% м/м (+86% г/г) — драйвер memory. ASP +33% м/м, +66% г/г.</p>
-                    <p>IC ex. Memory: −7,8% от тренда; Analog: −6,5%; MCU: −27,5%. GS ожидает постепенное приближение отгрузок к тренду.</p>
-                    <p>Двухуровневый рынок: сила memory (AI-driven DRAM/HBM) при слабости аналоговых и промышленных чипов.</p>
-                    <p>GS конструктивен по аналоговым компаниям — дальше всего ниже тренда и хорошо управляют supply chains.</p>
-                </div>
-                <div class="report-ideas">ADI: BUY · MCHP: BUY · NXPI: BUY</div>
-            </div>
-        </section>
-
-        <!-- SECTION 5: Что впереди -->
-        <section>
-            <h2>📅 Что впереди (7–13 апреля)</h2>
-
-            <h3>Экономический календарь (США)</h3>
-            <table class="calendar-table">
-                <thead>
-                    <tr>
-                        <th>Дата</th>
-                        <th>Событие</th>
-                        <th>Прогноз</th>
-                        <th>Пред.</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>7 апреля</td>
-                        <td>Durable Goods Orders MoM (февраль)</td>
-                        <td>−0,5%</td>
-                        <td>0%</td>
-                    </tr>
-                    <tr>
-                        <td>7 апреля</td>
-                        <td>Consumer Credit Change (февраль)</td>
-                        <td>$10 млрд</td>
-                        <td>$8,05 млрд</td>
-                    </tr>
-                    <tr>
-                        <td>7 апреля</td>
-                        <td>Выступление Fed Goolsbee</td>
-                        <td>—</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>7 апреля</td>
-                        <td>Выступление Fed Jefferson</td>
-                        <td>—</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>8 апреля</td>
-                        <td>FOMC Minutes (мартовское заседание)</td>
-                        <td>—</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>8 апреля</td>
-                        <td>10-Year Note Auction</td>
-                        <td>—</td>
-                        <td>4,217%</td>
-                    </tr>
-                    <tr>
-                        <td>9 апреля</td>
-                        <td>GDP Growth Rate QoQ (Q4, final)</td>
-                        <td>0,7%</td>
-                        <td>4,4%</td>
-                    </tr>
-                    <tr>
-                        <td>9 апреля</td>
-                        <td>Core PCE Price Index MoM (февраль)</td>
-                        <td>0,4%</td>
-                        <td>0,4%</td>
-                    </tr>
-                    <tr>
-                        <td>9 апреля</td>
-                        <td>Personal Spending MoM (февраль)</td>
-                        <td>0,5%</td>
-                        <td>0,4%</td>
-                    </tr>
-                    <tr>
-                        <td>9 апреля</td>
-                        <td>Initial Jobless Claims</td>
-                        <td>209K</td>
-                        <td>202K</td>
-                    </tr>
-                    <tr>
-                        <td>9 апреля</td>
-                        <td>30-Year Bond Auction</td>
-                        <td>—</td>
-                        <td>4,871%</td>
-                    </tr>
-                    <tr>
-                        <td>10 апреля</td>
-                        <td>CPI YoY (март)</td>
-                        <td>3,4%</td>
-                        <td>2,4%</td>
-                    </tr>
-                    <tr>
-                        <td>10 апреля</td>
-                        <td>Core CPI MoM (март)</td>
-                        <td>0,3%</td>
-                        <td>0,2%</td>
-                    </tr>
-                    <tr>
-                        <td>10 апреля</td>
-                        <td>Michigan Consumer Sentiment (апрель)</td>
-                        <td>52,0</td>
-                        <td>53,3</td>
-                    </tr>
-                    <tr>
-                        <td>10 апреля</td>
-                        <td>Baker Hughes Oil Rig Count</td>
-                        <td>—</td>
-                        <td>411</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Календарь отчётов (cap &gt; $5B)</h3>
-            <p>На неделе 7–13 апреля отчётов крупных компаний (cap &gt; $5B) не запланировано. Сезон отчётностей за 1Q26 стартует на следующей неделе — первыми традиционно отчитываются крупнейшие банки (JPM, WFC, C). Delta Air Lines (DAL) откроет сезон 9 апреля как первый крупный тест на влияние высоких цен на топливо.</p>
-        </section>
-
-        <footer>
-            <p>Создано с помощью Claude AI · Данные: FMP, Finnhub, Massive Market Data · © NDV 2026</p>
-        </footer>
+<div class="news-item">
+    <h4>Иран и США получили план прекращения огня — 45-дневное перемирие (5 апреля)</h4>
+    <p>Иран и США получили через пакистанских посредников план немедленного прекращения огня и 45-дневного перемирия с возможным открытием Ормузского пролива. Фьючерсы на S&P 500 выросли на 0,3%, emerging markets прибавили 0,7%. Однако формальных соглашений пока нет, а источники Reuters указывают, что шансы на сделку до вторника невелики.</p>
+    <div class="source">
+        <a href="https://www.reuters.com/">Reuters, 5 апреля</a>
+        <a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html">CNBC, 5 апреля</a>
     </div>
+</div>
+
+<div class="news-item">
+    <h4>Трамп угрожает «адом» для Ирана в случае отказа открыть Ормузский пролив (5 апреля)</h4>
+    <p>Президент Трамп дал Ирану ультиматум до вечера вторника: открыть Ормузский пролив для всех судов или столкнуться с ударами по электростанциям и мостам. Заявление, сделанное в Пасхальное воскресенье, вызвало скачок нефти выше $114 за баррель, прежде чем цены откатились. Доходность 10-летних Treasuries выросла на 36 б.п. с начала конфликта.</p>
+    <div class="source">
+        <a href="https://www.cnbc.com/2026/04/06/us-treasury-bond-yields-note-trump-extends-tuesday-deadline.html">CNBC, 5 апреля</a>
+        <a href="https://www.bloomberg.com/news/articles/2026-04-05/trading-open-shadowed-by-trump-escalation-threats-markets-wrap">Bloomberg, 5 апреля</a>
+    </div>
+</div>
+
+<div class="news-item">
+    <h4>50%-ные тарифы на сталь, алюминий и медь — новая структура вступает в силу (6 апреля)</h4>
+    <p>Администрация Трампа сохраняет ставку 50% на импорт стали, алюминия и меди, одновременно упрощая тарифную структуру для товаров с минимальным содержанием этих металлов. Алюминий вырос на ~12% с начала конфликта, медь потеряла 7%. Аналитики ожидают давления на маржинальность промышленных потребителей.</p>
+    <div class="source">
+        <a href="https://www.bloomberg.com/news/articles/2026-04-02/trump-revamps-steel-aluminum-copper-tariffs-but-keeps-50-rate">Bloomberg, 6 апреля</a>
+    </div>
+</div>
+
+<div class="news-item">
+    <h4>Рынок труда: 178 000 новых рабочих мест в марте, но ФРС остаётся в паузе (5 апреля)</h4>
+    <p>Мартовский отчёт по занятости показал 178 000 новых рабочих мест и рост зарплат на 3,5% — сильнее ожиданий. Это крупнейший прирост за 15 месяцев. Однако ФРС сохраняет ставку на уровне 3,50–3,75%, а JPMorgan прогнозирует отсутствие снижений в 2026 году с возможным повышением в 2027.</p>
+    <div class="source">
+        <a href="https://www.reuters.com/">Reuters, 5 апреля</a>
+        <a href="https://www.thestreet.com/latest-news/stock-market-today-apr-6-2026-updates">TheStreet, 6 апреля</a>
+    </div>
+</div>
+</div>
+
+<div class="section">
+<h2>📈 Секторальные новости</h2>
+
+<h3>🖥️ Software</h3>
+<p><em>За указанный период (5–6 апреля) значимых новостей по софтверному сектору не обнаружено.</em> Из околопериодных событий: Microsoft 2 апреля представила три новые фундаментальные AI-модели (текст, голос, изображения), продолжая конкуренцию с AI-лабораториями.</p>
+
+<h3>🔬 Semiconductors</h3>
+<p><em>За указанный период (5–6 апреля) значимых новостей по полупроводниковому сектору не обнаружено.</em> Из околопериодных событий: Intel выкупила 49% в Ireland Fab Joint Venture, получив полный контроль над Fab 34. Рыночная доля NVIDIA в Китае снизилась ниже 60% на фоне роста поставок китайских AI-чипов.</p>
+
+<h3>⛏️ Materials</h3>
+
+<div class="news-item">
+    <h4>50%-ные тарифы на сталь и алюминий: новая структура пошлин (6 апреля)</h4>
+    <p>Администрация Трампа сохраняет ставку 50% на импорт стали, алюминия и меди с введением многоуровневой системы тарифов. Алюминий прибавил ~12% с начала ирано-американского конфликта, тогда как медь потеряла 7%. NUE и AA — потенциальные бенефициары роста внутренних цен.</p>
+    <div class="source">
+        <a href="https://www.bloomberg.com/news/articles/2026-04-02/trump-revamps-steel-aluminum-copper-tariffs-but-keeps-50-rate">Bloomberg, 6 апреля</a>
+    </div>
+</div>
+
+<div class="news-item">
+    <h4>Золото снижается на фоне сильного доллара и данных по занятости (5 апреля)</h4>
+    <p>Золото отступило от рекордных уровней после выхода сильных данных по рынку труда, поддержавших доллар. С начала ирано-американского конфликта золото потеряло ~9%, серебро — 17–19%. Тем не менее, инвесторы сохраняют интерес к защитным активам на фоне неопределённости вокруг Ормузского пролива.</p>
+    <div class="source">
+        <a href="https://www.reuters.com/">Reuters, 5 апреля</a>
+    </div>
+</div>
+
+<h3>⚡ Energy</h3>
+
+<div class="news-item">
+    <h4>OPEC+ увеличивает добычу на 206 000 б/с, но пролив остаётся закрытым (5 апреля)</h4>
+    <p>Восемь членов OPEC+ договорились об увеличении добычи на 206 000 б/с с мая 2026. Однако неясно, как нефть попадёт на мировой рынок при закрытом Ормузском проливе. WTI торгуется на уровне $109,7/барр., Brent — $108,3/барр. Крупнейшее прерывание поставок за всю историю: 12–15 млн б/с выведено из оборота.</p>
+    <div class="source">
+        <a href="https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html">CNBC, 5 апреля</a>
+    </div>
+</div>
+
+<div class="news-item">
+    <h4>Иранские дроны атаковали нефтяные объекты Кувейта — Kuwait Petroleum сообщает об ущербе (5 апреля)</h4>
+    <p>Kuwait Petroleum Corp сообщила о значительных повреждениях на нескольких объектах после атак иранских дронов. Также пострадали объекты Bahrain's Gulf Petrochemical Industries (пожар) и Borouge plant в Абу-Даби (обломки). OPEC+ предупредила, что ремонт инфраструктуры «требует значительных затрат и времени».</p>
+    <div class="source">
+        <a href="https://www.reuters.com/">Reuters, 5 апреля</a>
+    </div>
+</div>
+
+<div class="news-item">
+    <h4>Индия впервые за 7 лет покупает иранскую нефть без проблем с оплатой (6 апреля)</h4>
+    <p>Индия совершила первую за семь лет покупку иранской нефти без проблем с платежами, несмотря на риски вторичных санкций. Южная Корея также балансирует риски поставок. Два индийских LPG-танкера покинули Персидский залив, а катарские LNG-суда развернулись, не дойдя до пролива.</p>
+    <div class="source">
+        <a href="https://www.reuters.com/">Reuters, 6 апреля</a>
+    </div>
+</div>
+
+<h3>🏦 Finance</h3>
+
+<div class="news-item">
+    <h4>Джейми Даймон (JPM) предупреждает: война с Ираном разгонит инфляцию и ставки (6 апреля)</h4>
+    <p>Глава JPMorgan Джейми Даймон предупредил, что война в Иране создаёт риск нефтяного и товарного шока, который удержит инфляцию на высоком уровне и вынудит ФРС поднять ставки выше, чем ожидает рынок. Даймон назвал инфляцию «скунсом на вечеринке». JPMorgan снизил таргет по S&P 500 с 7 500 до 7 200.</p>
+    <div class="source">
+        <a href="https://www.reuters.com/business/finance/jpmorgans-dimon-warns-iran-war-may-drive-inflation-interest-rates-higher-2026-04-06/">Reuters, 6 апреля</a>
+        <a href="https://www.thestreet.com/latest-news/stock-market-today-apr-6-2026-updates">TheStreet, 6 апреля</a>
+    </div>
+</div>
+
+<div class="news-item">
+    <h4>ФРС сохраняет ставку 3,50–3,75% второй раз подряд, рынок исключает снижение (5 апреля)</h4>
+    <p>FOMC проголосовал 11-1 за сохранение ставки. Рынок оценивает вероятность снижения в мае в ~15%, в июне — 35%. JPMorgan ожидает отсутствие снижений в 2026 году с возможным повышением в 2027. Пять стран ЕС призвали ввести налог на сверхприбыли энергетических компаний.</p>
+    <div class="source">
+        <a href="https://www.cnbc.com/2026/04/06/us-treasury-bond-yields-note-trump-extends-tuesday-deadline.html">CNBC, 6 апреля</a>
+        <a href="https://finance.yahoo.com/news/j-p-morgan-predicts-fed-035700750.html">Yahoo Finance</a>
+    </div>
+</div>
+
+<div class="news-item">
+    <h4>Корпоративные инсайдеры наращивают покупки акций вопреки общим распродажам (6 апреля)</h4>
+    <p>По данным MarketWatch, ключевой индикатор показывает, что офицеры и директора компаний увеличивают свои позиции в акциях, делая ставку на временный характер недавней распродажи. Индекс CNN Fear &amp; Greed остаётся в зоне «Extreme Fear», что исторически совпадает с хорошими точками входа.</p>
+    <div class="source">
+        <a href="https://www.marketwatch.com/story/corporate-insiders-stock-market-moves-dont-match-the-headlines-heres-what-theyre-seeing-cf33fefc">MarketWatch, 6 апреля</a>
+    </div>
+</div>
+</div>
+
+<div class="section">
+<h2>📋 Обзоры отчётов</h2>
+
+<div class="report-card">
+    <h3>1Q26 Preview: A healthier valuation backdrop, but macro uncertainty may create 2H earnings risk</h3>
+    <div class="report-meta">Goldman Sachs · Americas Banks · 6 апреля 2026</div>
+    <div class="report-summary">
+        <p>Отчёт подготовлен командой GS Equity Research (Richard Ramsden, James Yaro) для институциональных инвесторов перед сезоном отчётностей 1Q26 крупнейших банков. Фокус на четырёх дискуссиях: перспективы NII, риски торговых доходов, влияние высоких цен на энергоносители на кредитное качество и использование избыточного капитала.</p>
+        <p>GS ожидает рост NII на 8%/7% г/г в 2026/27E при отсутствии снижений ставки ФРС. Каждое повышение на 25 б.п. добавляет ~50 б.п. к NII и ~70 б.п. к EPS группы. Банки торгуются с P/E ~10,6x — 45-й процентиль за 5 лет, при 61% мультипликатора S&amp;P 500.</p>
+        <p>Основные риски: торговые доходы могут пострадать при дегроссинге клиентов (прайм-леверидж на 11-летнем максимуме). Высокие цены на нефть угрожают ростом резервов: GS снизил прогноз реального ВВП на ~40 б.п. Пересмотр Basel III Endgame увеличивает избыточный капитал группы с ~$140 млрд до ~$200 млрд.</p>
+        <p>После распродажи на 7% с начала года оценка стала привлекательнее. Прогнозы EPS выросли на 2%, что контрастирует с негативным ценовым движением.</p>
+        <p>Ключевой вывод: банки предлагают привлекательную точку входа, особенно с чувствительностью к ставкам и низкой экспозицией на capital markets.</p>
+    </div>
+    <div class="report-ideas">WFC: BUY · BAC: BUY · C: BUY</div>
+</div>
+
+<div class="report-card">
+    <h3>MercadoLibre Inc. (MELI): 1Q26 Preview</h3>
+    <div class="report-meta">Goldman Sachs · Equity Research · 6 апреля 2026</div>
+    <div class="report-summary">
+        <p>Отчёт GS (Irma Sgarz) перед публикацией результатов MELI за 1Q26. Цель — задать ожидания по GMV, TPV, кредитному портфелю и маржинальности в условиях инвестиционного цикла.</p>
+        <p>GS прогнозирует EBIT $603 млн с маржой 7,0% — ниже консенсуса ($688 млн, 8,3%). GMV +39% г/г. Кредитный портфель $14 млрд (+80% г/г). Выручка $8,588 млн (+45% г/г).</p>
+        <p>Давление на маржу: маркетинг +64% г/г, рост провизий +320 б.п., запуск кредитных карт в Аргентине с незрелыми когортами. 1Q26 — минимум маржи с 2022.</p>
+        <p>Долгосрочно: возврат маржи EBIT к двузначным уровням к 2029E за счёт масштабирования кредитования и операционного рычага.</p>
+        <p>Краткосрочное давление на маржу не меняет конструктивный взгляд GS на MELI.</p>
+    </div>
+    <div class="report-ideas">MELI: BUY (целевая $2 440)</div>
+</div>
+
+<div class="report-card">
+    <h3>Microsoft Corp. (MSFT): 3QFY Preview &amp; framing M365 using SOTP</h3>
+    <div class="report-meta">Goldman Sachs · Americas Software · 6 апреля 2026</div>
+    <div class="report-summary">
+        <p>Отчёт GS (Gabriela Borges) перед результатами за 3QFY (март 2026) 29 апреля. Акция −23% с 2Q. Анализ risk/reward и ключевых вопросов: Azure, capex, дезинтермедиация M365.</p>
+        <p>GS ожидает рост Azure на 37,5–39,0% cc. Capex повышен до $200/$241 млрд на FY27/28E. Выручка 6/26E $328,6 млрд, EPS $16,63. PT $600, апсайд 60,7%. P/E 22,5x.</p>
+        <p>Два фактора для ре-рейтинга: нормализация supply для Azure и улучшение метрик Copilot. Сегмент M365 оценивается в ~4x EV/27 EBIT — значительный дисконт к 14x app software.</p>
+        <p>Microsoft — ключевой бенефициар AI-инвестиционного цикла. Hyperscalers повысили capex на 24%/27% с начала года.</p>
+        <p>На текущих уровнях risk/reward благоприятно. GS видит Microsoft как лучшую позицию для компаундной AI-стратегии.</p>
+    </div>
+    <div class="report-ideas">MSFT: BUY (целевая $600)</div>
+</div>
+
+<div class="report-card">
+    <h3>Netflix Inc. (NFLX): Q1'26 Preview — Upgrade to Buy</h3>
+    <div class="report-meta">Goldman Sachs · Americas Internet · 5 апреля 2026</div>
+    <div class="report-summary">
+        <p>GS (Eric Sheridan) повышает рейтинг до Buy с Neutral. PT $120 (с $100). Ставка на устойчивый рост выручки в double digits и расширение маржинальности.</p>
+        <p>Выручка 12/26E $51,7 млрд (+14,4%). EBIT-маржа 31,9%. Рекламная выручка: $1,5 млрд (2025) → $4,5 млрд (2027E) → $9,5 млрд (2030E).</p>
+        <p>Три драйвера: (1) рост подписчиков ~M-HSD% + price increases; (2) операционный рычаг ~250 б.п./год + FCF-конверсия 70–75%; (3) buyback 20–25% market cap за 5 лет.</p>
+        <p>Акции −18% за 6 мес (vs S&amp;P −2%). PT $120 → ~29x 2027 GAAP EPS, ~1,1x PEG при CAGR EPS ~27%.</p>
+        <p>Netflix трансформируется в мультиканальную платформу с растущей рекламной вертикалью. Текущая оценка не учитывает потенциал FCF.</p>
+    </div>
+    <div class="report-ideas">NFLX: BUY (целевая $120, повышение с Neutral)</div>
+</div>
+
+<div class="report-card">
+    <h3>Strait of Hormuz: A Citrini Field Trip</h3>
+    <div class="report-meta">Citrini Research · Полевой отчёт · 5 апреля 2026</div>
+    <div class="report-summary">
+        <p>Уникальный полевой отчёт — аналитик Citrini Research отправился непосредственно в Ормузский пролив для оценки реальной ситуации. Цель — предоставить инвесторам информацию из первых рук о судоходстве и контроле КСИР.</p>
+        <p>Аналитик пересёк Оман на лодке, наблюдал дроны Shahed, патрульные катера КСИР и де-факто систему контроля, где Иран определяет, кто проходит через пролив.</p>
+        <p>Отчёт опровергает упрощённую формулу «пролив открыт/закрыт», демонстрируя нюансированную реальность с де-факто иранским контролем, рисками задержания судов и неопределённостью для страховщиков.</p>
+        <p>Нефтяная премия за риск может сохраняться дольше, чем закладывает рынок. Релевантно для XOM, CVX, OXY и нефтесервиса.</p>
+        <p>Ормузский пролив в зоне де-факто иранского контроля — постоянный риск для ~21% мировых поставок нефти. Стоит закладывать повышенную геополитическую премию.</p>
+    </div>
+</div>
+
+<div class="report-card">
+    <h3>The way forward for Alt Managers: Reframing growth and valuation</h3>
+    <div class="report-meta">Goldman Sachs · Americas Asset Managers · 6 апреля 2026</div>
+    <div class="report-summary">
+        <p>GS (Alexander Blostein) переоценивает инвестиционный тезис по альтернативным управляющим после обвала сектора на 30% с начала года. Три вопроса: Wealth-канал, Private Credit, Private Equity.</p>
+        <p>Группа на ~18X NTM P/E — на 20% ниже исторических ~23X. Средний органический рост management fee CAGR ~15% за 2025–2028E. При стресс-сценарии downside к DE/share 14% в 2026E.</p>
+        <p>Три риска: замедление Wealth-канала, проблемы Direct Lending + AI disruption для портфельных software-компаний, затяжные PE fundraising-циклы.</p>
+        <p>Растущая дисперсия: CG, APO, TPG, BAM ускоряются; OWL, STEP, HLNE, BX теряют growth expectations. PT подразумевают ~30% средний апсайд.</p>
+        <p>Сектор перепродан. Даже при стрессовых предпосылках, alt managers торгуются ниже исторических мультипликаторов.</p>
+    </div>
+    <div class="report-ideas">STEP: BUY · HLNE: BUY · CG: BUY · TPG: BUY · ARES: BUY</div>
+</div>
+
+<div class="report-card">
+    <h3>Americas Technology: Semiconductors — SIA data shows memory driving above-seasonal trends</h3>
+    <div class="report-meta">Goldman Sachs · Americas Technology · 6 апреля 2026</div>
+    <div class="report-summary">
+        <p>Дата-отчёт GS (James Schneider) анализирует февральские данные SIA для оценки фазы полупроводникового цикла.</p>
+        <p>Отгрузки IC (без памяти) −10% м/м, ниже сезонности. DRAM +32% м/м, NAND +16% м/м — единственные сегменты выше нормы. Revenue +25% м/м (+86% г/г) — драйвер memory. ASP +33% м/м, +66% г/г.</p>
+        <p>IC ex. Memory: −7,8% от тренда; Analog: −6,5%; MCU: −27,5%. GS ожидает постепенное приближение отгрузок к тренду.</p>
+        <p>Двухуровневый рынок: сила memory (AI-driven DRAM/HBM) при слабости аналоговых и промышленных чипов.</p>
+        <p>GS конструктивен по аналоговым компаниям — дальше всего ниже тренда и хорошо управляют supply chains.</p>
+    </div>
+    <div class="report-ideas">ADI: BUY · MCHP: BUY · NXPI: BUY</div>
+</div>
+</div>
+
+<div class="section">
+<h2>📅 Что впереди (7–13 апреля)</h2>
+
+<h3>Экономический календарь (США)</h3>
+<table class="calendar-table">
+    <thead>
+        <tr>
+            <th>Дата</th>
+            <th>Событие</th>
+            <th>Прогноз</th>
+            <th>Пред.</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>7 апреля</td>
+            <td>Durable Goods Orders MoM (февраль)</td>
+            <td>−0,5%</td>
+            <td>0%</td>
+        </tr>
+        <tr>
+            <td>7 апреля</td>
+            <td>Consumer Credit Change (февраль)</td>
+            <td>$10 млрд</td>
+            <td>$8,05 млрд</td>
+        </tr>
+        <tr>
+            <td>7 апреля</td>
+            <td>Выступление Fed Goolsbee</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7 апреля</td>
+            <td>Выступление Fed Jefferson</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8 апреля</td>
+            <td>FOMC Minutes (мартовское заседание)</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8 апреля</td>
+            <td>10-Year Note Auction</td>
+            <td>—</td>
+            <td>4,217%</td>
+        </tr>
+        <tr>
+            <td>9 апреля</td>
+            <td>GDP Growth Rate QoQ (Q4, final)</td>
+            <td>0,7%</td>
+            <td>4,4%</td>
+        </tr>
+        <tr>
+            <td>9 апреля</td>
+            <td>Core PCE Price Index MoM (февраль)</td>
+            <td>0,4%</td>
+            <td>0,4%</td>
+        </tr>
+        <tr>
+            <td>9 апреля</td>
+            <td>Personal Spending MoM (февраль)</td>
+            <td>0,5%</td>
+            <td>0,4%</td>
+        </tr>
+        <tr>
+            <td>9 апреля</td>
+            <td>Initial Jobless Claims</td>
+            <td>209K</td>
+            <td>202K</td>
+        </tr>
+        <tr>
+            <td>9 апреля</td>
+            <td>30-Year Bond Auction</td>
+            <td>—</td>
+            <td>4,871%</td>
+        </tr>
+        <tr>
+            <td>10 апреля</td>
+            <td>CPI YoY (март)</td>
+            <td>3,4%</td>
+            <td>2,4%</td>
+        </tr>
+        <tr>
+            <td>10 апреля</td>
+            <td>Core CPI MoM (март)</td>
+            <td>0,3%</td>
+            <td>0,2%</td>
+        </tr>
+        <tr>
+            <td>10 апреля</td>
+            <td>Michigan Consumer Sentiment (апрель)</td>
+            <td>52,0</td>
+            <td>53,3</td>
+        </tr>
+        <tr>
+            <td>10 апреля</td>
+            <td>Baker Hughes Oil Rig Count</td>
+            <td>—</td>
+            <td>411</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Календарь отчётов (cap &gt; $5B)</h3>
+<p>На неделе 7–13 апреля отчётов крупных компаний (cap &gt; $5B) не запланировано. Сезон отчётностей за 1Q26 стартует на следующей неделе — первыми традиционно отчитываются крупнейшие банки (JPM, WFC, C). Delta Air Lines (DAL) откроет сезон 9 апреля как первый крупный тест на влияние высоких цен на топливо.</p>
+</div>
+
+</div>
+
+<div class="footer">
+  Создано с помощью Claude AI · Данные: FMP, Finnhub, Massive Market Data<br>
+  © NDV 2026
+</div>
+
 </body>
 </html>
