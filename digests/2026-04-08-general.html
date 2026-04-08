@@ -242,42 +242,33 @@
             color: #666;
         }
 
-        .report-block {
+        .report-summary-block {
             margin-bottom: 16px;
-            padding: 12px 16px;
-            background: #FAFBFF;
+            padding: 14px 16px;
+            background: #F0F2FF;
             border-radius: 8px;
-        }
-
-        .report-block-title {
-            font-weight: 700;
-            font-size: 15px;
-            color: #2020CC;
-            margin-bottom: 8px;
-        }
-
-        .report-block-content {
-            font-size: 14px;
+            border-left: 3px solid #3333FF;
             line-height: 1.7;
+            font-size: 14px;
             color: #1a1a2e;
         }
 
-        .report-block.bull-case {
-            background: #F0FFF4;
-            border-left: 3px solid #1B7A3D;
-            border-radius: 6px;
+        .report-analysis {
+            margin-bottom: 16px;
         }
 
-        .report-block.bear-case {
-            background: #FFF5F5;
-            border-left: 3px solid #C0392B;
-            border-radius: 6px;
+        .report-analysis-title {
+            font-weight: 700;
+            font-size: 15px;
+            color: #2020CC;
+            margin-bottom: 10px;
         }
 
-        .report-block.scenario-block {
-            background: #FFFFF0;
-            border-left: 3px solid #D4A017;
-            border-radius: 6px;
+        .report-analysis p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            font-size: 14px;
+            color: #1a1a2e;
         }
 
         .report-ideas {
@@ -502,37 +493,21 @@
                     <div class="report-card-meta">Goldman Sachs, PDF, 7 апреля 2026</div>
                 </div>
 
-                <div class="report-block">
-                    <div class="report-block-title">Основная идея</div>
-                    <div class="report-block-content">
-                        AVGO: BUY, целевая $480 (текущая $314.43, апсайд 52.7%). Broadcom заключил долгосрочные соглашения о разработке TPU-чипов для Google и сетевых компонентов через 2031 год. Anthropic получит 3.5+ ГВт на TPU с 2027. Google и Anthropic обеспечат ~70% доходов AI XPU Broadcom в 2027/28.
-                    </div>
+                <div class="report-summary-block">
+                    Goldman Sachs подтверждает рейтинг BUY по Broadcom (AVGO) с целевой ценой $480, что предполагает потенциал роста на 52.7% от текущих $314.43. Ключевой тезис: долгосрочное соглашение с Google и Anthropic по поставкам TPU-чипов и сетевых компонентов через 2031 год подтверждает позицию компании как ведущего поставщика кастомного кремния в эпоху ИИ-процессоров. GS ожидает, что Google и Anthropic совместно обеспечат ~70% доходов AVGO от AI XPU в 2027–2028 годах, что даёт беспрецедентную видимость роста на многолетнем горизонте.
                 </div>
 
-                <div class="report-block bull-case">
-                    <div class="report-block-title">Bull case</div>
-                    <div class="report-block-content">
-                        Revenue CAGR ~45-50% (2025-2028): $63.9B → $107.2B → $180.7B → $224.0B. EPS: $5.39 → $10.37 → $19.18 → $24.39. EBIT margin расширяется с 53.9% до 63.5%. FCF: $26.9B → $52.4B → $100.1B → $124.4B. CROCI: 19.8% → 65.5%.
-                    </div>
-                </div>
-
-                <div class="report-block bear-case">
-                    <div class="report-block-title">Bear case</div>
-                    <div class="report-block-content">
-                        Концентрация клиентов (Google + Anthropic = 70% AI XPU). Валовая маржа снижается с 77.3% до 71.4%. Долг $62B. Риск замедления AI capex.
-                    </div>
-                </div>
-
-                <div class="report-block scenario-block">
-                    <div class="report-block-title">Прогнозы</div>
-                    <div class="report-block-content">
-                        Revenue $107.2B (2026E), $180.7B (2027E). EPS $10.37/$19.18/$24.39. P/E сжимается с 45.7x до 12.9x.
-                    </div>
+                <div class="report-analysis">
+                    <div class="report-analysis-title">Развёрнутый анализ</div>
+                    <p>GS исходит из того, что долгосрочное партнёрство с Google и Anthropic является критическим катализатором для восстановления доверия инвесторов к устойчивости бизнеса Broadcom. Согласно отчёту, компания ожидает получить от Google и Anthropic совместно $64.5 млрд и $75.7 млрд доходов AI XPU в 2027 и 2028 годах соответственно, что составит примерно 70% всех доходов от AI XPU. Anthropic получит 3.5+ ГВт вычислительной мощности на TPU с 2027 года. Это означает, что две компании с лидирующими позициями в бенчмарках LLM обеспечат стабильный спрос до 2031 года, существенно снижая риск потери доли рынка в растущем сегменте кастомного кремния.</p>
+                    <p>Маржинальная динамика AVGO демонстрирует значительный операционный рычаг на прогнозном горизонте. GS предполагает, что EBIT маржа расширится с 53.9% в октябре 2025 года до 63.5% в октябре 2028 года благодаря растущей доле высокомаржинальных доходов от AI XPU и эффекту масштаба. Свободный денежный поток вырастет с $26.9 млрд (FCF yield 2.3%) в 2025 до $124.4 млрд (yield 8.5%) в 2028 — четырёхкратное увеличение за три года. Это означает, что при сохранении темпов роста выручки (Revenue CAGR ~45-50%, с $63.9B до $224B к 2028) компания трансформируется в мощнейший генератор денежного потока в полупроводниковой отрасли.</p>
+                    <p>Ключевые риски связаны с высокой концентрацией клиентов и потенциальным замедлением ИИ-инвестиций. Google + Anthropic = 70% AI XPU-доходов — это одновременно и сила, и уязвимость: решение любого из этих двух клиентов о сокращении заказов создаст непропорциональный удар по выручке. Валовая маржа, по прогнозам GS, снижается с 77.3% до 71.4% из-за изменения продуктового микса. Чистый долг составляет $62B, хотя соотношение долг/EBITDA быстро сокращается с 1.3x до отрицательного (-0.9x) к 2028 году. Следовательно, bear case реализуется только при структурном замедлении AI capex — сценарий, который GS считает маловероятным.</p>
+                    <p>Валюационный профиль AVGO демонстрирует классическую трансформацию из growth-истории в value play при сохранении высоких темпов роста. GS предполагает, что P/E мультипликатор сожмётся с 45.7x (2025E) до 12.9x (2028E), а EV/EBITDA — с 34.0x до 9.3x. При EPS $10.37 (2026E) → $19.18 (2027E) → $24.39 (2028E) акция фактически торгуется по оценке зрелой компании при темпах роста гипер-скейлера. Целевая цена $480 основана на 30x нормализованной EPS в $16, что предполагает консервативное дисконтирование будущих доходов.</p>
                 </div>
 
                 <div class="report-ideas">
-                    <div class="report-ideas-title">Ideas</div>
-                    <div class="report-ideas-item">AVGO: BUY ($480, +52.7%)</div>
+                    <div class="report-ideas-title">🎯 Top Picks</div>
+                    <div class="report-ideas-item">AVGO: BUY — целевая $480, апсайд +52.7%</div>
                 </div>
             </div>
 
@@ -543,46 +518,23 @@
                     <div class="report-card-meta">Goldman Sachs, PDF, 8 апреля 2026</div>
                 </div>
 
-                <div class="report-block">
-                    <div class="report-block-title">Основная идея</div>
-                    <div class="report-block-content">
-                        Обзор сектора entertainment: LYV Buy $190 (+50%), SPHR Buy $140 (+315%), MSGE Buy $67 (+118%).
-                    </div>
+                <div class="report-summary-block">
+                    Goldman Sachs сохраняет рейтинг Buy по трём ключевым компаниям сектора живых развлечений: LYV (целевая $190, апсайд +50%), SPHR (целевая $140, апсайд +315%), MSGE (целевая $67, апсайд +118%). Ключевой тезис: сектор живых развлечений остаётся бенефициаром структурного сдвига потребительских расходов в сторону впечатлений, при этом каждая из трёх компаний имеет уникальный катализатор — расширение площадок (LYV), франшизную модель Sphere (SPHR) и монетизацию недвижимости Penn Station (MSGE).
                 </div>
 
-                <div class="report-block bull-case">
-                    <div class="report-block-title">Bull LYV</div>
-                    <div class="report-block-content">
-                        Revenue 1Q26 $3.62B (+7% YoY), посещаемость +20.4% в 2026, 67M билетов уже продано. Venue Nation расширение: 30% мощности открыто в 2026. Sponsorship pipeline DD% рост.
-                    </div>
-                </div>
-
-                <div class="report-block bull-case">
-                    <div class="report-block-title">Bull SPHR</div>
-                    <div class="report-block-content">
-                        Revenue +56% YoY в 1Q26. Wizard of Oz 2.0 в 4Q26. Franchise Япония/Nashville. Core Sphere 15x 2027E AOI = $116/share + $24 franchise DCF.
-                    </div>
-                </div>
-
-                <div class="report-block bull-case">
-                    <div class="report-block-title">Bull MSGE</div>
-                    <div class="report-block-content">
-                        Christmas Spectacular 228 шоу (+6% YoY), 25-летний рекорд. Penn Station redevelopment потенциал ~$500M (20% market cap).
-                    </div>
-                </div>
-
-                <div class="report-block bear-case">
-                    <div class="report-block-title">Bear case</div>
-                    <div class="report-block-content">
-                        Legal/FTC штрафы $6-7M/квартал (LYV). Макро risk on consumer spending. Abu Dhabi отложен до 2030 (SPHR).
-                    </div>
+                <div class="report-analysis">
+                    <div class="report-analysis-title">Развёрнутый анализ</div>
+                    <p>Стратегия расширения Live Nation основана на предположении, что увеличение пропускной способности площадок напрямую транслируется в рост посещаемости при сохранении ценовой дисциплины. Данные подтверждают этот тезис: прогноз посещаемости на 2026 год составляет 172.5 млн (+8.5% YoY), при этом посещаемость Amps растёт на 25% YoY, а 67 млн билетов на мероприятия 2026 года уже продано. Pipeline крупных площадок заполнен на 80%, а 24 новых тура объявлены только в марте. Это означает, что стратегия Venue Nation создаёт структурную основу для устойчивого роста, оправдывая целевую цену $190 на базе 19.0x 2027E EV/EBITDA.</p>
+                    <p>Оценка Sphere Entertainment строится на допущении, что шоу «Wizard of Oz» представляет собой устойчивую высокомаржинальную контентную франшизу, способную генерировать $1.1M AOI за шоу на нескольких площадках глобально. К концу 2025 года кумулятивная посещаемость Sphere в Лас-Вегасе достигла 2 млн человек, предпродано 2.2 млн билетов на $290 млн. Менеджмент ведёт переговоры о полноразмерных Sphere на 20 тыс. мест в Японии (стоимость строительства ~$2.2B) и компактной площадке на 6 тыс. мест в Nashville. При оценке 15x 2027E AOI core-бизнес стоит $116/акцию плюс $24/акцию от франшизного DCF, что поддерживает целевую цену $140.</p>
+                    <p>Катализатор MSGE — Christmas Spectacular с 228 шоу в F2027 (vs 215 в F2026), продажи которого уже показывают +6% YoY рост. Foot traffic в The Garden вырос на +11% YoY в марте. На стратегическом уровне, проект реконструкции Penn Station движется к выбору девелопера к маю 2026 года, со стартом строительства к концу 2027 — это потенциально ~20% рыночной капитализации MSGE ($2.7B) в виде стоимости недвижимости. Следовательно, MSGE предлагает комбинацию краткосрочного booking-момента и многолетней опциональности недвижимости при 14.0x 2027E TEV/EBITDA.</p>
+                    <p>Сектор сталкивается с материальными регуляторными и макро-рисками. LYV несёт юридические расходы $6-7M в квартал из-за иска FTC, а урегулирование с DOJ ожидается к концу 2026 / началу 2027. Замедление потребительских расходов может давить на посещаемость премиальных мероприятий, а рост ставок увеличивает стоимость рефинансирования плавающего долга MSGE. Для SPHR площадки в Abu Dhabi и National Harbor отложены до 2030 года, что снижает краткосрочный вклад франшизы в ROI. Тем не менее, текущие индикаторы спроса остаются сильными, и GS считает, что фундаментальный рост перевешивает циклические риски.</p>
                 </div>
 
                 <div class="report-ideas">
-                    <div class="report-ideas-title">Ideas</div>
-                    <div class="report-ideas-item">LYV Buy $190 (+50%)</div>
-                    <div class="report-ideas-item">SPHR Buy $140 (+315%)</div>
-                    <div class="report-ideas-item">MSGE Buy $67 (+118%)</div>
+                    <div class="report-ideas-title">🎯 Top Picks</div>
+                    <div class="report-ideas-item">LYV: Buy — целевая $190, апсайд +50%</div>
+                    <div class="report-ideas-item">SPHR: Buy — целевая $140, апсайд +315%</div>
+                    <div class="report-ideas-item">MSGE: Buy — целевая $67, апсайд +118%</div>
                 </div>
             </div>
 
@@ -593,34 +545,27 @@
                     <div class="report-card-meta">Goldman Sachs, PDF, 8 апреля 2026</div>
                 </div>
 
-                <div class="report-block">
-                    <div class="report-block-title">Основная идея</div>
-                    <div class="report-block-content">
-                        Обзор 19 компаний biotech (все BUY). Сектор вошёл в FY26 на лучших квартальных результатах за 5 лет (+22% в 4Q25). M&A рост 32% ($148B run-rate vs $112B). XBI +7.5% от 31 марта.
-                    </div>
+                <div class="report-summary-block">
+                    Goldman Sachs сохраняет универсальный рейтинг Buy на всех 19 компаниях покрытия в секторе биотехнологий. Сектор вступил в FY26 на фоне лучшей квартальной динамики XBI за 5 лет (+22% в Q4'25), активность M&A выросла на 32% до $148B годового run-rate (vs $112B в 2024), а уровень реализации каталистов в 1Q26 составил 77% — всё это указывает на здоровую фундаментальную среду для sector-specific stock picking.
                 </div>
 
-                <div class="report-block bull-case">
-                    <div class="report-block-title">Bull case</div>
-                    <div class="report-block-content">
-                        77% outperformance rate каталистов в 1Q26. M&A объем $148B run-rate, средний размер $2.2B. Ставки ожидаются к 3-3.25% (2 снижения). IPO активность: Evommune +39%, LB Pharma +59%.
-                    </div>
-                </div>
-
-                <div class="report-block bear-case">
-                    <div class="report-block-title">Bear case</div>
-                    <div class="report-block-content">
-                        Процентная неопределенность, разрыв XBI-10Y yield. IPO когорта смешанная (-29% до +101%). Valuation compression: 7x FY2 sales vs 11x исторически.
-                    </div>
+                <div class="report-analysis">
+                    <div class="report-analysis-title">Развёрнутый анализ</div>
+                    <p>GS исходит из того, что сектор биотехнологий остаётся фундаментально привлекательным благодаря конфлюэнции позитивных факторов: частичный отход от торговли ИИ, благоприятные регуляторные решения FDA и макроэкономические сдвиги. XBI выросла на 22% в Q4'25 — лучший квартал за пять лет, хотя в 2026 году сектор отстал от S&P 500 на 453 б.п. (XBI +4.5% vs S&P -4.8%). Позитивные клинические вехи продолжают вознаграждаться рынком: из ~30 позитивных результатов в 1Q26 уровень реализации составил 77% для событий с post-catalyst выплатами >$200M, со средним ростом +20%. Это подтверждает, что биотех по-прежнему чувствителен к pipeline-новостям, а не только к макро-факторам.</p>
+                    <p>Среда M&A демонстрирует значительное усиление: объём сделок достиг $148B в 2025 году (19 сделок) vs $112B в 2024, при среднем размере $2.2B (медиана $2.6B). С Дня труда объявлено 12 сделок в Q1'26 (включая приобретение ACLX компанией GILD за $7.8B). GS предполагает, что медианный мультипликатор EV/FY2 составляет 7x — ниже исторического диапазона 7-11x (2007-2023), что указывает на смещение активности в сторону mid-cap когорты, готовой совершать сделки при более конкурентных оценках. Следовательно, M&A активность будет сохраняться как ключевой катализатор переоценки сектора.</p>
+                    <p>Чувствительность к процентным ставкам остаётся важным допущением, хотя историческая корреляция XBI с 10-летним UST yield недавно разрушилась. Макро-команда GS прогнозирует два снижения ставок до 3-3.25% и считает, что вероятность повышений (~45% по рынку) завышена, учитывая смягчение рынка труда и уже находящуюся выше нейтрального funds rate. Благоприятная ставочная среда исторически поддерживает IPO-активность и финансирование ранних стадий: Evommune показала +39% post-IPO, LB Pharma +59%. Это создаёт условия для притока капитала в сектор при реализации прогноза по ставкам.</p>
+                    <p>Основные риски включают потенциальное сжатие мультипликаторов и смешанные результаты IPO-когорты 2025-2026 годов. IPO 2025 года показывают медианный доход -72% vs +101% median gain post-catalyst в 2024, а IPO 2026 года демонстрируют неравномерность (GENB +39%, SyGlass +41%, но AsomaBio -32%). Текущая оценка сектора (7x FY2 sales) значительно ниже исторического среднего 11x, что может отражать как привлекательность, так и структурную переоценку рисков. При изменении макроусловий это создаёт downside к оценкам, особенно для компаний без near-term каталистов.</p>
                 </div>
 
                 <div class="report-ideas">
-                    <div class="report-ideas-title">Top picks</div>
-                    <div class="report-ideas-item">CGON $100 (+43%)</div>
-                    <div class="report-ideas-item">CYTK $113 (+54%)</div>
-                    <div class="report-ideas-item">IMGN $99 (+125%)</div>
-                    <div class="report-ideas-item">VERA $127 (+138%)</div>
-                    <div class="report-ideas-item">ARCB $1,405 (+20%)</div>
+                    <div class="report-ideas-title">🎯 Top Picks</div>
+                    <div class="report-ideas-item">CGON: Buy — целевая $100</div>
+                    <div class="report-ideas-item">CYTK: Buy — целевая $113</div>
+                    <div class="report-ideas-item">GPCR: Buy — целевая $145</div>
+                    <div class="report-ideas-item">VERA: Buy — целевая $127</div>
+                    <div class="report-ideas-item">BHVN: Buy — целевая $30</div>
+                    <div class="report-ideas-item">DNLI: Buy — целевая $72</div>
+                    <div class="report-ideas-item">RAPP: Buy — целевая $77</div>
                 </div>
             </div>
 
@@ -631,37 +576,21 @@
                     <div class="report-card-meta">Goldman Sachs, PDF, 7 апреля 2026</div>
                 </div>
 
-                <div class="report-block">
-                    <div class="report-block-title">Основная идея</div>
-                    <div class="report-block-content">
-                        JNJ: BUY (Conviction List), целевая $265 (текущая $240.97, апсайд 10%). Множественные новые циклы продуктов: Icotyde (псориаз, одобрен март), Capyta (биполярное расстройство, TRx +57% YoY), Tremfya (+62% YoY).
-                    </div>
+                <div class="report-summary-block">
+                    Goldman Sachs подтверждает рейтинг Buy (Conviction List) по Johnson & Johnson с целевой ценой $265, что предполагает 10% апсайд от текущих $240.97. Ключевой тезис: множественные новые циклы продуктов — Icotyde (псориаз, одобрен март 2026), Capyta (биполярное расстройство, TRx +57% YoY), Tremfya (+62% YoY) — обеспечат ускорение роста квартал к кварталу и поддержат заявленную цель двузначного роста выручки к 2030 году. JNJ уникально позиционирована в large-cap фарме: сочетание ускоряющегося top-line роста с крепчайшим балансом в индустрии.
                 </div>
 
-                <div class="report-block bull-case">
-                    <div class="report-block-title">Bull case</div>
-                    <div class="report-block-content">
-                        Revenue 1Q26 $24.0B (vs consensus $23.6B, +1.8%). IM segment $15.34B (+1.9% vs consensus). Darzalex $3.99B (+4.5%), Tremfya $1.47B (+5.2%), Capyta $305M (+8.9%). MedTech +7.7% YoY. FCF $21B. Strongest balance sheet in pharma.
-                    </div>
-                </div>
-
-                <div class="report-block bear-case">
-                    <div class="report-block-title">Bear case</div>
-                    <div class="report-block-content">
-                        Talc litigation reserve $11B (NPV ~$3.4B). MedTech EP/PFA: JNJ #3-4 on safety issues. Macro/tariff/FX risks. ACA policy risk.
-                    </div>
-                </div>
-
-                <div class="report-block scenario-block">
-                    <div class="report-block-title">Прогнозы</div>
-                    <div class="report-block-content">
-                        Revenue $100.8B (2026E, +7%), $109.1B (2027E, +8.3%). EPS $11.57 (2026E), $13.24 (2027E). P/E 20.8x → 18.2x. Div yield 2.1%.
-                    </div>
+                <div class="report-analysis">
+                    <div class="report-analysis-title">Развёрнутый анализ</div>
+                    <p>GS предполагает, что три ключевых продуктовых цикла обеспечат ускорение роста сегмента Innovative Medicines выше консенсуса. Tremfya демонстрирует TRx-рост ~62% YoY и ~11% QoQ — значительное ускорение vs 47% и 11% в Q4'25; в IBD-показаниях Tremfya уже занимает ~44% TRx в UC и ~32-39% в CD. Icotyde, одобренный в марте для псориаза раньше ожиданий, позиционирован как конкурентный front-line вариант без необходимости TB-тестирования. Capyta показывает ускорение TRx с 39% YoY в Q4'25 до 57% YoY в Q1'26, с оценкой GS на ~9% выше консенсуса. Это означает, что сегмент IM имеет потенциал для серии позитивных сюрпризов по выручке в ближайших кварталах.</p>
+                    <p>GS прогнозирует выручку Q1'26 на уровне $24.0B vs консенсус $23.6B (+1.8% upside), с Innovative Medicines $15.56B (+3.4% vs консенсус) и MedTech $8.43B (-0.9% vs консенсус). Ключевые продукты: Darzalex $3.99B (+4.5% vs консенсус), Tremfya $1.47B (+5.2%), Capyta $305M (+8.9%). Менеджмент дал консервативный гайденс $100-101B на 2026 год и не повышал ожидания — GS предполагает, что, как и в прошлом году, когда JNJ поднимала гайденс каждый квартал, текущие цифры остаются консервативными. При новых EPS-оценках $11.57 (2026E) / $13.24 (2027E) / $14.45 (2028E) компания торгуется на ~20.9x forward P/E — in line с large-cap pharma peers.</p>
+                    <p>MedTech сегмент растёт на 7.7% YoY (5.7% на adjusted operational basis), с US-ростом +6.4% и overseas +5.0% ex-FX, что находится в середине долгосрочного таргета 5-7%. GS прогнозирует органический рост large-cap MedTech ~6.5% в 2026 vs ~7.5% в 2024-2025. JNJ сохраняет лидерство в нескольких сегментах кардиоваскулярных устройств, хотя в pulsed-field ablation компания занимает #3-4 позицию из-за проблем с безопасностью, а в structural heart растёт конкуренция от Farapulse и участников VOLT. Следовательно, MedTech обеспечивает стабильный, но не ускоряющийся вклад в общий рост.</p>
+                    <p>Ключевые риски включают судебные процессы по тальку (резервы ~$3.4B, федеральный судья дисквалифицировал ключевую юридическую фирму в MDL), конкурентные угрозы в MedTech (VBP и DRG в Китае, deductible reset в США), а также макро/тарифные/FX-риски. Более медленный, чем ожидается, ramp новых продуктов мог бы привести к недостаточному замещению выручки от зрелых franchise. Тем не менее, баланс JNJ остаётся сильнейшим в фарме: FCF прогнозируется на $21B в 2026, дивидендная доходность 2.1%, а optionality для M&A обеспечивает дополнительный upside. При таком профиле risk/reward GS считает включение в Conviction List обоснованным.</p>
                 </div>
 
                 <div class="report-ideas">
-                    <div class="report-ideas-title">Ideas</div>
-                    <div class="report-ideas-item">JNJ: BUY (CL) $265 (+10%)</div>
+                    <div class="report-ideas-title">🎯 Top Picks</div>
+                    <div class="report-ideas-item">JNJ: Buy (Conviction List) — целевая $265, апсайд +10%</div>
                 </div>
             </div>
 
@@ -672,30 +601,21 @@
                     <div class="report-card-meta">Goldman Sachs, PDF, 7 апреля 2026</div>
                 </div>
 
-                <div class="report-block">
-                    <div class="report-block-title">Основная идея</div>
-                    <div class="report-block-content">
-                        LEVI: NEUTRAL, целевая $24 (текущая $19.71, потенциал 21.8%). Устойчивый рост при здоровых маржах, но макро неопределённость и волатильность органического роста удерживают от повышения рейтинга.
-                    </div>
+                <div class="report-summary-block">
+                    Goldman Sachs сохраняет рейтинг Neutral по Levi Strauss с целевой ценой $24, что предполагает потенциал роста 21.8% от текущих $19.71. Компания продемонстрировала сильный Q1 с выручкой $1.74B (+14.1% YoY), превысив ожидания, и повысила гайденс FY26 до EPS $1.42-$1.48. Однако макроэкономическая неопределённость, волатильность органического роста ex-FX и недавнее сжатие рыночных мультипликаторов не позволяют повысить рейтинг до Buy, несмотря на улучшающиеся фундаментальные показатели.
                 </div>
 
-                <div class="report-block bull-case">
-                    <div class="report-block-title">Bull case</div>
-                    <div class="report-block-content">
-                        Q1FY26 revenue $1.74B (+14.1% YoY, +9.1% ex-FX). EPS FY26E $1.50 (+11.1%), FY27E $1.64, FY28E $1.85. Валовая маржа расширяется до 62.6%. FCF yield: 4.1% → 11.3%. Net debt/EBITDA: 0.3x → (0.2x). DTC канал растёт. US organic +4% в Q1.
-                    </div>
-                </div>
-
-                <div class="report-block bear-case">
-                    <div class="report-block-title">Bear case</div>
-                    <div class="report-block-content">
-                        Elevated macro uncertainty. Volatility in ex-FX organic growth. Q2 ожидается слабее (wholesale timing). FX tailwinds diminish. Target multiple cut from 8.5x to 8.25x EV/EBITDA.
-                    </div>
+                <div class="report-analysis">
+                    <div class="report-analysis-title">Развёрнутый анализ</div>
+                    <p>GS предполагает, что Levi Strauss способна устойчиво генерировать органический рост в среднем однозначном диапазоне, подкреплённый расширением DTC-канала и ценовой властью бренда. Q1 FY26 adjusted EPS $0.42 превысил консенсус $0.37 на $0.05, выручка $1,742.5M выросла на 14.1% YoY (9.1% ex-FX) — значительно выше ожиданий GS в 8.0%. Americas wholesale показал особую силу, US organic рост составил +4%. Менеджмент повысил органический гайденс до 4.5-5.5% YoY на FY26. Это подтверждает ценовую устойчивость и потребительскую резильентность даже в условиях тарифного давления.</p>
+                    <p>Маржинальная динамика подтверждает операционный рычаг бизнеса. Валовая маржа составила 61.9% (in line с GS, выше консенсуса), adjusted EBIT маржа расширилась до 12.5% vs ожиданий 12.0%, а SG&A под контролем — 49.4% от выручки vs консенсус 49.6%. GS прогнозирует рост EBITDA на 10.9% в FY26 (с $925.3M до $1,026.6M), а FCF yield расширяется с 4.1% до 8.7% в FY26 и 9.8% в FY27. Net debt/EBITDA снижается с 0.3x до отрицательного (-0.2x). Следовательно, компания выходит на траекторию значительного возврата капитала при сохранении инвестиций в рост.</p>
+                    <p>Несмотря на сильное исполнение, LEVI сталкивается с циклическими макро-рисками. GS ожидает, что Q2 окажется слабее из-за timing-эффектов в wholesale и уменьшения FX-попутных ветров, с гайдансом 4-5% reported growth (3-4% organic) и EBIT margin 8-9%. Волатильность ex-FX органического роста исторически создаёт трудности для прогнозирования, а тарифные surcharges уже заложены в гайденс. GS модерирует целевой мультипликатор с 8.5x до 8.25x EV/EBITDA, отражая повышенную макро-неопределённость и недавнее сжатие рыночных мультипликаторов.</p>
+                    <p>При текущей цене $19.71 и FY26E EPS $1.50, LEVI торгуется на 13.2x P/E и 7.5x EV/EBITDA — разумная оценка при 11.1% росте EPS и ROE/CROCI в диапазоне 24.7%/30.3%. GS оставляет рейтинг Neutral, поскольку, несмотря на 21.8% upside к целевой цене, устойчивость роста в Americas и Европе на фоне tough comps и wholesale distribution timing остаётся под вопросом. Ключевые upside-катализаторы: ускорение бренда в North America, margin expansion и масштабирование DTC. Downside-риски: снижение momentum бренда и давление wholesale.</p>
                 </div>
 
                 <div class="report-ideas">
-                    <div class="report-ideas-title">Ideas</div>
-                    <div class="report-ideas-item">LEVI: NEUTRAL $24 (+21.8%)</div>
+                    <div class="report-ideas-title">🎯 Top Picks</div>
+                    <div class="report-ideas-item">LEVI: Neutral — целевая $24, потенциал +21.8%</div>
                 </div>
             </div>
 
@@ -706,37 +626,22 @@
                     <div class="report-card-meta">Goldman Sachs, PDF, 8 апреля 2026</div>
                 </div>
 
-                <div class="report-block">
-                    <div class="report-block-title">Основная идея</div>
-                    <div class="report-block-content">
-                        NTNX: BUY, целевая $60 (текущая $39.50, апсайд 51.9%). Ключевой бенефициар миграции с VMware post-Broadcom. Гибридная облачная платформа с TCO экономией 40%+.
-                    </div>
+                <div class="report-summary-block">
+                    Goldman Sachs подтверждает рейтинг BUY по Nutanix с целевой ценой $60, что предполагает 51.9% апсайд от текущих $39.50. Ключевой тезис: Nutanix является главным бенефициаром миграции клиентов с VMware после приобретения Broadcom — агрессивное изменение ценовой политики VMware вынуждает корпоративных клиентов переоценивать альтернативы, а Nutanix с ~50% долей рынка HCI и платформой гибридного облака с экономией TCO 40%+ занимает идеальную позицию для захвата этого потока.
                 </div>
 
-                <div class="report-block bull-case">
-                    <div class="report-block-title">Bull case</div>
-                    <div class="report-block-content">
-                        TAM $137B (FY29). VMware displacement opportunity $300-600M ARR за 4 года (+3-6% CAGR). Revenue CAGR ~12% (FY25-28): $2.53B → $2.85B → $3.22B → $3.59B. EPS: $1.77 → $1.86 → $2.21 → $2.56. FCFM: 29.2% → 29.3%. Agentic AI integration с NVIDIA. NKP Metal для Kubernetes на bare metal. Portfolio attach растёт с 21% до 34%.
-                    </div>
-                </div>
-
-                <div class="report-block bear-case">
-                    <div class="report-block-title">Bear case</div>
-                    <div class="report-block-content">
-                        Supply chain: server lead times 6→9 months. VMware displacement early stages (only 35% by 2028). Competitive pressure from AWS, Azure. Macro risk on IT budgets.
-                    </div>
-                </div>
-
-                <div class="report-block scenario-block">
-                    <div class="report-block-title">Прогнозы</div>
-                    <div class="report-block-content">
-                        EBITDA margin 24.1% → 25.5%. Valuation: 85% EV/uFCF ($57) + 15% M&A ($72) = $60. P/E FY28E 15.4x. Rule of 40: CAGR 11.7% + FCFM 29.3% = 41%.
-                    </div>
+                <div class="report-analysis">
+                    <div class="report-analysis-title">Развёрнутый анализ</div>
+                    <p>GS предполагает, что миграция с VMware создаёт многолетний структурный попутный ветер для Nutanix. Агрессивные ценовые изменения Broadcom после приобретения VMware вынуждают клиентов переоценивать свои vSphere-развёртывания, а Nutanix с ~50% долей рынка HCI и глубокими enterprise-связями находится в уникальной позиции для захвата миграционного потока. GS оценивает TAM в $137B к CY29, из которых private cloud составляет ~$30B, но партнёрства с Dell, Everpure и NetApp по внешнему хранилищу расширяют адресуемый рынок до ~$40B к FY29. Расчётная возможность VMware displacement: $300-600M ARR за 4 года (+3-6% CAGR к FY29). Это означает, что одна только VMware-миграция может добавить 12-24% к текущему ARR компании.</p>
+                    <p>Финансовая траектория Nutanix демонстрирует устойчивый рост при расширяющейся маржинальности. GS прогнозирует Revenue CAGR ~12% (FY25-28): $2.53B → $2.85B → $3.22B → $3.59B, с менеджментом, таргетирующим mid-to-high teens рост ARR. FCFM расширился с 1% в FY22 до 28% в FY24, демонстрируя сильную unit-экономику. EPS прогнозируется на $1.77 (FY25) → $1.86 (FY26) → $2.21 (FY27) → $2.56 (FY28). Rule of 40 выполняется: CAGR 11.7% + FCFM 29.3% = 41%. При таком профиле компания заслуживает premium-оценки среди инфраструктурных software peers.</p>
+                    <p>Продуктовая экспансия выходит за рамки классического HCI в ИИ и Kubernetes. Agentic AI меняет приоритеты enterprise-нагрузок в сторону inference и agent-driven deployment на гибридных средах, а NKP Metal позволяет запускать Kubernetes напрямую на bare metal — захватывая долю performance-sensitive AI use cases. Менеджмент прогнозирует рост portfolio attach с 21% landing ACV (FY25) до 34% к FY29, поддерживаемый portfolio-специалистами и интеграцией приобретений (D2iQ, NUS, NDB). Следовательно, экспансия за пределы HCI в Agentic AI и bare-metal Kubernetes создаёт множественные точки прикрепления и повышает потенциал expansion revenue в установленной базе.</p>
+                    <p>Ключевые риски связаны с supply chain и конкуренцией. Расширенные сроки поставки серверов (с 6 до 9 месяцев) создают friction в сделках, хотя это также стимулирует более ранние multi-year контракты, поддерживая видимость renewals. VMware displacement находится на ранних стадиях — к 2028 году мигрирует лишь ~35% потенциальных клиентов. Конкуренция от AWS, Azure и Hyper-V в гибридном мульти-облаке может ограничить pricing power. Макро-риски (тарифы, геополитика) могут удлинить циклы сделок и снизить conversion pipeline.</p>
+                    <p>GS использует blended-валюацию: 85% вес на EV/uFCF ($57 фундаментальная стоимость) + 15% на M&A-мультипликаторы ($72 теоретическая стоимость) = целевая $60. Forward P/E FY27E 17.9x и FY28E 16.1x — разумно для mid-to-high teens роста с расширяющейся маржой. При ~10x EV/FCF (FY27) оценка подразумевает устойчивый Rule of 40+ профиль, сопоставимый с инфраструктурными peers. При 51.9% апсайде и VMware displacement как многолетнем драйвере, risk/reward сдвинут в пользу быков.</p>
                 </div>
 
                 <div class="report-ideas">
-                    <div class="report-ideas-title">Ideas</div>
-                    <div class="report-ideas-item">NTNX: BUY $60 (+51.9%)</div>
+                    <div class="report-ideas-title">🎯 Top Picks</div>
+                    <div class="report-ideas-item">NTNX: BUY — целевая $60, апсайд +51.9%</div>
                 </div>
             </div>
         </div>
