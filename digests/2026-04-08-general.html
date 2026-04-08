@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дайджест фондового рынка — 8 апреля 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background-color: #F0F2F8;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2828E0 0%, #4040FF 50%, #2828E0 100%);
+            color: white;
+            padding: 24px 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-logo {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .header-title h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .header-title p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2828E0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #4040FF;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #2020CC;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #ECEEFF;
+            padding-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: #2020CC;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .market-overview {
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        table th {
+            background-color: #ECEEFF;
+            border: 1px solid #E0E0E8;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #2020CC;
+            font-size: 14px;
+        }
+
+        table td {
+            border: 1px solid #E0E0E8;
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #FAFBFF;
+        }
+
+        .positive {
+            color: #1B7A3D;
+            font-weight: 600;
+        }
+
+        .negative {
+            color: #C0392B;
+            font-weight: 600;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #ECEEFF;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-title {
+            font-weight: 600;
+            color: #2020CC;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .news-date {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .news-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        .news-links {
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .news-links a {
+            color: #2828E0;
+            text-decoration: none;
+            margin-right: 12px;
+        }
+
+        .news-links a:hover {
+            text-decoration: underline;
+        }
+
+        .sector-section {
+            margin-bottom: 20px;
+        }
+
+        .sector-header {
+            font-weight: 600;
+            font-size: 15px;
+            color: #2020CC;
+            margin-bottom: 8px;
+        }
+
+        .sector-content {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #1a1a2e;
+        }
+
+        .emoji {
+            margin-right: 8px;
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #3333FF;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+
+        .report-card-header {
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ECEEFF;
+        }
+
+        .report-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2020CC;
+            margin-bottom: 4px;
+        }
+
+        .report-card-meta {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .report-block {
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: #FAFBFF;
+            border-radius: 8px;
+        }
+
+        .report-block-title {
+            font-weight: 700;
+            font-size: 15px;
+            color: #2020CC;
+            margin-bottom: 8px;
+        }
+
+        .report-block-content {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #1a1a2e;
+        }
+
+        .report-block.bull-case {
+            background: #F0FFF4;
+            border-left: 3px solid #1B7A3D;
+            border-radius: 6px;
+        }
+
+        .report-block.bear-case {
+            background: #FFF5F5;
+            border-left: 3px solid #C0392B;
+            border-radius: 6px;
+        }
+
+        .report-block.scenario-block {
+            background: #FFFFF0;
+            border-left: 3px solid #D4A017;
+            border-radius: 6px;
+        }
+
+        .report-ideas {
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: #F0F2FF;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .report-ideas-title {
+            font-weight: 700;
+            color: #2020CC;
+            margin-bottom: 8px;
+        }
+
+        .report-ideas-item {
+            margin-bottom: 6px;
+            color: #1a1a2e;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px 16px;
+            color: #666;
+            font-size: 13px;
+            background: #FAFBFF;
+            border-top: 1px solid #ECEEFF;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-logo">📈</div>
+            <div class="header-title">
+                <h1>Дайджест фондового рынка — 8 апреля 2026</h1>
+                <p>Общий обзор рынка · 8 апреля 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Все дайджесты</a>
+
+        <!-- SECTION 1: Обзор рынка -->
+        <div class="card">
+            <h2 class="section-title">Обзор рынка</h2>
+
+            <div class="market-overview">
+                <p>US-Iran 2-week ceasefire agreed late Tuesday. Oil crashed biggest since 2020. Markets opened sharply higher on the news but gave back most gains during the session as CPI fears (Friday, est. 3.4% vs prev 2.4%) weighed on sentiment. The ceasefire requires Iran to allow safe passage through Strait of Hormuz for 2 weeks while both sides cease attacks. 800+ vessels trapped in Persian Gulf may now exit.</p>
+            </div>
+
+            <div class="section-subtitle">Индексы</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Индекс</th>
+                        <th>Значение</th>
+                        <th>Изменение</th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S&P 500</td>
+                        <td>6,616.85</td>
+                        <td><span class="positive">+5.02</span></td>
+                        <td><span class="positive">+0.08%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dow Jones</td>
+                        <td>46,584.46</td>
+                        <td><span class="negative">−85.42</span></td>
+                        <td><span class="negative">−0.18%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Nasdaq</td>
+                        <td>22,017.85</td>
+                        <td><span class="positive">+21.51</span></td>
+                        <td><span class="positive">+0.10%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 2: Макроэкономика -->
+        <div class="card">
+            <h2 class="section-title">Макроэкономика</h2>
+
+            <div class="news-item">
+                <div class="news-title">Перемирие США-Иран: Ормузский пролив открывается на 2 недели (8 апреля)</div>
+                <div class="news-date">8 апреля 2026</div>
+                <div class="news-text">Trump agreed to suspend bombing of Iran. Iran's Foreign Minister confirmed safe passage through Hormuz for 2 weeks. 10-point proposal from Iran accepted as basis for negotiation. 800+ vessels trapped in Persian Gulf may now exit.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/07/trump-iran-ceasefire-hormuz-strait.html" target="_blank">CNBC, 7 апреля</a>
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-08/shipowners-eye-hormuz-ceasefire-window-for-800-trapped-vessels" target="_blank">Bloomberg, 8 апреля</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Нефть рухнула ниже $100 — крупнейший обвал с 2020 года (8 апреля)</div>
+                <div class="news-date">8 апреля 2026</div>
+                <div class="news-text">WTI -18% to ~$94/barrel, Brent -15% to ~$92/barrel. Biggest single-day drop since 2020. In early European trading Brent slid 15%, WTI 18%, European natural gas benchmark -17%.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/07/oil-prices-iran-war-trump-deadline-strait-hormuz.html" target="_blank">CNBC, 7 апреля</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Доходность казначейских облигаций упала на 10 б.п. (8 апреля)</div>
+                <div class="news-date">8 апреля 2026</div>
+                <div class="news-text">US Treasury yields plunged 10bps on ceasefire sentiment. UK gilts rallied with 10Y yields falling 21bps. Traders reduced rate hike bets — swaps now imply ~35bps tightening by year-end vs 60bps before.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/08/us-treasury-yields-plunge-amid-iran-ceasefire.html" target="_blank">CNBC, 8 апреля</a>
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-08/gilts-surge-on-lower-oil-and-gas-prices-after-us-iran-ceasefire" target="_blank">Bloomberg, 8 апреля</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">ЦБ Индии сохранил ставку на фоне инфляционных рисков войны (8 апреля)</div>
+                <div class="news-date">8 апреля 2026</div>
+                <div class="news-text">India's RBI held key policy rate at 5.25% as expected. Iran war raises inflation risks across emerging markets.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/08/rbi-rate-iran-war-inflation.html" target="_blank">CNBC, 8 апреля</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Шорты по Nasdaq 100 достигли 91% — инфляционные страхи (8 апреля)</div>
+                <div class="news-date">8 апреля 2026</div>
+                <div class="news-text">Algorithm-driven futures celebrate ceasefire but physical market warnings suggest inflation squeeze on small-cap margins far from over. Nasdaq 100 shorts at 91%.</div>
+                <div class="news-links">
+                    <a href="https://www.benzinga.com/markets/futures/26/04/51696587/exclusive-nasdaq-100-shorts-hit-91-as-inflation-fears-force-a-pause-on-the-small-cap-rotation" target="_blank">Benzinga, 8 апреля</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Секторальные новости -->
+        <div class="card">
+            <h2 class="section-title">Секторальные новости</h2>
+
+            <!-- Software -->
+            <div class="sector-section">
+                <div class="sector-header"><span class="emoji">🖥️</span>Software</div>
+                <div class="sector-content">
+                    <div class="news-item" style="border-bottom: 1px solid #ECEEFF; padding-bottom: 12px;">
+                        <strong>«SaaSpocalypse» продолжается: NOW −28% YTD, CRM −26%, INTU −34% (8 апреля)</strong>
+                        <p style="margin-top: 8px;">SaaS stocks remain under pressure from AI disruption fears. Anthropic's Claude Cowork productivity tool has intensified concerns. HubSpot -39% YTD, Figma -40%, Atlassian -35%.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.bloomberg.com/news/articles/2026-02-04/what-s-behind-the-saaspocalypse-plunge-in-software-stocks" target="_blank">Bloomberg, 4 февраля</a>
+                            <a href="https://www.cnbc.com/2026/02/04/software-stocks-plunge-us-ai-disruption.html" target="_blank">CNBC, 4 февраля</a>
+                        </div>
+                    </div>
+                    <div class="news-item" style="border-bottom: none;">
+                        <strong>CEO Mistral: 50%+ enterprise software может быть заменено AI (8 апреля)</strong>
+                        <p style="margin-top: 8px;">More than half of enterprise software could switch to AI. JPMorgan and UBS highlighted Okta and Zscaler as names that will likely withstand AI threats.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.cnbc.com/2026/02/18/ai-mistral-software-switch-ceo-india-ai-impact-summit.html" target="_blank">CNBC, 18 февраля</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semiconductors -->
+            <div class="sector-section">
+                <div class="sector-header"><span class="emoji">🔬</span>Semiconductors</div>
+                <div class="sector-content">
+                    <div class="news-item" style="border-bottom: 1px solid #ECEEFF; padding-bottom: 12px;">
+                        <strong>ASML −2.6% на фоне MATCH Act: новые экспортные ограничения для Китая (7 апреля)</strong>
+                        <p style="margin-top: 8px;">Bipartisan lawmakers introduced MATCH Act targeting China's semiconductor firms. Would restrict ASML's DUV lithography machines to Chinese buyers.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.cnbc.com/2026/04/07/asml-shares-today-us-chip-export-curbs-china.html" target="_blank">CNBC, 7 апреля</a>
+                        </div>
+                    </div>
+                    <div class="news-item" style="border-bottom: 1px solid #ECEEFF; padding-bottom: 12px;">
+                        <strong>Китайские чипмейкеры: рекордная выручка на волне AI и санкций (3 апреля)</strong>
+                        <p style="margin-top: 8px;">Chinese chip firms hit record high revenue driven by AI boom and US curbs pushing Beijing to bolster homegrown tech.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.cnbc.com/2026/04/03/chinese-chip-firms-record-revenue-ai-boom-us-curbs.html" target="_blank">CNBC, 3 апреля</a>
+                        </div>
+                    </div>
+                    <div class="news-item" style="border-bottom: none;">
+                        <strong>Цены на память вырастут ещё на 40% во 2 квартале</strong>
+                        <p style="margin-top: 8px;">Counterpoint Research forecast.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.cnbc.com/2026/01/06/semiconductor-stocks-rally-led-by-asml-tsmc-samsung.html" target="_blank">CNBC, 6 января</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Materials -->
+            <div class="sector-section">
+                <div class="sector-header"><span class="emoji">⛏️</span>Materials</div>
+                <div class="sector-content">
+                    <div class="news-item" style="border-bottom: 1px solid #ECEEFF; padding-bottom: 12px;">
+                        <strong>Золото и медь под давлением: рост нефти убивает спрос на металлы (март)</strong>
+                        <p style="margin-top: 8px;">Gold fell nearly 6% in March, silver -8%, copper -2%, palladium -5.5%. Surging oil prices caused inflation fears, stronger dollar weighed on bullion.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.cnbc.com/2026/03/19/copper-joins-gold-in-broad-commodities-sell-off-theres-a-worrying-reason-behind-it.html" target="_blank">CNBC, 19 марта</a>
+                        </div>
+                    </div>
+                    <div class="news-item" style="border-bottom: none;">
+                        <strong>Перемирие может развернуть тренд: падение нефти снижает инфляционные ожидания (8 апреля)</strong>
+                        <p style="margin-top: 8px;">With oil crashing 15-18%, pressure on non-yielding assets like gold may ease. Copper hit ATH of $12,558 in late 2025.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.bloomberg.com/news/articles/2026-01-14/records-tumble-as-silver-and-tin-lead-blistering-metals-rally" target="_blank">Bloomberg, 14 января</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Energy -->
+            <div class="sector-section">
+                <div class="sector-header"><span class="emoji">⚡</span>Energy</div>
+                <div class="sector-content">
+                    <div class="news-item" style="border-bottom: 1px solid #ECEEFF; padding-bottom: 12px;">
+                        <strong>WTI −18%, Brent −15%: крупнейший обвал нефти с 2020 года (8 апреля)</strong>
+                        <p style="margin-top: 8px;">WTI to ~$94, Brent to ~$92. Hormuz reopening triggered massive sell-off. European natural gas -17%.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.cnbc.com/2026/04/07/oil-prices-iran-war-trump-deadline-strait-hormuz.html" target="_blank">CNBC, 7 апреля</a>
+                        </div>
+                    </div>
+                    <div class="news-item" style="border-bottom: none;">
+                        <strong>Гилты Великобритании взлетели: 10Y yield −21 б.п. на обвале энергоносителей (8 апреля)</strong>
+                        <p style="margin-top: 8px;">UK gilts jumped, traders cut rate hike bets from 60bps to 35bps by year-end.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.bloomberg.com/news/articles/2026-04-08/gilts-surge-on-lower-oil-and-gas-prices-after-us-iran-ceasefire" target="_blank">Bloomberg, 8 апреля</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finance -->
+            <div class="sector-section">
+                <div class="sector-header"><span class="emoji">🏦</span>Finance</div>
+                <div class="sector-content">
+                    <div class="news-item" style="border-bottom: 1px solid #ECEEFF; padding-bottom: 12px;">
+                        <strong>Финансовый сектор −9.8% в Q1: WFC −17%, GS −13% от рекордов (апрель)</strong>
+                        <p style="margin-top: 8px;">S&P 500 financials underperformed, dragged by Iran war uncertainty. Banks face earnings season starting April 14 (JPM, WFC, C).</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://www.cnbc.com/2026/04/01/here-are-3-ways-to-ignite-a-2026-rally-in-beaten-down-bank-stocks.html" target="_blank">CNBC, 1 апреля</a>
+                        </div>
+                    </div>
+                    <div class="news-item" style="border-bottom: 1px solid #ECEEFF; padding-bottom: 12px;">
+                        <strong>SpaceX IPO: 21 банк работает над сделкой, оценка $1.75 трлн, ожидается в июне (апрель)</strong>
+                        <p style="margin-top: 8px;">Goldman Sachs and Wells Fargo among banks. Potentially record-breaking deal.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://finance.yahoo.com/news/2026-stock-market-predictions-wall-181506005.html" target="_blank">Yahoo Finance</a>
+                        </div>
+                    </div>
+                    <div class="news-item" style="border-bottom: none;">
+                        <strong>Delta Air Lines (DAL) отчитывается сегодня: EPS est. $0.64 (+39% г/г), выручка $14.82B (+5.6%) (8 апреля)</strong>
+                        <p style="margin-top: 8px;">Delta raised Q1 revenue forecast to high-single-digit growth. Has beaten estimates in each of last 4 quarters by avg 7.9%.</p>
+                        <div class="news-links" style="margin-top: 8px;">
+                            <a href="https://finance.yahoo.com/markets/stocks/articles/delta-air-lines-report-q1-163000250.html" target="_blank">Yahoo Finance</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: Обзоры отчётов -->
+        <div class="card">
+            <h2 class="section-title">Обзоры отчётов</h2>
+
+            <!-- Report 1: Broadcom -->
+            <div class="report-card">
+                <div class="report-card-header">
+                    <div class="report-card-title">GS — Broadcom (AVGO) Google/Anthropic Partnership</div>
+                    <div class="report-card-meta">Goldman Sachs, PDF, 7 апреля 2026</div>
+                </div>
+
+                <div class="report-block">
+                    <div class="report-block-title">Основная идея</div>
+                    <div class="report-block-content">
+                        AVGO: BUY, целевая $480 (текущая $314.43, апсайд 52.7%). Broadcom заключил долгосрочные соглашения о разработке TPU-чипов для Google и сетевых компонентов через 2031 год. Anthropic получит 3.5+ ГВт на TPU с 2027. Google и Anthropic обеспечат ~70% доходов AI XPU Broadcom в 2027/28.
+                    </div>
+                </div>
+
+                <div class="report-block bull-case">
+                    <div class="report-block-title">Bull case</div>
+                    <div class="report-block-content">
+                        Revenue CAGR ~45-50% (2025-2028): $63.9B → $107.2B → $180.7B → $224.0B. EPS: $5.39 → $10.37 → $19.18 → $24.39. EBIT margin расширяется с 53.9% до 63.5%. FCF: $26.9B → $52.4B → $100.1B → $124.4B. CROCI: 19.8% → 65.5%.
+                    </div>
+                </div>
+
+                <div class="report-block bear-case">
+                    <div class="report-block-title">Bear case</div>
+                    <div class="report-block-content">
+                        Концентрация клиентов (Google + Anthropic = 70% AI XPU). Валовая маржа снижается с 77.3% до 71.4%. Долг $62B. Риск замедления AI capex.
+                    </div>
+                </div>
+
+                <div class="report-block scenario-block">
+                    <div class="report-block-title">Прогнозы</div>
+                    <div class="report-block-content">
+                        Revenue $107.2B (2026E), $180.7B (2027E). EPS $10.37/$19.18/$24.39. P/E сжимается с 45.7x до 12.9x.
+                    </div>
+                </div>
+
+                <div class="report-ideas">
+                    <div class="report-ideas-title">Ideas</div>
+                    <div class="report-ideas-item">AVGO: BUY ($480, +52.7%)</div>
+                </div>
+            </div>
+
+            <!-- Report 2: Entertainment -->
+            <div class="report-card">
+                <div class="report-card-header">
+                    <div class="report-card-title">GS — Americas Entertainment</div>
+                    <div class="report-card-meta">Goldman Sachs, PDF, 8 апреля 2026</div>
+                </div>
+
+                <div class="report-block">
+                    <div class="report-block-title">Основная идея</div>
+                    <div class="report-block-content">
+                        Обзор сектора entertainment: LYV Buy $190 (+50%), SPHR Buy $140 (+315%), MSGE Buy $67 (+118%).
+                    </div>
+                </div>
+
+                <div class="report-block bull-case">
+                    <div class="report-block-title">Bull LYV</div>
+                    <div class="report-block-content">
+                        Revenue 1Q26 $3.62B (+7% YoY), посещаемость +20.4% в 2026, 67M билетов уже продано. Venue Nation расширение: 30% мощности открыто в 2026. Sponsorship pipeline DD% рост.
+                    </div>
+                </div>
+
+                <div class="report-block bull-case">
+                    <div class="report-block-title">Bull SPHR</div>
+                    <div class="report-block-content">
+                        Revenue +56% YoY в 1Q26. Wizard of Oz 2.0 в 4Q26. Franchise Япония/Nashville. Core Sphere 15x 2027E AOI = $116/share + $24 franchise DCF.
+                    </div>
+                </div>
+
+                <div class="report-block bull-case">
+                    <div class="report-block-title">Bull MSGE</div>
+                    <div class="report-block-content">
+                        Christmas Spectacular 228 шоу (+6% YoY), 25-летний рекорд. Penn Station redevelopment потенциал ~$500M (20% market cap).
+                    </div>
+                </div>
+
+                <div class="report-block bear-case">
+                    <div class="report-block-title">Bear case</div>
+                    <div class="report-block-content">
+                        Legal/FTC штрафы $6-7M/квартал (LYV). Макро risk on consumer spending. Abu Dhabi отложен до 2030 (SPHR).
+                    </div>
+                </div>
+
+                <div class="report-ideas">
+                    <div class="report-ideas-title">Ideas</div>
+                    <div class="report-ideas-item">LYV Buy $190 (+50%)</div>
+                    <div class="report-ideas-item">SPHR Buy $140 (+315%)</div>
+                    <div class="report-ideas-item">MSGE Buy $67 (+118%)</div>
+                </div>
+            </div>
+
+            <!-- Report 3: Biotechnology -->
+            <div class="report-card">
+                <div class="report-card-header">
+                    <div class="report-card-title">GS — Biotechnology Review</div>
+                    <div class="report-card-meta">Goldman Sachs, PDF, 8 апреля 2026</div>
+                </div>
+
+                <div class="report-block">
+                    <div class="report-block-title">Основная идея</div>
+                    <div class="report-block-content">
+                        Обзор 19 компаний biotech (все BUY). Сектор вошёл в FY26 на лучших квартальных результатах за 5 лет (+22% в 4Q25). M&A рост 32% ($148B run-rate vs $112B). XBI +7.5% от 31 марта.
+                    </div>
+                </div>
+
+                <div class="report-block bull-case">
+                    <div class="report-block-title">Bull case</div>
+                    <div class="report-block-content">
+                        77% outperformance rate каталистов в 1Q26. M&A объем $148B run-rate, средний размер $2.2B. Ставки ожидаются к 3-3.25% (2 снижения). IPO активность: Evommune +39%, LB Pharma +59%.
+                    </div>
+                </div>
+
+                <div class="report-block bear-case">
+                    <div class="report-block-title">Bear case</div>
+                    <div class="report-block-content">
+                        Процентная неопределенность, разрыв XBI-10Y yield. IPO когорта смешанная (-29% до +101%). Valuation compression: 7x FY2 sales vs 11x исторически.
+                    </div>
+                </div>
+
+                <div class="report-ideas">
+                    <div class="report-ideas-title">Top picks</div>
+                    <div class="report-ideas-item">CGON $100 (+43%)</div>
+                    <div class="report-ideas-item">CYTK $113 (+54%)</div>
+                    <div class="report-ideas-item">IMGN $99 (+125%)</div>
+                    <div class="report-ideas-item">VERA $127 (+138%)</div>
+                    <div class="report-ideas-item">ARCB $1,405 (+20%)</div>
+                </div>
+            </div>
+
+            <!-- Report 4: Johnson & Johnson -->
+            <div class="report-card">
+                <div class="report-card-header">
+                    <div class="report-card-title">GS — Johnson & Johnson (JNJ) Q1 Preview</div>
+                    <div class="report-card-meta">Goldman Sachs, PDF, 7 апреля 2026</div>
+                </div>
+
+                <div class="report-block">
+                    <div class="report-block-title">Основная идея</div>
+                    <div class="report-block-content">
+                        JNJ: BUY (Conviction List), целевая $265 (текущая $240.97, апсайд 10%). Множественные новые циклы продуктов: Icotyde (псориаз, одобрен март), Capyta (биполярное расстройство, TRx +57% YoY), Tremfya (+62% YoY).
+                    </div>
+                </div>
+
+                <div class="report-block bull-case">
+                    <div class="report-block-title">Bull case</div>
+                    <div class="report-block-content">
+                        Revenue 1Q26 $24.0B (vs consensus $23.6B, +1.8%). IM segment $15.34B (+1.9% vs consensus). Darzalex $3.99B (+4.5%), Tremfya $1.47B (+5.2%), Capyta $305M (+8.9%). MedTech +7.7% YoY. FCF $21B. Strongest balance sheet in pharma.
+                    </div>
+                </div>
+
+                <div class="report-block bear-case">
+                    <div class="report-block-title">Bear case</div>
+                    <div class="report-block-content">
+                        Talc litigation reserve $11B (NPV ~$3.4B). MedTech EP/PFA: JNJ #3-4 on safety issues. Macro/tariff/FX risks. ACA policy risk.
+                    </div>
+                </div>
+
+                <div class="report-block scenario-block">
+                    <div class="report-block-title">Прогнозы</div>
+                    <div class="report-block-content">
+                        Revenue $100.8B (2026E, +7%), $109.1B (2027E, +8.3%). EPS $11.57 (2026E), $13.24 (2027E). P/E 20.8x → 18.2x. Div yield 2.1%.
+                    </div>
+                </div>
+
+                <div class="report-ideas">
+                    <div class="report-ideas-title">Ideas</div>
+                    <div class="report-ideas-item">JNJ: BUY (CL) $265 (+10%)</div>
+                </div>
+            </div>
+
+            <!-- Report 5: Levi Strauss -->
+            <div class="report-card">
+                <div class="report-card-header">
+                    <div class="report-card-title">GS — Levi Strauss (LEVI)</div>
+                    <div class="report-card-meta">Goldman Sachs, PDF, 7 апреля 2026</div>
+                </div>
+
+                <div class="report-block">
+                    <div class="report-block-title">Основная идея</div>
+                    <div class="report-block-content">
+                        LEVI: NEUTRAL, целевая $24 (текущая $19.71, потенциал 21.8%). Устойчивый рост при здоровых маржах, но макро неопределённость и волатильность органического роста удерживают от повышения рейтинга.
+                    </div>
+                </div>
+
+                <div class="report-block bull-case">
+                    <div class="report-block-title">Bull case</div>
+                    <div class="report-block-content">
+                        Q1FY26 revenue $1.74B (+14.1% YoY, +9.1% ex-FX). EPS FY26E $1.50 (+11.1%), FY27E $1.64, FY28E $1.85. Валовая маржа расширяется до 62.6%. FCF yield: 4.1% → 11.3%. Net debt/EBITDA: 0.3x → (0.2x). DTC канал растёт. US organic +4% в Q1.
+                    </div>
+                </div>
+
+                <div class="report-block bear-case">
+                    <div class="report-block-title">Bear case</div>
+                    <div class="report-block-content">
+                        Elevated macro uncertainty. Volatility in ex-FX organic growth. Q2 ожидается слабее (wholesale timing). FX tailwinds diminish. Target multiple cut from 8.5x to 8.25x EV/EBITDA.
+                    </div>
+                </div>
+
+                <div class="report-ideas">
+                    <div class="report-ideas-title">Ideas</div>
+                    <div class="report-ideas-item">LEVI: NEUTRAL $24 (+21.8%)</div>
+                </div>
+            </div>
+
+            <!-- Report 6: Nutanix -->
+            <div class="report-card">
+                <div class="report-card-header">
+                    <div class="report-card-title">GS — Nutanix (NTNX) Investor Day</div>
+                    <div class="report-card-meta">Goldman Sachs, PDF, 8 апреля 2026</div>
+                </div>
+
+                <div class="report-block">
+                    <div class="report-block-title">Основная идея</div>
+                    <div class="report-block-content">
+                        NTNX: BUY, целевая $60 (текущая $39.50, апсайд 51.9%). Ключевой бенефициар миграции с VMware post-Broadcom. Гибридная облачная платформа с TCO экономией 40%+.
+                    </div>
+                </div>
+
+                <div class="report-block bull-case">
+                    <div class="report-block-title">Bull case</div>
+                    <div class="report-block-content">
+                        TAM $137B (FY29). VMware displacement opportunity $300-600M ARR за 4 года (+3-6% CAGR). Revenue CAGR ~12% (FY25-28): $2.53B → $2.85B → $3.22B → $3.59B. EPS: $1.77 → $1.86 → $2.21 → $2.56. FCFM: 29.2% → 29.3%. Agentic AI integration с NVIDIA. NKP Metal для Kubernetes на bare metal. Portfolio attach растёт с 21% до 34%.
+                    </div>
+                </div>
+
+                <div class="report-block bear-case">
+                    <div class="report-block-title">Bear case</div>
+                    <div class="report-block-content">
+                        Supply chain: server lead times 6→9 months. VMware displacement early stages (only 35% by 2028). Competitive pressure from AWS, Azure. Macro risk on IT budgets.
+                    </div>
+                </div>
+
+                <div class="report-block scenario-block">
+                    <div class="report-block-title">Прогнозы</div>
+                    <div class="report-block-content">
+                        EBITDA margin 24.1% → 25.5%. Valuation: 85% EV/uFCF ($57) + 15% M&A ($72) = $60. P/E FY28E 15.4x. Rule of 40: CAGR 11.7% + FCFM 29.3% = 41%.
+                    </div>
+                </div>
+
+                <div class="report-ideas">
+                    <div class="report-ideas-title">Ideas</div>
+                    <div class="report-ideas-item">NTNX: BUY $60 (+51.9%)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: Что впереди -->
+        <div class="card">
+            <h2 class="section-title">Что впереди</h2>
+
+            <div class="section-subtitle">Economic Calendar (US only)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Событие</th>
+                        <th>Оценка</th>
+                        <th>Пред. значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9 апреля</td>
+                        <td>GDP Growth Rate QoQ (Q4)</td>
+                        <td>0.7%</td>
+                        <td>4.4%</td>
+                    </tr>
+                    <tr>
+                        <td>9 апреля</td>
+                        <td>Initial Jobless Claims (4 апреля)</td>
+                        <td>210K</td>
+                        <td>202K</td>
+                    </tr>
+                    <tr>
+                        <td>10 апреля</td>
+                        <td>CPI YoY (март)</td>
+                        <td>3.4%</td>
+                        <td>2.4%</td>
+                    </tr>
+                    <tr>
+                        <td>10 апреля</td>
+                        <td>CPI MoM (март)</td>
+                        <td>1.0%</td>
+                        <td>0.3%</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td>Core PPI YoY (март)</td>
+                        <td>3.7%</td>
+                        <td>3.9%</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td>NFIB Business Optimism (март)</td>
+                        <td>97.0</td>
+                        <td>98.8</td>
+                    </tr>
+                    <tr>
+                        <td>15 апреля</td>
+                        <td>Fed Beige Book</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="section-subtitle">Earnings Calendar (cap > $5B)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Компания</th>
+                        <th>EPS ожид.</th>
+                        <th>Выручка ожид.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8 апреля</td>
+                        <td>DAL (Delta Air Lines)</td>
+                        <td>$0.64</td>
+                        <td>$14.82B</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td>JPM (JPMorgan Chase)</td>
+                        <td>$5.38</td>
+                        <td>$48.8B</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td>WFC (Wells Fargo)</td>
+                        <td>$1.57</td>
+                        <td>$21.8B</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td>C (Citigroup)</td>
+                        <td>$2.63</td>
+                        <td>$23.3B</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        Создано с помощью Claude AI · Данные: FMP, Finnhub, Massive Market Data
+    </div>
+</body>
+</html>
