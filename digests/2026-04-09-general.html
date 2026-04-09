@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обзор рынка — 9 апреля 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background-color: #F0F2F8;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2828E0 0%, #4040FF 50%, #2828E0 100%);
+            color: white;
+            padding: 24px 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-logo {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .header-title h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .header-title p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2828E0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #4040FF;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #2020CC;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #ECEEFF;
+            padding-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: #2020CC;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .market-overview {
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        table th {
+            background-color: #ECEEFF;
+            border: 1px solid #E0E0E8;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #2020CC;
+            font-size: 14px;
+        }
+
+        table td {
+            border: 1px solid #E0E0E8;
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #FAFBFF;
+        }
+
+        .positive {
+            color: #1B7A3D;
+            font-weight: 600;
+        }
+
+        .negative {
+            color: #C0392B;
+            font-weight: 600;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #ECEEFF;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-title {
+            font-weight: 600;
+            color: #2020CC;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .news-date {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .news-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        .news-links {
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .news-links a {
+            color: #2828E0;
+            text-decoration: none;
+            margin-right: 12px;
+        }
+
+        .news-links a:hover {
+            text-decoration: underline;
+        }
+
+        .sector-section {
+            margin-bottom: 20px;
+        }
+
+        .sector-header {
+            font-weight: 600;
+            font-size: 15px;
+            color: #2020CC;
+            margin-bottom: 8px;
+        }
+
+        .sector-content {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #1a1a2e;
+        }
+
+        .emoji {
+            margin-right: 8px;
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #3333FF;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+
+        .report-card-header {
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ECEEFF;
+        }
+
+        .report-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2020CC;
+            margin-bottom: 4px;
+        }
+
+        .report-card-meta {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .report-summary-block {
+            margin-bottom: 16px;
+            padding: 14px 16px;
+            background: #F0F2FF;
+            border-radius: 8px;
+            border-left: 3px solid #3333FF;
+            line-height: 1.7;
+            font-size: 14px;
+            color: #1a1a2e;
+        }
+
+        .report-analysis {
+            margin-bottom: 16px;
+        }
+
+        .report-analysis-title {
+            font-weight: 700;
+            font-size: 15px;
+            color: #2020CC;
+            margin-bottom: 10px;
+        }
+
+        .report-analysis p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            font-size: 14px;
+            color: #1a1a2e;
+        }
+
+        .report-ideas {
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: #F0F2FF;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .report-ideas-title {
+            font-weight: 700;
+            color: #2020CC;
+            margin-bottom: 8px;
+        }
+
+        .report-ideas-item {
+            margin-bottom: 6px;
+            color: #1a1a2e;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px 16px;
+            color: #666;
+            font-size: 13px;
+            background: #FAFBFF;
+            border-top: 1px solid #ECEEFF;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-logo">📈</div>
+            <div class="header-title">
+                <h1>Обзор рынка — 9 апреля 2026</h1>
+                <p>Общий обзор рынка · 8–9 апреля 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Все дайджесты</a>
+
+        <!-- SECTION 1: Обзор рынка -->
+        <div class="card">
+            <h2 class="section-title">Обзор рынка</h2>
+
+            <div class="market-overview">
+                <p>Двухнедельное перемирие между США и Ираном стало главным событием 8–9 апреля. Рынки отреагировали мощным ралли: нефть обрушилась на 16% до $94.41/барр. — крупнейшее однодневное падение с 2020 года. Авиакомпании и транспортные компании взлетели (Delta +12%), энергетический сектор оказался под давлением (APA −9%, OXY −7%). На следующий день оптимизм частично угас: нефть отскочила, акции скорректировались вниз на фоне осознания хрупкости перемирия и ожидания пятничного CPI (прогноз 3.4% YoY против 2.4% ранее). Протоколы FOMC от 18–19 марта показали, что часть членов ФРС видит основания и для повышения ставки, хотя базовый сценарий — снижение.</p>
+            </div>
+
+            <div class="section-subtitle">Индексы</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Индекс</th>
+                        <th>Значение</th>
+                        <th>Изменение</th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S&P 500</td>
+                        <td>6,782.81</td>
+                        <td><span class="positive">+166.11</span></td>
+                        <td><span class="positive">+2.51%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dow Jones</td>
+                        <td>47,909.92</td>
+                        <td><span class="positive">+1,325.46</span></td>
+                        <td><span class="positive">+2.85%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Nasdaq</td>
+                        <td>22,634.99</td>
+                        <td><span class="positive">+617.07</span></td>
+                        <td><span class="positive">+2.80%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 2: Макроэкономика -->
+        <div class="card">
+            <h2 class="section-title">Макроэкономика</h2>
+
+            <div class="news-item">
+                <div class="news-title">Перемирие США–Иран: Ормузский пролив открыт на 2 недели (8 апреля)</div>
+                <div class="news-text">США и Иран договорились о двухнедельном прекращении огня. Иран обязался обеспечить безопасный проход через Ормузский пролив, через который проходит ~20% мировых нефтяных поставок. Более 800 судов, застрявших в Персидском заливе, получили возможность выйти. Нефть Brent обвалилась на 16% до $94.41 — крупнейшее дневное падение с апреля 2020. Рынки отреагировали ростом: S&P 500 и Dow прибавили более 2.5%.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/08/oil-prices-plunge-iran-ceasefire.html" target="_blank">CNBC, 8 апреля →</a>
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-08/shipowners-eye-hormuz-ceasefire-window" target="_blank">Bloomberg, 8 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Хрупкость перемирия: нефть отскочила, рынки скорректировались (9 апреля)</div>
+                <div class="news-text">Уже 9 апреля рынки начали корректироваться вниз. Аналитики Bloomberg указали, что перемирие может не продержаться две недели, а геополитические риски в регионе остаются высокими. Нефть частично восстановила потери. Заголовок Bloomberg: «Iran War's Fuel Shock Will Reshape Energy» — война уже привела к закрытию ~9 млн барр./день добычи, и даже временное перемирие не решает структурных проблем снабжения.</div>
+                <div class="news-links">
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-09/iran-wars-fuel-shock-reshape-energy" target="_blank">Bloomberg, 9 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Протоколы FOMC: ФРС разделена — снижение или повышение ставки (8 апреля)</div>
+                <div class="news-text">Опубликованные 8 апреля протоколы заседания FOMC от 18–19 марта показали разногласия внутри комитета. Большинство по-прежнему прогнозирует снижение ставки в 2026 году, однако «несколько» членов видят основания для повышения, если инфляция ускорится. Доходность казначейских облигаций упала на 10 б.п. после публикации. Объём торгов Treasuries достиг рекордных $1.4 трлн в день в марте 2026.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/08/fomc-minutes-march-2026.html" target="_blank">CNBC, 8 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">CPI в пятницу: рынок готовится к шоку — прогноз 3.4% YoY (9 апреля)</div>
+                <div class="news-text">Главная макро-интрига недели — публикация CPI 10 апреля. Консенсус: 3.4% YoY (против 2.4% месяцем ранее) и 1.0% MoM (против 0.3%). Такой скачок, если подтвердится, станет самым резким ускорением инфляции с 2022 года. Рынки уже закладывают в цены пересмотр ожиданий по ставке ФРС.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/09/cpi-preview-inflation-april.html" target="_blank">CNBC, 9 апреля →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Секторальные новости -->
+        <div class="card">
+            <h2 class="section-title">Секторальные новости</h2>
+
+            <h3 style="font-size: 17px; color: #2020CC; margin-bottom: 12px; margin-top: 8px;">🖥️ Software</h3>
+
+            <div class="news-item">
+                <div class="news-title">Private credit кризис бьёт по софтверным компаниям — волна дефолтов (9 апреля)</div>
+                <div class="news-text">Аналитический обзор TSCS от 9 апреля зафиксировал, что кризис ликвидности в частном кредите распространяется на софтверный сектор. Redemption requests в BDC-фондах выросли на 217% QoQ до $13.9 млрд, при этом 88% запросов были заблокированы (gated). Аналитик выделяет «dead zone» — компании с высокой долговой нагрузкой вроде FIVN ($15 с пика $209), и «fortress zone» — NOW (0.98x PEG), VEEV (19.7x fwd P/E), CRWD ($5.25B ARR).</div>
+                <div class="news-links">
+                    <a href="https://substack.com/@tscs" target="_blank">TSCS (Substack), 9 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Constellation Brands отзывает прогноз на 2028 год (8 апреля)</div>
+                <div class="news-text">Constellation Brands (STZ) отозвала долгосрочный прогноз (guidance) на 2028 финансовый год на фоне неопределённости с тарифами и макроэкономической волатильности. Акции упали на фоне новости, хотя компания подтвердила краткосрочные ориентиры.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/08/constellation-brands-withdraws-guidance.html" target="_blank">CNBC, 8 апреля →</a>
+                </div>
+            </div>
+
+            <h3 style="font-size: 17px; color: #2020CC; margin-bottom: 12px; margin-top: 24px;">🔬 Semiconductors</h3>
+
+            <div class="news-item">
+                <div class="news-title">Intel +11.4%: Маск выбрал INTC для проекта Terafab AI-чипов (8 апреля)</div>
+                <div class="news-text">Акции Intel взлетели на 11.42% после сообщений о том, что Илон Маск выбрал Intel в качестве партнёра для строительства фабрики Terafab — мегапроекта по производству AI-чипов. Если сделка состоится, это станет крупнейшим заказом для Intel Foundry Services и может изменить расклад сил на рынке контрактного производства чипов, где доминирует TSMC.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/08/intel-musk-terafab-ai-chips.html" target="_blank">CNBC, 8 апреля →</a>
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-08/intel-surges-musk-terafab" target="_blank">Bloomberg, 8 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Gartner: выручка полупроводниковой отрасли превысит $1.3 трлн в 2026 (8 апреля)</div>
+                <div class="news-text">Исследовательская компания Gartner обновила прогноз: глобальная выручка чип-индустрии превысит $1.3 трлн в 2026 году — рост более чем на 20% YoY. Основной драйвер — взрывной спрос на AI-ускорители и серверные GPU. NVIDIA, Broadcom и AMD названы главными бенефициарами.</div>
+                <div class="news-links">
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-08/gartner-chip-revenue-forecast" target="_blank">Bloomberg, 8 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">GS: Q1 превью полупроводников — AMD повышен, ARM и TXN понижены (8 апреля)</div>
+                <div class="news-text">Goldman Sachs опубликовал превью сезона отчётов Q1 для полупроводниковых компаний. EPS-прогноз AMD повышен на 6%. AMAT — Buy с целью $390, CDNS — Buy с целью $410. Негативные сигналы: ARM понижен до Sell ($125), TXN понижен до Sell ($175) из-за завышенных мультипликаторов и рисков Automotive/Industrial.</div>
+                <div class="news-links">
+                    <a href="https://www.goldmansachs.com/insights/semiconductors-q1-2026" target="_blank">Goldman Sachs, 8 апреля →</a>
+                </div>
+            </div>
+
+            <h3 style="font-size: 17px; color: #2020CC; margin-bottom: 12px; margin-top: 24px;">⛏️ Materials</h3>
+
+            <div class="news-item">
+                <div class="news-title">Медь +2.9% на Ормузском перемирии, золото стабильно (8 апреля)</div>
+                <div class="news-text">Медь выросла на 2.9% после объявления о перемирии — открытие Ормузского пролива снижает логистические расходы для сырьевых поставок. Золото осталось вблизи рекордных уровней: инвесторы сохраняют хеджирование на случай провала перемирия. Алюминий и сталь показали умеренный рост на фоне улучшения настроений.</div>
+                <div class="news-links">
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-08/copper-joins-rally-hormuz-truce" target="_blank">Bloomberg, 8 апреля →</a>
+                </div>
+            </div>
+
+            <h3 style="font-size: 17px; color: #2020CC; margin-bottom: 12px; margin-top: 24px;">⚡ Energy</h3>
+
+            <div class="news-item">
+                <div class="news-title">Нефть −16%: крупнейший обвал с 2020 года после перемирия (8 апреля)</div>
+                <div class="news-text">Brent рухнул на 16% до $94.41/барр. — рекордное дневное падение с апреля 2020 года. Причина — ожидание, что перемирие в Ормузском проливе снимет блокаду и позволит выйти 800+ застрявшим танкерам. Энергетические акции обвалились: APA −9%, OXY −7%, XOM −5.5%, SLB −4%. При этом авиакомпании взлетели — Delta (DAL) +12%.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/08/oil-crash-ceasefire.html" target="_blank">CNBC, 8 апреля →</a>
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-08/oil-plunges-ceasefire" target="_blank">Bloomberg, 8 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Bloomberg: «Топливный шок иранской войны изменит энергетику» (9 апреля)</div>
+                <div class="news-text">Обзор Bloomberg от 9 апреля подчёркивает: война уже привела к закрытию ~9 млн барр./день добычи, и даже двухнедельное перемирие не решает структурных проблем. Поставки из Ирака, Кувейта и ОАЭ остаются под угрозой. Перестройка энергетических цепочек займёт месяцы. Нефть отскочила 9 апреля, подтверждая хрупкость перемирия.</div>
+                <div class="news-links">
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-09/iran-wars-fuel-shock-reshape-energy" target="_blank">Bloomberg, 9 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Нефть отскочила 9 апреля: рынок не верит в долгосрочный мир (9 апреля)</div>
+                <div class="news-text">После обвала на 16% днём ранее, нефть восстановила часть потерь 9 апреля. Трейдеры оценивают вероятность продления перемирия как низкую. Фьючерсная кривая остаётся в контанго, указывая на ожидание нового витка напряжённости. Акции энергосектора частично восстановились.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/09/oil-rebounds-ceasefire-fragility.html" target="_blank">CNBC, 9 апреля →</a>
+                </div>
+            </div>
+
+            <h3 style="font-size: 17px; color: #2020CC; margin-bottom: 12px; margin-top: 24px;">🏦 Finance</h3>
+
+            <div class="news-item">
+                <div class="news-title">Протоколы FOMC: ставки на снижение оживились, но ястребы не молчат (8 апреля)</div>
+                <div class="news-text">Minutes заседания ФРС показали разногласия. Ставки на снижение ставки выросли после публикации — часть членов ФРС назвала текущий уровень «ограничительным». Но «несколько» участников указали, что ускорение инфляции может потребовать повышения. Доходности 10-летних Treasuries снизились на 10 б.п.</div>
+                <div class="news-links">
+                    <a href="https://www.cnbc.com/2026/04/08/fed-minutes-rate-debate.html" target="_blank">CNBC, 8 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Объём торгов Treasuries — рекордные $1.4 трлн/день в марте (8 апреля)</div>
+                <div class="news-text">Дневной объём торгов казначейскими облигациями США достиг рекордных $1.4 трлн в марте 2026 года. Рост волатильности на фоне иранского конфликта и неопределённости с инфляцией привёл к беспрецедентной активности на рынке фиксированного дохода. Банки и хедж-фонды активно перебалансируют портфели.</div>
+                <div class="news-links">
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-08/treasury-trading-record" target="_blank">Bloomberg, 8 апреля →</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">GS: Brokers & Crypto Q1 превью — сектор −11% YTD, но IBKR и HOOD — фавориты (8 апреля)</div>
+                <div class="news-text">Goldman Sachs выпустил превью Q1 для брокеров и крипто-платформ. Сектор снизился на 11% YTD из-за геополитики и снижения торговых объёмов. Тем не менее GS выделяет IBKR (Buy, апсайд +31%) и HOOD (Buy, +29%) благодаря устойчивому росту активных аккаунтов и revenue per trade. COIN — Buy с апсайдом +31%.</div>
+                <div class="news-links">
+                    <a href="https://www.goldmansachs.com/insights/brokers-crypto-q1-2026" target="_blank">Goldman Sachs, 8 апреля →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: Обзоры отчётов -->
+        <div class="card">
+            <h2 class="section-title">Обзоры отчётов</h2>
+        </div>
+
+        <!-- Report 1: GS — Delta Air Lines -->
+        <div class="report-card">
+            <div class="report-card-header">
+                <div class="report-card-title">GS — Delta Air Lines (DAL): Buy, TP $80 (+21.9%)</div>
+                <div class="report-card-meta">Goldman Sachs · 8 апреля 2026 · Q1 2026 Report</div>
+            </div>
+
+            <div class="report-summary-block">
+                GS подтверждает Buy по DAL с целевой ценой $80 (апсайд ~21.9% от текущих $65.63). Ключевой тезис: Q1 значительно превзошёл ожидания — RASM +8.2% vs консенсус +6.5%, операционная маржа 8.1% vs прогноз 6.7%. Акции взлетели на 12% в день перемирия благодаря обвалу нефти, но GS предупреждает: компания отозвала прогноз на H2 из-за неопределённости с топливными ценами. При средней цене топлива $4.30/галлон fuel headwind составляет ~$600M в квартал.
+            </div>
+
+            <div class="report-analysis">
+                <div class="report-analysis-title">Развёрнутый анализ</div>
+
+                <p>GS исходит из того, что Delta — наиболее защищённая авиакомпания от волатильности цен на нефть благодаря премиальному позиционированию. RASM +8.2% QoQ обеспечен ростом доходов от бизнес-класса (+14% YoY) и программы лояльности SkyMiles (вклад $1.8B в квартал). Это означает, что Delta способна перекладывать часть топливных издержек на пассажиров через ценообразование — unit revenue gap с конкурентами (AA, UA) расширился до рекордных 4.2 п.п.</p>
+
+                <p>Основной риск — топливные расходы. GS моделирует среднюю цену jet fuel $4.30/галлон на Q2–Q4 (против $3.10 год назад), что создаёт headwind ~$600M/квартал. Компания отозвала guidance на H2 2026, что GS интерпретирует как осторожность, а не слабость: менеджмент хочет дождаться ясности по иранскому конфликту. При цене нефти $80–90 маржа восстанавливается до 12–14% к Q4.</p>
+
+                <p>GS рассчитывает, что перемирие создаёт тактическое окно для позиций в DAL. Если перемирие продержится 2+ недели, нефть может стабилизироваться в диапазоне $85–95, что позволит Delta вернуть guidance и запустить buyback ($2B авторизация). P/E на 2027E составляет 7.8x — ниже исторической медианы 9.5x, что оставляет пространство для переоценки.</p>
+            </div>
+
+            <div class="report-ideas">
+                <div class="report-ideas-title">Top Picks</div>
+                <div class="report-ideas-item">• <strong>DAL</strong> — Buy, TP $80 (+21.9%). Лучшая позиция среди авиакомпаний для ставки на деэскалацию иранского конфликта.</div>
+            </div>
+        </div>
+
+        <!-- Report 2: GS — Semiconductors Q1 Preview -->
+        <div class="report-card">
+            <div class="report-card-header">
+                <div class="report-card-title">GS — Semiconductors: Q1 Preview</div>
+                <div class="report-card-meta">Goldman Sachs · 8 апреля 2026 · Q1 Earnings Preview</div>
+            </div>
+
+            <div class="report-summary-block">
+                Goldman Sachs обновляет оценки перед сезоном Q1 для полупроводникового сектора. Ключевой позитив: прогноз EPS по AMD повышен на 6% благодаря сильному спросу на MI400 AI-ускорители. AMAT — фаворит с целью $390 (Buy), CDNS повышен до Buy ($410). Негативные пересмотры: ARM понижен до Sell с TP $125 (−15% downside) из-за завышенного P/E >80x; TXN понижен до Sell с TP $175 на фоне слабости Automotive и Industrial сегментов. MCHP — Buy с целью $88 на ожиданиях восстановления Embedded.
+            </div>
+
+            <div class="report-analysis">
+                <div class="report-analysis-title">Развёрнутый анализ</div>
+
+                <p>GS исходит из того, что AI-драйвер остаётся доминирующей силой в секторе, но дифференциация между компаниями усиливается. AMD получает повышение EPS на 6% ($1.12 → $1.19 на Q1E) благодаря ускорению поставок MI400 крупным облачным клиентам (Microsoft, Google). GS прогнозирует, что Data Center revenue AMD достигнет $8.5B в 2026 (+65% YoY). Это означает, что AMD сокращает разрыв с NVIDIA в AI-инференсе, хотя тренинг остаётся за NVDA.</p>
+
+                <p>AMAT и CDNS — ставки на рост capex полупроводниковых фабрик. GS исходит из того, что глобальные инвестиции в fab construction достигнут $195B в 2026 (+22% YoY), основной драйвер — строительство фабрик в США (CHIPS Act) и Японии. AMAT — главный бенефициар с ~25% долей рынка оборудования. CDNS повышен до Buy с TP $410 благодаря росту EDA-лицензий для 2nm дизайнов. Следовательно, обе компании выигрывают от структурного тренда reshoring.</p>
+
+                <p>Негативные изменения касаются ARM и TXN. ARM торгуется на P/E >80x 2026E — GS считает это неоправданным даже с учётом роста роялти. Компания зависит от одного клиента (Qualcomm — 25% роялти), а конкуренция со стороны RISC-V нарастает. TXN понижен до Sell из-за слабости Automotive (−12% QoQ) и Industrial (−8% QoQ). При текущем P/E 28x GS видит downside 15% до $175.</p>
+            </div>
+
+            <div class="report-ideas">
+                <div class="report-ideas-title">Top Picks</div>
+                <div class="report-ideas-item">• <strong>AMAT</strong> — Buy, TP $390. Главный бенефициар цикла строительства фабрик.</div>
+                <div class="report-ideas-item">• <strong>CDNS</strong> — Buy (повышение), TP $410. Рост EDA для 2nm дизайнов.</div>
+                <div class="report-ideas-item">• <strong>MCHP</strong> — Buy, TP $88. Восстановление Embedded-цикла.</div>
+                <div class="report-ideas-item">• <strong>ARM</strong> — Sell (понижение), TP $125. Переоценка, RISC-V конкуренция.</div>
+                <div class="report-ideas-item">• <strong>TXN</strong> — Sell (понижение), TP $175. Слабость Auto/Industrial.</div>
+            </div>
+        </div>
+
+        <!-- Report 3: GS — Brokers & Crypto Q1 Preview -->
+        <div class="report-card">
+            <div class="report-card-header">
+                <div class="report-card-title">GS — Brokers & Crypto: Q1 Preview</div>
+                <div class="report-card-meta">Goldman Sachs · 8 апреля 2026 · Q1 Earnings Preview</div>
+            </div>
+
+            <div class="report-summary-block">
+                Goldman Sachs выпускает превью Q1 для брокеров и крипто-платформ. Сектор снизился на 11% YTD на фоне геополитической волатильности и ужесточения регулирования. Тем не менее GS видит привлекательные точки входа: IBKR — Buy с апсайдом +31%, HOOD — Buy (+29%), COIN — Buy (+31%). Ключевой тезис: рост волатильности — позитив для брокеров, торговые объёмы в Q1 были рекордными, но рынок этого ещё не оценил. FIGR — Buy (+27%), CRCL — единственный Neutral с умеренным апсайдом +10%.
+            </div>
+
+            <div class="report-analysis">
+                <div class="report-analysis-title">Развёрнутый анализ</div>
+
+                <p>GS исходит из того, что повышенная волатильность (VIX средний 28 в Q1 vs 18 в Q4 2025) — прямой позитив для брокеров. Торговые объёмы на опционных рынках выросли на 35% QoQ, объёмы крипто-торговли — на 45%. Это означает, что revenue per trade и commission income будут значительно выше консенсуса. IBKR особенно выигрывает: его клиентская база (профессиональные трейдеры) наиболее активна в волатильных условиях.</p>
+
+                <p>HOOD (Robinhood) получает Buy благодаря трансформации бизнес-модели. GS отмечает, что доля subscription revenue (Gold) выросла до 28% от общей выручки (с 18% год назад), что снижает зависимость от PFOF и transaction revenue. Кроме того, запуск кредитных карт и совместных счетов расширяет TAM. При P/E 15x 2027E и росте EPS на 40%+ YoY GS считает HOOD одной из самых дешёвых growth-историй в финтехе.</p>
+
+                <p>COIN — ставка на институционализацию крипто. GS прогнозирует, что институциональные объёмы на Coinbase вырастут на 60% YoY благодаря запуску Bitcoin ETF custody и расширению Coinbase Prime. При этом регуляторные риски снижаются: урегулирование с SEC ожидается в Q2. Единственный Neutral — CRCL (Circle/USDC), где GS видит давление на маржу от конкуренции со стороны PayPal USD и Tether.</p>
+            </div>
+
+            <div class="report-ideas">
+                <div class="report-ideas-title">Top Picks</div>
+                <div class="report-ideas-item">• <strong>IBKR</strong> — Buy, апсайд +31%. Максимальный бенефициар высокой волатильности.</div>
+                <div class="report-ideas-item">• <strong>HOOD</strong> — Buy, апсайд +29%. Трансформация к subscription-модели.</div>
+                <div class="report-ideas-item">• <strong>COIN</strong> — Buy, апсайд +31%. Институционализация крипто + ETF custody.</div>
+                <div class="report-ideas-item">• <strong>FIGR</strong> — Buy, апсайд +27%.</div>
+                <div class="report-ideas-item">• <strong>CRCL</strong> — Neutral, апсайд +10%. Давление на маржу от конкуренции.</div>
+            </div>
+        </div>
+
+        <!-- Report 4: The Trade Desk Disrupted -->
+        <div class="report-card">
+            <div class="report-card-header">
+                <div class="report-card-title">Tech Fund — The Trade Desk (TTD): BUY</div>
+                <div class="report-card-meta">Tech Investments (Substack) · 8 апреля 2026 · Аналитический обзор</div>
+            </div>
+
+            <div class="report-summary-block">
+                Аналитик Tech Fund выпускает обзор TTD с рейтингом BUY. Ключевой тезис: акции упали на ~70% от пика и торгуются на 10x forward P/E — исторический минимум. При этом фундаментальные драйверы — рост CTV (Connected TV) и AI-оптимизация рекламы — остаются intact. Скандал с Publicis (крупнейший клиент TTD, ~15% revenue) создал панику, но аналитик считает, что рынок переоценил риск. Главная угроза — Amazon DSP, но TTD сохраняет преимущество в независимости и открытой экосистеме.
+            </div>
+
+            <div class="report-analysis">
+                <div class="report-analysis-title">Развёрнутый анализ</div>
+
+                <p>Аналитик исходит из того, что падение TTD на 70% создало экстремальную асимметрию risk/reward. Текущий P/E ~10x forward — это уровень, на котором компания торговалась только во время COVID-паники 2020. При этом revenue CAGR 2024–2027E составляет ~22%, а gross margin стабильна на уровне 80%+. Следовательно, рынок оценивает TTD как declining business, тогда как фактически это high-margin growth company с temporarily depressed multiple.</p>
+
+                <p>Скандал с Publicis — главный краткосрочный риск. Publicis (15% revenue TTD) перенаправляет бюджеты в собственный DSP после обвинений в конфликте интересов. Аналитик считает, что потеря Publicis уже заложена в цену, и оценивает реальный impact в 8–10% revenue (не все бюджеты Publicis уйдут). Более того, другие агентства (WPP, Omnicom) усиливают партнёрство с TTD как альтернативу Google DV360.</p>
+
+                <p>Amazon DSP — стратегическая угроза, но с ограничениями. Amazon контролирует ~12% programmatic рынка, но его DSP работает преимущественно внутри Amazon-экосистемы. TTD сохраняет преимущество в open internet: CTV (Roku, Samsung, LG), audio (Spotify, iHeart), и DOOH (digital out-of-home). AI-движок Kokai улучшает оптимизацию кампаний на 15–20% по ROAS. Это означает, что TTD и Amazon скорее делят рынок, чем конкурируют напрямую.</p>
+            </div>
+
+            <div class="report-ideas">
+                <div class="report-ideas-title">Top Picks</div>
+                <div class="report-ideas-item">• <strong>TTD</strong> — BUY. 10x P/E при 22% revenue CAGR. Исторический минимум оценки, CTV/AI-драйверы intact.</div>
+            </div>
+        </div>
+
+        <!-- Report 5: Private Credit Unfiltered -->
+        <div class="report-card">
+            <div class="report-card-header">
+                <div class="report-card-title">JunkBondInvestor — Private Credit: кризис ликвидности BDC</div>
+                <div class="report-card-meta">JunkBondInvestor (Substack) · 8 апреля 2026 · Аналитический обзор</div>
+            </div>
+
+            <div class="report-summary-block">
+                JunkBondInvestor публикует детальный разбор нарастающего кризиса ликвидности в секторе BDC (Business Development Companies) и частного кредита. Ключевые цифры: Blue Owl Capital зафиксировал 40.7% redemption requests от NAV — рекорд для отрасли. Medallia (портфельная компания нескольких BDC) торгуется на вторичном рынке по 69 центов на доллар. Совокупная стена погашений (maturity wall) в частном кредите — $80B до конца 2027. Автор предупреждает: «private credit — это новый субпрайм», где иллюзия стабильных NAV скрывает реальные потери.
+            </div>
+
+            <div class="report-analysis">
+                <div class="report-analysis-title">Развёрнутый анализ</div>
+
+                <p>Автор исходит из того, что BDC-фонды структурно уязвимы к redemption waves из-за mismatch между ликвидностью активов и обязательств. Blue Owl Capital получил 40.7% redemption requests от NAV за Q1 2026 — из них удовлетворено лишь ~12%, остальные были gated (заблокированы). Это означает, что инвесторы в BDC фактически заперты: они не могут выйти, а публикуемый NAV может не отражать реальную стоимость портфеля.</p>
+
+                <p>Кейс Medallia иллюстрирует глубину проблемы. Компания была куплена в LBO при оценке $6.4B, финансирование — через синдикат BDC и CLO. Сейчас долг Medallia торгуется на вторичном рынке по 69 центов на доллар, что implied enterprise value ~$4.4B — дисконт 31% к цене покупки. Автор подчёркивает: таких кейсов десятки, но BDC отражают их в отчётности с лагом 1–2 квартала, создавая иллюзию стабильности NAV.</p>
+
+                <p>Maturity wall $80B до конца 2027 — главный системный риск. Значительная часть займов в private credit была выдана в 2021–2022 при ставках 4–5% и теперь подлежит рефинансированию при ставках 8–10%. Для компаний с EBITDA margin <15% (а таких ~35% портфелей BDC) рефинансирование невозможно без реструктуризации. Это означает рост дефолтов с текущих ~3.5% до 7–9% к середине 2027, по оценке автора.</p>
+            </div>
+
+            <div class="report-ideas">
+                <div class="report-ideas-title">Выводы</div>
+                <div class="report-ideas-item">• Избегать BDC-фондов с высокой концентрацией в software/tech LBOs (Blue Owl, Ares, Owl Rock).</div>
+                <div class="report-ideas-item">• Maturity wall $80B → рост дефолтов до 7–9% к 2027.</div>
+                <div class="report-ideas-item">• Публикуемые NAV BDC могут быть завышены на 15–25% из-за лаговой переоценки.</div>
+            </div>
+        </div>
+
+        <!-- Report 6: Nobody Can Leave (TSCS) -->
+        <div class="report-card">
+            <div class="report-card-header">
+                <div class="report-card-title">TSCS — Nobody Can Leave: кризис ликвидности в частном кредите</div>
+                <div class="report-card-meta">Strategist and Architect (TSCS, Substack) · 9 апреля 2026 · Аналитический обзор</div>
+            </div>
+
+            <div class="report-summary-block">
+                TSCS публикует масштабный обзор кризиса ликвидности в private credit за Q1 2026. Ключевые цифры: совокупные redemption requests достигли $13.9 млрд (+217% QoQ), при этом 88% запросов были заблокированы (gated). Это означает, что инвесторы в частный кредит массово пытаются выйти, но не могут. Автор вводит фреймворк «fortress zone» vs «dead zone» для публичных акций: компании с сильным балансом и recurring revenue выигрывают от кризиса конкурентов (NOW, VEEV, CRWD), а закредитованные компании (FIVN — $15 с пика $209) движутся к реструктуризации.
+            </div>
+
+            <div class="report-analysis">
+                <div class="report-analysis-title">Развёрнутый анализ</div>
+
+                <p>Автор исходит из того, что Q1 2026 стал переломным моментом для private credit. $13.9B redemption requests (+217% QoQ) — рекорд за всю историю отрасли. Из них удовлетворено лишь $1.7B (12%), остальные $12.2B заблокированы. Основные причины: переоценка рисков после серии дефолтов в tech-LBOs, рост ставок, и серия расследований SEC в отношении mark-to-market практик BDC. Это означает начало «кредитного сжатия» — BDC не могут ни выдавать новые кредиты (нет ликвидности), ни рефинансировать существующие.</p>
+
+                <p>«Fortress zone» — компании, которые выигрывают от кризиса конкурентов. NOW (ServiceNow) с PEG 0.98x торгуется ниже исторической медианы при Rule of 40 > 55%. VEEV (Veeva Systems) на 19.7x forward P/E — дисконт 35% к медиане software-сектора — при net cash balance и 90%+ gross retention. CRWD (CrowdStrike) с $5.25B ARR и 78% gross margin доминирует в endpoint security, где конкуренты (SentinelOne, Carbon Black) испытывают funding pressure. Следовательно, кризис частного кредита консолидирует рынок в пользу крупных cash-rich игроков.</p>
+
+                <p>«Dead zone» — компании с критической долговой нагрузкой. Яркий пример — FIVN (Five9), торгующийся по $15 против пика $209 в 2021. Компания финансировалась через частный кредит с leverage 6.5x EBITDA; при текущих ставках interest coverage ratio упал ниже 1.5x, что технически является covenant violation. Автор ожидает реструктуризацию или forced sale в течение 6–12 месяцев. Аналогичные риски у Bandwidth (BAND), Limelight/Edgio (EGIO), и нескольких непубличных SaaS-компаний.</p>
+            </div>
+
+            <div class="report-ideas">
+                <div class="report-ideas-title">Top Picks</div>
+                <div class="report-ideas-item">• <strong>NOW</strong> — Fortress zone. PEG 0.98x, Rule of 40 > 55%. Бенефициар консолидации.</div>
+                <div class="report-ideas-item">• <strong>VEEV</strong> — Fortress zone. 19.7x fwd P/E, net cash, 90%+ retention.</div>
+                <div class="report-ideas-item">• <strong>CRWD</strong> — Fortress zone. $5.25B ARR, доминирование в endpoint security.</div>
+                <div class="report-ideas-item">• <strong>FIVN</strong> — Dead zone. $15 с пика $209, leverage 6.5x, covenant violation risk.</div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: Что впереди -->
+        <div class="card">
+            <h2 class="section-title">Что впереди</h2>
+
+            <div class="section-subtitle">Экономический календарь (10–16 апреля)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Событие</th>
+                        <th>Прогноз</th>
+                        <th>Пред.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10 апреля</td>
+                        <td>CPI MoM</td>
+                        <td>1.0%</td>
+                        <td>0.3%</td>
+                    </tr>
+                    <tr>
+                        <td>10 апреля</td>
+                        <td>CPI YoY</td>
+                        <td>3.4%</td>
+                        <td>2.4%</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td>Core PPI MoM</td>
+                        <td>0.4%</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td>Core PPI YoY</td>
+                        <td>3.7%</td>
+                        <td>3.9%</td>
+                    </tr>
+                    <tr>
+                        <td>16 апреля</td>
+                        <td>Initial Jobless Claims</td>
+                        <td>216K</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="section-subtitle">Календарь отчётов (cap > $5B)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Компания</th>
+                        <th>EPS (E)</th>
+                        <th>Revenue (E)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>13 апреля</td>
+                        <td><strong>GS</strong> (Goldman Sachs)</td>
+                        <td>$16.35</td>
+                        <td>$16.95B</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td><strong>JPM</strong> (JPMorgan Chase)</td>
+                        <td>$5.42</td>
+                        <td>$49.13B</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td><strong>WFC</strong> (Wells Fargo)</td>
+                        <td>$1.57</td>
+                        <td>$21.75B</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td><strong>C</strong> (Citigroup)</td>
+                        <td>$2.63</td>
+                        <td>$23.31B</td>
+                    </tr>
+                    <tr>
+                        <td>14 апреля</td>
+                        <td><strong>JNJ</strong> (Johnson & Johnson)</td>
+                        <td>$2.69</td>
+                        <td>$23.62B</td>
+                    </tr>
+                    <tr>
+                        <td>15 апреля</td>
+                        <td><strong>BAC</strong> (Bank of America)</td>
+                        <td>$0.99</td>
+                        <td>$29.92B</td>
+                    </tr>
+                    <tr>
+                        <td>15 апреля</td>
+                        <td><strong>MS</strong> (Morgan Stanley)</td>
+                        <td>$2.99</td>
+                        <td>$19.71B</td>
+                    </tr>
+                    <tr>
+                        <td>16 апреля</td>
+                        <td><strong>NFLX</strong> (Netflix)</td>
+                        <td>$0.76</td>
+                        <td>$12.18B</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="font-size: 14px; line-height: 1.7; margin-top: 12px; color: #1a1a2e;">
+                Неделя 13–16 апреля — старт сезона отчётов крупных банков. JPM, GS, C, WFC, BAC и MS отчитаются за Q1 на фоне рекордных торговых объёмов и волатильности на рынке облигаций. Ключевой вопрос: насколько trading revenue компенсирует давление на NII (net interest income) из-за инверсии кривой доходности. Netflix (16 апреля) — первый отчёт из Big Tech, рынок ожидает обновление guidance после отказа от M&A-сделки.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>NDV · Дайджест фондового рынка · 9 апреля 2026</p>
+        <p style="margin-top: 8px;">Данный дайджест носит информационный характер и не является инвестиционной рекомендацией.</p>
+    </div>
+</body>
+</html>
