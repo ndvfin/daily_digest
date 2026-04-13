@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дайджест фондового рынка — 12–13 апреля 2026</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F0F2F8; color: #1a1a2e; line-height: 1.6; }
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+header { background: linear-gradient(135deg, #2828E0 0%, #4040FF 50%, #2828E0 100%); color: white; padding: 32px 20px; text-align: center; box-shadow: 0 4px 20px rgba(40,40,224,0.3); }
+header img { height: 60px; margin-bottom: 12px; }
+header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+header .subtitle { font-size: 16px; opacity: 0.9; }
+.top-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; margin-top: 20px; }
+.back-link { color: #3333FF; text-decoration: none; font-weight: 600; font-size: 14px; }
+.back-link:hover { text-decoration: underline; }
+.print-btn { background: linear-gradient(135deg, #2828E0, #4040FF); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; box-shadow: 0 2px 6px rgba(40,40,224,0.3); }
+.print-btn:hover { opacity: 0.9; }
+section { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 24px 28px; margin-bottom: 20px; }
+section h2 { color: #2020CC; font-size: 22px; margin-bottom: 16px; border-bottom: 2px solid #ECEEFF; padding-bottom: 10px; }
+section h3 { color: #2020CC; font-size: 17px; margin: 20px 0 12px 0; }
+p { margin-bottom: 12px; }
+.news-item { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid #F0F2F8; }
+.news-item:last-child { border-bottom: none; padding-bottom: 0; }
+.news-title { font-weight: 700; font-size: 15px; color: #1a1a2e; margin-bottom: 4px; }
+.news-text { font-size: 14px; color: #333; line-height: 1.65; }
+.news-source { font-size: 12px; color: #888; margin-top: 4px; }
+.news-source a { color: #3333FF; text-decoration: none; }
+.news-source a:hover { text-decoration: underline; }
+table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 8px; overflow: hidden; margin: 16px 0; font-size: 14px; }
+thead { background: #ECEEFF; }
+th { padding: 10px 14px; text-align: left; font-weight: 600; color: #2020CC; border-bottom: 2px solid #E0E0E8; }
+td { padding: 10px 14px; border-bottom: 1px solid #F0F2F8; }
+tr:nth-child(even) { background: #FAFAFF; }
+.positive { color: #1B7A3D; font-weight: 600; }
+.negative { color: #C0392B; font-weight: 600; }
+.report-card { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #3333FF; padding: 20px 24px; margin-bottom: 20px; }
+.report-card-header { margin-bottom: 16px; }
+.report-card-title { font-weight: 700; font-size: 18px; color: #1a1a2e; }
+.report-card-meta { font-size: 13px; color: #888; margin-top: 4px; }
+.report-summary-block { margin-bottom: 16px; padding: 14px 16px; background: #F0F2FF; border-radius: 8px; border-left: 3px solid #3333FF; line-height: 1.6; }
+.report-analysis { margin-bottom: 16px; }
+.report-analysis-title { font-weight: 700; font-size: 15px; color: #2020CC; margin-bottom: 10px; }
+.report-analysis p { margin-bottom: 12px; line-height: 1.65; color: #1a1a2e; }
+.report-ideas { margin-top: 12px; padding: 10px 14px; background: #F0F2FF; border-radius: 6px; font-size: 14px; }
+.report-ideas-title { font-weight: 700; font-size: 14px; color: #2020CC; margin-bottom: 6px; }
+.report-ideas-item { margin-bottom: 4px; }
+.x-discussions { margin-top: 32px; }
+.x-discussions .section-intro { font-size: 14px; color: #666; margin-bottom: 20px; font-style: italic; }
+.x-card { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #3333FF; padding: 20px 24px; margin-bottom: 20px; }
+.x-card-header { margin-bottom: 14px; }
+.x-card-handle { font-weight: 700; font-size: 18px; color: #1a1a2e; }
+.x-card-meta { font-size: 13px; color: #888; margin-top: 2px; }
+.x-card-link { font-size: 12px; margin-top: 4px; }
+.x-card-link a { color: #3333FF; text-decoration: none; }
+.x-card-link a:hover { text-decoration: underline; }
+.x-card-body { margin-bottom: 14px; line-height: 1.65; color: #1a1a2e; }
+.x-card-subtitle { font-weight: 700; font-size: 14px; color: #B8860B; margin-bottom: 6px; margin-top: 12px; }
+.x-card-investor, .x-card-risks { margin-bottom: 10px; line-height: 1.6; color: #1a1a2e; }
+.x-card-community { margin-top: 10px; line-height: 1.55; color: #555; font-style: italic; }
+footer { text-align: center; padding: 24px; color: #888; font-size: 13px; }
+@media print {
+  .top-actions, .print-btn, .back-link { display: none !important; }
+  body { background: white !important; margin: 0; padding: 0; }
+  .container { max-width: 100% !important; margin: 0 !important; padding: 0 15px !important; }
+  header { box-shadow: none !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  section, .report-card, .x-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+  table { break-inside: avoid; page-break-inside: avoid; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; color: #666; word-break: break-all; }
+  footer { break-before: avoid; }
+  .report-summary-block, .report-ideas { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="../logo.png" alt="NDV">
+  <h1>Дайджест фондового рынка</h1>
+  <div class="subtitle">12–13 апреля 2026</div>
+</header>
+
+<div class="container">
+
+<div class="top-actions">
+  <a href="../index.html" class="back-link">← Все дайджесты</a>
+  <button onclick="window.print()" class="print-btn">📄 Сохранить в PDF</button>
+</div>
+
+<!-- ===== 1. ОБЗОР РЫНКА ===== -->
+<section>
+  <h2>📊 Обзор рынка</h2>
+  <p>Выходные принесли резкое ухудшение геополитического фона: переговоры США и Ирана провалились, и президент Трамп объявил о морской блокаде Ормузского пролива силами ВМС США. Нефть Brent подскочила на 7,8% к $103 за баррель, а фьючерсы на американские индексы ушли в минус более чем на 1% в преторговой сессии понедельника. Доходности казначейских облигаций выросли на фоне инфляционных опасений из-за роста энергоносителей. На предыдущей неделе S&P 500 показал лучшую динамику с ноября (+3,9%), однако оптимизм по поводу перемирия быстро испарился. Рынок готовится к сезону отчётностей — на неделе 14–18 апреля отчитываются JPM, C, WFC, BAC, MS, ASML, TSM и NFLX.</p>
+
+  <table>
+    <thead><tr><th>Индекс</th><th>Значение</th><th>Изменение</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>S&P 500</td><td>6 816,89</td><td class="negative">−7,77</td><td class="negative">−0,11%</td></tr>
+      <tr><td>Dow Jones</td><td>47 916,57</td><td class="negative">−269,24</td><td class="negative">−0,56%</td></tr>
+      <tr><td>NASDAQ</td><td>22 902,90</td><td class="positive">+80,48</td><td class="positive">+0,35%</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== 2. МАКРОЭКОНОМИКА ===== -->
+<section>
+  <h2>🌍 Макроэкономика</h2>
+
+  <div class="news-item">
+    <div class="news-title">Трамп объявил морскую блокаду Ормузского пролива после провала переговоров с Ираном (12 апреля)</div>
+    <div class="news-text">Вице-президент Вэнс не смог достичь соглашения за день переговоров. Трамп заявил, что ВМС США начнут перехватывать все суда, входящие и выходящие из пролива, начиная с 10:00 по нью-йоркскому времени в понедельник. Через Ормузский пролив проходит около 7 млн баррелей сырой нефти и 4 млн баррелей нефтепродуктов ежедневно — это крупнейший узкий пункт мировых энергетических поставок.</div>
+    <div class="news-source"><a href="https://www.cnbc.com/2026/04/12/trump-iran-war-strait-of-hormuz.html" target="_blank">CNBC, 12 апреля →</a> · <a href="https://www.barrons.com/articles/stock-oil-futures-trade-sunday-beb0866b" target="_blank">Barron's, 12 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Нефть вернулась выше $100 — Brent +7,8% к $103/барр. (13 апреля)</div>
+    <div class="news-text">Нефть резко подорожала после объявления о блокаде. Brent поднялся до $103 за баррель, WTI вернулся выше $100. Европейские газовые фьючерсы взлетели на 18%. Доходность двухлетних казначейских облигаций выросла на 2 б.п. до 3,82%, трейдеры сократили ожидания снижения ставки ФРС в 2026 году.</div>
+    <div class="news-source"><a href="https://www.bloomberg.com/news/articles/2026-04-12/latest-oil-market-news-and-analysis-for-april-13" target="_blank">Bloomberg, 13 апреля →</a> · <a href="https://www.wsj.com/finance/jgbs-slide-on-renewed-inflation-worries-spurred-by-failure-of-u-s-iran-peace-talks-f992a2a1" target="_blank">WSJ, 13 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Доходности казначейских облигаций растут на инфляционных опасениях (13 апреля)</div>
+    <div class="news-text">Рост цен на нефть после провала мирных переговоров омрачил перспективы инфляции. Рынок ожидает, что ФРС останется на паузе при ставке 3,50–3,75% в течение 2026 года. Экономисты WSJ прогнозируют ухудшение ВВП, инфляции и рынка труда из-за конфликта с Ираном.</div>
+    <div class="news-source"><a href="https://www.cnbc.com/2026/04/13/treasury-yields-up-as-collapse-of-iran-talks-clouds-inflation-outlook.html" target="_blank">CNBC, 13 апреля →</a> · <a href="https://www.wsj.com/economy/inflation-growth-and-jobs-all-look-worse-with-the-war-cc9263e5" target="_blank">WSJ, 12 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Тарифы США могут сохраняться годами даже после Трампа (13 апреля)</div>
+    <div class="news-text">Подавляющее большинство американских бизнес-лидеров планируют работу в условиях повышенных тарифов на годы вперёд. По оценкам PwC, это обоснованное ожидание — структура тарифов закрепляется в торговых соглашениях и регуляторных рамках, которые сложно развернуть.</div>
+    <div class="news-source"><a href="https://www.marketwatch.com/story/why-elevated-u-s-tariffs-could-stick-around-for-years-even-after-trump-leaves-office-f39cfd54" target="_blank">MarketWatch, 13 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Вэнс покинул Пакистан без сделки — рынки реагируют негативно (12 апреля)</div>
+    <div class="news-text">Переговоры вице-президента Вэнса в Пакистане завершились без договорённостей, что усиливает региональную нестабильность на фоне уже обострённых отношений на Ближнем Востоке. Фьючерсы указали на слабое открытие рынков.</div>
+    <div class="news-source"><a href="https://www.marketwatch.com/story/vance-leaves-pakistan-talks-with-no-deal-how-financial-markets-are-reacting-ef6916b3" target="_blank">MarketWatch, 12 апреля →</a></div>
+  </div>
+</section>
+
+<!-- ===== 3. СЕКТОРАЛЬНЫЕ НОВОСТИ ===== -->
+<section>
+  <h2>📈 Секторальные новости</h2>
+
+  <h3>🖥️ Software</h3>
+
+  <div class="news-item">
+    <div class="news-title">«SaaSpocalypse» продолжается: Anthropic и AI-агенты атакуют SaaS-модели (12 апреля)</div>
+    <div class="news-text">Cloudflare (NET) потерял 12% после запуска Claude Code Security от Anthropic, ServiceNow (NOW) упал на 8% из-за угрозы вытеснения workflow-автоматизации AI-агентами, CrowdStrike (CRWD) снизился на 5%. Инвесторы переоценивают SaaS-бизнесы, зависящие от модели per-seat лицензирования — «SaaS-премия» уходит в прошлое, её заменяет фокус на AI-защитимости.</div>
+    <div class="news-source"><a href="https://247wallst.com/investing/2026/04/10/the-saas-pocalypse-continues-cloudflare-servicenow-crowdstrike-under-fire-as-anthropic-rewrites-the-rules/" target="_blank">247 Wall St., 10 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">GS: ARR-рост софтверных компаний ускоряется до +20,6% — лучшая динамика с 1Q24 (13 апреля)</div>
+    <div class="news-text">Согласно отчёту Goldman Sachs по 49 софтверным компаниям, медианный ARR вырос на 20,6% г/г (vs 17,6% в 3Q25). 63% компаний ускорили рост ARR квартал к кварталу. CAC снизился до 1,98x — лучшее улучшение с 3Q23. EBIT-маржа достигла 22,2% — 13-й квартал расширения подряд.</div>
+    <div class="news-source">Goldman Sachs, Americas Benchmarking Software, 13 апреля</div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">6 ключевых тем сезона отчётностей: AI-расходы перекраивают секторальные иерархии (13 апреля)</div>
+    <div class="news-text">Консенсус-прогноз роста прибыли S&P 500 на 12,6–13,2% выглядит чрезмерно оптимистичным на фоне геополитических рисков. Только компании, демонстрирующие чёткую монетизацию и ROI от массивных инвестиций в AI-инфраструктуру, смогут оправдать повышенные мультипликаторы.</div>
+    <div class="news-source"><a href="https://seekingalpha.com/article/4890131-6-themes-for-earning-season" target="_blank">Seeking Alpha, 13 апреля →</a></div>
+  </div>
+
+  <h3>🔬 Semiconductors</h3>
+
+  <div class="news-item">
+    <div class="news-title">Экспорт чипов из Южной Кореи взлетел на 152% г/г до $8,6 млрд за первые 10 дней апреля (13 апреля)</div>
+    <div class="news-text">Южнокорейский экспорт полупроводников вырос на 152% г/г до $8,6 млрд — абсолютный рекорд для первой декады месяца. Общий экспорт страны увеличился на 36,7% на фоне глобального AI-бума. Это подтверждает устойчивый спрос на чипы памяти и HBM.</div>
+    <div class="news-source"><a href="https://www.upi.com/Top_News/World-News/2026/04/13/korea-Korea-exports-up-367-percent-semiconductor-demand/9071776065743/" target="_blank">UPI, 13 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">TSMC запускает пилотную линию panel-level packaging CoPoS в июне (13 апреля)</div>
+    <div class="news-text">TSMC готовит пилотную линию CoPoS (Chip-on-Polymer Substrate) на Тайване в июне 2026 года, второй сайт в Аризоне (2029–2030) также включит SoIC и CoPoS. Это решает ключевое бутылочное горлышко в advanced packaging для AI-чипов и ускоряет альтернативы CoWoS.</div>
+    <div class="news-source"><a href="https://x.com/trendforce/status/2043541003186184379" target="_blank">TrendForce / X, 13 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Глобальные доходы полупроводниковой отрасли достигнут $1,3 трлн в 2026 году (12 апреля)</div>
+    <div class="news-text">По прогнозу Gartner, мировые доходы от полупроводников вырастут на 64% г/г до $1,3 трлн — крупнейший рост за два десятилетия. Однако цены на память вырастут на 125%, а на чипы хранения — на 234%, что может подавить не-AI спрос до 2028 года.</div>
+    <div class="news-source"><a href="https://finance.yahoo.com/sectors/technology/article/semiconductor-industry-revenue-to-hit-13-trillion-in-2026-as-memory-crunch-hits-consumers-151202545.html" target="_blank">Yahoo Finance, 12 апреля →</a></div>
+  </div>
+
+  <h3>⛏️ Materials</h3>
+
+  <div class="news-item">
+    <div class="news-title">Золото снижается к $4 723 на фоне укрепления доллара (13 апреля)</div>
+    <div class="news-text">Золото упало на 0,59% до $4 723/унция, отступив от недельного роста +2%. Спайк цен на нефть и укрепление доллара перевесили геополитический safe-haven спрос. Ранее на неделе золото достигало ~$4 888 на новостях о перемирии, но консолидировалось по мере ухудшения перспектив переговоров.</div>
+    <div class="news-source"><a href="https://www.150currency.com/" target="_blank">150Currency, 12 апреля →</a> · <a href="https://www.newsx.com/business/gold-rate-silver-rate-today-13-april-2026-gold-price-drops-151457-on-mcx-silver-falls-25-as-crude-oil-surges-check-gold-price-in-chennai-hyderabad-delhi-mumbai-and-dubai-gold-rate-198155/" target="_blank">NewsX, 13 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Алюминий у 4-летнего максимума ~$3 511/т после остановки EGA (12 апреля)</div>
+    <div class="news-text">Алюминий вырос до $3 511/т — вблизи четырёхлетних максимумов. Emirates Global Aluminium (EGA), крупнейший производитель в регионе, приостановил операции на заводе Al Taweelah после ударов по инфраструктуре. Перебои с поставками из Ближнего Востока усиливают ценовое давление.</div>
+    <div class="news-source"><a href="https://www.indexbox.io/blog/daily-scrap-metal-index-copper-up-aluminum-down-as-of-april-2026/" target="_blank">IndexBox, апрель 2026 →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Медь на рекордных уровнях — AI и EV поддерживают спрос (12 апреля)</div>
+    <div class="news-text">Медь остаётся вблизи исторических максимумов из-за дисбаланса спроса и предложения на рынке рафинированного металла. AI-инфраструктура (дата-центры, энергосети) и электромобили формируют устойчивый структурный спрос на медь, необходимую для проводки, трансмиссий и возобновляемой энергетики.</div>
+    <div class="news-source"><a href="https://discoveryalert.com.au/global-supply-chain-vulnerabilities-2025-industrial-metal/" target="_blank">Discovery Alert, апрель 2026 →</a></div>
+  </div>
+
+  <h3>⚡ Energy</h3>
+
+  <div class="news-item">
+    <div class="news-title">Нефть взлетела: Brent $103, WTI выше $100, газ в Европе +18% (13 апреля)</div>
+    <div class="news-text">Блокада Ормузского пролива спровоцировала резкий рост энергоносителей. Brent подскочил на 7,8% к $103/барр., WTI вернулся выше $100. Европейские газовые фьючерсы взлетели на 18%. Через пролив проходит ~20% мировой торговли нефтью — эффективное закрытие маршрута угрожает глобальному энергоснабжению.</div>
+    <div class="news-source"><a href="https://www.bloomberg.com/news/articles/2026-04-12/latest-oil-market-news-and-analysis-for-april-13" target="_blank">Bloomberg, 13 апреля →</a> · <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-04-13-2026" target="_blank">WSJ, 13 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">PJM планирует добавить 15 ГВт генерации для дата-центров (13 апреля)</div>
+    <div class="news-text">Оператор крупнейшей энергосети США PJM Interconnection объявил о планах добавить 15 ГВт новой генерирующей мощности для удовлетворения взрывного спроса со стороны дата-центров. Это ускоряет капитальные расходы в utilities, газовую генерацию, ядерную энергетику и сети передачи.</div>
+    <div class="news-source"><a href="https://x.com/zerohedge/status/2043626524058792035" target="_blank">ZeroHedge / X, 13 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Китай вышел из 41-месячной дефляции PPI — рост цен на энергоносители ключевой драйвер (12 апреля)</div>
+    <div class="news-text">PPI Китая вырос на +0,5% г/г в марте — первый положительный результат после 41 месяца дефляции. М/м рост +1,0% — максимум с августа 2022. Цены на газ в Китае выросли на 25% с начала войны в Иране. Конец «экспорта дефляции» из Китая меняет глобальную инфляционную картину.</div>
+    <div class="news-source"><a href="https://x.com/KobeissiLetter/status/2043478014046941308" target="_blank">Kobeissi Letter / X, 12 апреля →</a></div>
+  </div>
+
+  <h3>🏦 Finance</h3>
+
+  <div class="news-item">
+    <div class="news-title">Крупнейшие банки открывают сезон отчётностей на этой неделе (12 апреля)</div>
+    <div class="news-text">JPMorgan Chase, Citigroup, Wells Fargo отчитываются 14 апреля; Bank of America, Morgan Stanley, PNC — 15 апреля. Большая четвёрка вошла в 2026 с сильным импульсом после рекордного 2025 года. Внимание инвесторов — на quality of earnings на фоне геополитической неопределённости и потенциального влияния высоких цен на нефть на потребительские расходы.</div>
+    <div class="news-source"><a href="https://www.cnbc.com/2026/04/10/stock-market-next-week-outlook-for-april-13-17-2026.html" target="_blank">CNBC, 12 апреля →</a> · <a href="https://seekingalpha.com/article/4890063-industry-outlook-visible-alpha-breakdown-of-us-banks-first-quarter-2026-earnings-expectations" target="_blank">Seeking Alpha, 12 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">ФРС на паузе: ставка 3,50–3,75%, рынок не ждёт изменений в 2026 (12 апреля)</div>
+    <div class="news-text">После снижения ставок на 1,00% в 2024 и 0,75% в 2025 году, ФРС сохранила ставку на уровне 3,50–3,75% на заседаниях в январе и марте 2026. На прошлой неделе рынок частично закладывал повышение ставки — теперь консенсус сдвигается к сценарию «на паузе весь год» из-за конфликтующих сигналов: рост нефти vs замедление экономики.</div>
+    <div class="news-source"><a href="https://www.cnbc.com/2026/04/10/stock-market-next-week-outlook-for-april-13-17-2026.html" target="_blank">CNBC, 12 апреля →</a></div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-title">Wise: объём трансграничных транзакций +26% в 4Q, Nasdaq-листинг на горизонте (13 апреля)</div>
+    <div class="news-text">Британская финтех-компания Wise сообщила о росте трансграничных транзакций на 26% в 4 квартале до £49,4 млрд ($66,2 млрд). Компания ожидает, что маржа прибыли окажется ближе к верхней границе прогноза. Wise готовится к листингу на Nasdaq.</div>
+    <div class="news-source"><a href="https://www.reuters.com/business/uks-wise-reports-26-jump-q4-cross-border-volumes-nasdaq-debut-nears-2026-04-13/" target="_blank">Reuters, 13 апреля →</a></div>
+  </div>
+</section>
+
+<!-- ===== 4. ОБЗОРЫ ОТЧЁТОВ ===== -->
+<section class="report-reviews">
+  <h2>📋 Обзоры отчётов</h2>
+
+  <!-- REPORT 1: GS Nuclear Q1 Preview -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div class="report-card-title">Goldman Sachs — Nuclear Q1 Preview (CCJ, UEC, OKLO, SMR)</div>
+      <div class="report-card-meta">Goldman Sachs, PDF, 12 апреля 2026</div>
+    </div>
+    <div class="report-summary-block">
+      <p>GS сохраняет BUY по Cameco (CCJ) с целевой ценой $131 (+12,8%) и Uranium Energy (UEC) с целевой $18 (+33%). Oklo (OKLO) понижен до $55 (с $65), NuScale (SMR) — до $10 (с $14), оба Neutral. Ключевой тезис: урановый спот стабилизируется около $84/фунт после пика >$100 в январе, при этом форвардные цены остаются устойчивыми — рынок закладывает долгосрочный структурный дефицит на фоне глобального ренессанса ядерной энергетики и AI-спроса на электроэнергию.</p>
+    </div>
+    <div class="report-analysis">
+      <div class="report-analysis-title">Развёрнутый анализ</div>
+      <p>GS исходит из того, что Cameco занимает уникальную позицию как вертикально интегрированный игрок с экспозицией на весь ядерный цикл. Прогноз на 2026: выручка C$3 367 млн (ниже консенсуса C$3 500 млн), adj. EBITDA C$1 820 млн, adj. EPS C$1,65. Добыча урана составит 20,5 млн фунтов при средней реализованной цене C$88,78/фунт. EBITDA Westinghouse (40%-ная доля) — US$432 млн. Это означает, что Cameco получает диверсифицированный поток доходов: уран (25X EV/EBITDA), топливные услуги (30X) и Westinghouse (40X), что обосновывает премиальную оценку.</p>
+      <p>UEC представляет чистую ставку на рост добычи урана в США. GS прогнозирует производство 424 тыс. фунтов в FY2026 (Christensen Ranch 339 тыс. + Burke Hollow 85 тыс.) при cash cost $41/фунт — значительно ниже спотовой цены $84/фунт. При оценке 35X EV/EBITDA на F2028 целевая цена составляет $18, что предполагает апсайд 33%. Ключевой катализатор — расследование Section 232, результаты которого могут ограничить импорт урана в США и поддержать внутренних производителей.</p>
+      <p>Для SMR (NuScale) и OKLO риски остаются существенными: OKLO сжигает $80–100 млн в год, NuScale — $290 млн в 2026 году. GS снижает целевые цены из-за задержек с коммерциализацией и ликвидностных рисков. Партнёрство NuScale с ENTRA1 находится на ранней стадии, а Oklo ещё не вышла на стадию строительства. Тем не менее, глобально в 2026 году подключены 2 реактора к сети (оба в Китае) и объявлено 6 новых строек, подтверждая долгосрочный тренд.</p>
+    </div>
+    <div class="report-ideas">
+      <div class="report-ideas-title">🎯 Top Picks</div>
+      <div class="report-ideas-item">CCJ: BUY — целевая $131, апсайд +12,8%</div>
+      <div class="report-ideas-item">UEC: BUY — целевая $18, апсайд +33%</div>
+      <div class="report-ideas-item">OKLO: NEUTRAL — целевая $55 (понижена с $65)</div>
+      <div class="report-ideas-item">SMR: NEUTRAL — целевая $10 (понижена с $14)</div>
+    </div>
+  </div>
+
+  <!-- REPORT 2: GS Payments Q1 Preview -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div class="report-card-title">Goldman Sachs — Payments Q1 2026 Preview</div>
+      <div class="report-card-meta">Goldman Sachs, PDF, 13 апреля 2026</div>
+    </div>
+    <div class="report-summary-block">
+      <p>GS отмечает, что сентимент и оценки в платёжном секторе достигли новых минимумов, несмотря на устойчивые потребительские расходы. Наиболее конструктивный взгляд — на AFRM (Buy, $83, +71%), V (Buy, $408, +29%), MA (Buy, $739, +43%) и FIS (Buy, $70, +50%). Наиболее осторожный — на PYPL (Sell, $41, −9%). Ключевой тезис: AI-дисрупция и стейблкоины создают структурное давление на традиционные платёжные модели, но лидеры с сетевыми эффектами сохраняют ценовую власть.</p>
+    </div>
+    <div class="report-analysis">
+      <div class="report-analysis-title">Развёрнутый анализ</div>
+      <p>GS исходит из того, что Affirm (AFRM) — лидер BNPL с сильнейшим позиционированием для захвата доли кредитного рынка у традиционных карт. Прогноз выручки: $862 млн (2026E) → $1 142 млн (2027E) → $1 582 млн (2028E) при оценке 22x. Компания демонстрирует устойчивый рост GMV и улучшение unit economics. Это означает, что при сохранении траектории AFRM перейдёт в прибыльность на уровне EBITDA раньше консенсуса, обосновывая значительную премию к текущей цене.</p>
+      <p>Visa и Mastercard остаются ядром портфеля GS в секторе благодаря дуополии в глобальных платежах. V оценивается на 28x с EPS $12,74 (2026E) → $14,11 (2027E) → $15,63 (2028E); MA — на 32x с EPS $19,88 (2026E) → $23,10 (2027E) → $27,31 (2028E). Рост Mastercard опережает Visa благодаря более высокой экспозиции на cross-border транзакции и коммерческие платежи. Следовательно, MA предлагает лучший профиль роста при сопоставимом качестве бизнеса.</p>
+      <p>PYPL — единственный Sell в покрытии. GS прогнозирует EPS $5,32 (2026E) → $5,89 (2027E) при оценке 7x — целевая $41 предполагает даунсайд 9%. Компания теряет долю в checkout, сталкивается с конкуренцией от Apple Pay, BNPL-провайдеров и стейблкоинов. Ключевые риски сектора: расширение кредитных спредов (SOFI, UPST наиболее уязвимы), авиа-экспозиция GPN (7–30 б.п. headwind) и повышенные цены на бензин, создающие неопределённость в потребительских расходах.</p>
+    </div>
+    <div class="report-ideas">
+      <div class="report-ideas-title">🎯 Top Picks</div>
+      <div class="report-ideas-item">AFRM: BUY — целевая $83, апсайд +71%</div>
+      <div class="report-ideas-item">V: BUY — целевая $408, апсайд +29%</div>
+      <div class="report-ideas-item">MA: BUY — целевая $739, апсайд +43%</div>
+      <div class="report-ideas-item">FIS: BUY — целевая $70, апсайд +50%</div>
+      <div class="report-ideas-item">PYPL: SELL — целевая $41, даунсайд −9%</div>
+    </div>
+  </div>
+
+  <!-- REPORT 3: GS Homebuilders Q1 Preview -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div class="report-card-title">Goldman Sachs — Americas Homebuilders & Building Products Q1 Preview</div>
+      <div class="report-card-meta">Goldman Sachs, PDF, 10 апреля 2026</div>
+    </div>
+    <div class="report-summary-block">
+      <p>GS снижает целевые цены по 14 компаниям сектора строительных материалов на фоне роста тарифов, нефти ($100/барр., +50% г/г) и ипотечных ставок (6,37%, +39 б.п. с 27 февраля). Прогноз EPS сектора снижен в среднем на 6%, для Wood Products — на 17%. Но GS сохраняет конструктивный взгляд на CSL (US Conviction List), BLD, IBP, POOL и AWI как на компании с наименьшей инфляционной экспозицией и ценовой властью.</p>
+    </div>
+    <div class="report-analysis">
+      <div class="report-analysis-title">Развёрнутый анализ</div>
+      <p>GS предполагает, что тарифная и инфляционная среда существенно дифференцирует компании сектора. Наименее уязвимые: AWI (unmitigated EPS impact −2%), TREX (−3%), WOR (−5%). Наиболее уязвимые: SWIM (−39%), JELD (−37%), WHR (−36%). Это означает, что разброс влияния достигает 37 п.п. — инвесторам критически важно позиционироваться в компаниях с ценовой властью и локализованным производством.</p>
+      <p>Валюационный профиль сектора: Building Products торгуются на 10,9x forward EV/EBITDA (vs 12-летнее среднее 11,3x), Wood Products — на 12,4x (vs 10-летнее среднее 9,6x), Homebuilders — на 1,3x P/TBV (vs post-GFC среднее 1,4x). GS прогнозирует снижение валовой маржи 1Q на 352 б.п. до 19,3%, full-year — на 210 б.п. до 20,0%. 64% застройщиков используют скидки, средний размер ценовых уступок — 6%. При этом средний апсайд к целевым ценам составляет ~15%, что указывает на привлекательность для терпеливых инвесторов.</p>
+      <p>Жилищный рынок демонстрирует смешанные сигналы: число новых домов в стадии строительства/завершения снизилось на 2,9% г/г в 4Q и на 6,3% в январе 2026. Ипотечные ставки остаются повышенными на фоне стабильной политики ФРС. Однако структурный дефицит жилья в США и демографический спрос поддерживают долгосрочные перспективы. Ключевые риски — дальнейший рост нефти и рецессионный сценарий.</p>
+    </div>
+    <div class="report-ideas">
+      <div class="report-ideas-title">🎯 Top Picks</div>
+      <div class="report-ideas-item">CSL: BUY (US Conviction List) — целевая $414, 14,6x EBITDA</div>
+      <div class="report-ideas-item">BLD: BUY — целевая $486, 13,7x EBITDA</div>
+      <div class="report-ideas-item">AWI: BUY — целевая $206, 13,8x EBITDA</div>
+      <div class="report-ideas-item">IBP, POOL: BUY</div>
+    </div>
+  </div>
+
+  <!-- REPORT 4: GS Software ARR Benchmarking -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div class="report-card-title">Goldman Sachs — Americas Benchmarking Software (49 компаний)</div>
+      <div class="report-card-meta">Goldman Sachs, PDF, 13 апреля 2026</div>
+    </div>
+    <div class="report-summary-block">
+      <p>GS представляет комплексный бенчмарк 49 софтверных компаний за 4Q25. Ключевой вывод: ARR-рост ускорился до медианных +20,6% г/г (vs +17,6% в 3Q25) — 63% компаний показали квартальное ускорение. CAC снизился до 1,98x — лучшее улучшение с 3Q23. EBIT-маржа достигла 22,2% — 13-й квартал расширения подряд. Текущий NTM EV/Sales 4,1x — значительно ниже исторического среднего 7,7x, при этом все шесть сегментов отстали от S&P 500 YTD.</p>
+    </div>
+    <div class="report-analysis">
+      <div class="report-analysis-title">Развёрнутый анализ</div>
+      <p>GS предполагает, что ускорение ARR отражает начало нового цикла роста, а не разовый эффект. Для 4-летней выборки NNARR (Net New ARR) вырос на 35% г/г (vs 22% в 3Q) — сильнейший показатель за два года. Медианное LTV выросло до 4,61x (vs 4,58x), а LTV:CAC — до 2,35x (vs 2,18x), указывая на улучшение unit economics. Это означает, что сектор находится в ранней стадии фундаментального перелома, хотя для изменения сентимента потребуется несколько кварталов устойчивого улучшения.</p>
+      <p>По эффективности CAC лидируют: Vertical (1,15x), Infra/DevOps (1,39x). Худшие — Back Office и Front Office. Среди отдельных компаний лучшее улучшение CAC показали AKAM (−3,7x г/г), MDB (−0,9x), GWRE (−0,6x). Ухудшение: SMWB (+1,3x), VERX (+1,0x), FTNT (+0,9x). Высшие оценки: PLTR (EV/ARR 61,0x при росте 70%), NET (29,3x, рост 34%), CRWD (18,0x, рост 24%). Лучшие unit economics: SHOP (CAC 0,5x), PLTR (CAC 0,5x, LTV:CAC 10,3x).</p>
+      <p>Несмотря на фундаментальное улучшение, GS предупреждает о сохраняющихся рисках: AI-дисрупция остаётся главным предметом дискуссий инвесторов, CAC по-прежнему выше исторического среднего (1,98x vs 1,73x за 7+ лет), а 84% компаний имеют CAC выше 1x. Прогнозы выручки на 2026 повышены в среднем на 1,4%: Workflow Automation +2,3% (лучший), Vertical +0,6% (худший). Контекст «SaaSpocalypse» создаёт дополнительное давление на мультипликаторы, несмотря на улучшение фундаментальных показателей.</p>
+    </div>
+    <div class="report-ideas">
+      <div class="report-ideas-title">🎯 Ключевые метрики</div>
+      <div class="report-ideas-item">Медианный ARR рост: +20,6% г/г (ускорение с +17,6%)</div>
+      <div class="report-ideas-item">Медианный CAC: 1,98x (улучшение с 2,06x)</div>
+      <div class="report-ideas-item">Медианная EBIT-маржа: 22,2% (13 кварталов расширения)</div>
+      <div class="report-ideas-item">NTM EV/Sales: 4,1x vs историческое среднее 7,7x</div>
+    </div>
+  </div>
+
+  <!-- REPORT 5: I Read 24 Papers (PhotonCap) -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div class="report-card-title">PhotonCap — «I Read 24 Papers: The Press Releases Were Lying» (OFC 2026)</div>
+      <div class="report-card-meta">PhotonCap, PDF, 13 апреля 2026</div>
+    </div>
+    <div class="report-summary-block">
+      <p>Независимый анализ 24 технических докладов с конференции OFC 2026 (Optical Fiber Communication), крупнейшего события в индустрии фотоники. Ключевой вывод: маркетинговые пресс-релизы компаний существенно расходятся с реальным положением дел в научных статьях. NVIDIA доминирует через оптическую supply chain на $6 млрд (Lumentum $2B, Coherent $2B, Marvell $2B), формируя стратегию «optical CUDA». CPO (co-packaged optics) развивается медленнее, чем заявляют маркетологи.</p>
+    </div>
+    <div class="report-analysis">
+      <div class="report-analysis-title">Развёрнутый анализ</div>
+      <p>Автор предполагает, что энергоэффективность, а не скорость, является реальным бутылочным горлышком в оптических интерконнектах. Анализ докладов показывает: CPO (chip-to-packet optics) внедряется медленнее маркетинговых обещаний — улучшенные pluggables выступают мостовой технологией. Стеклянные подложки и hollow-core fiber остаются на стадии R&D, а не промышленного производства. Это означает, что технологические переходы в фотонике займут больше времени, чем закладывает консенсус, и компании с действующими решениями (pluggables) имеют более длинный runway.</p>
+      <p>NVIDIA контролирует оптическую supply chain через партнёрства, а не прямое владение — инвестиции $6 млрд в Lumentum, Coherent и Marvell формируют «optical CUDA» экосистему. Samsung выделяется вертикальной интеграцией (HBM + logic + packaging + SiPh) как ключевой дифференциатор при условии получения reference customer. Meta масштабирует GPU-racks с 72 → 144 → 256+ узлов, что экспоненциально увеличивает потребности в оптической bandwidth. Corning хорошо позиционирован в цепочке. Инвестиционный вывод: доминирование NVIDIA в оптике закреплено через партнёрства; технологические переходы медленнее ожиданий рынка.</p>
+    </div>
+    <div class="report-ideas">
+      <div class="report-ideas-title">🎯 Инвестиционные выводы</div>
+      <div class="report-ideas-item">NVIDIA: доминирует через $6B оптическую supply chain</div>
+      <div class="report-ideas-item">Corning: хорошо позиционирован в цепочке</div>
+      <div class="report-ideas-item">CPO: медленнее консенсуса — pluggables дольше актуальны</div>
+    </div>
+  </div>
+
+  <!-- REPORT 6: Liberty Energy -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div class="report-card-title">Junk Bond Investor — Liberty Energy ($LBRT): The Fracker Who Wants to Power the AI Boom</div>
+      <div class="report-card-meta">Junk Bond Investor, PDF, 10 апреля 2026</div>
+    </div>
+    <div class="report-summary-block">
+      <p>Глубокий анализ трансформации фрэкинг-подрядчика Liberty Energy в поставщика инфраструктуры для AI-дата-центров через дочернюю компанию LPI (Liberty Power Innovations). Акция утроилась за 6 месяцев. Ключевой тезис: конверты (0% converts 2031/2032) защищены восстановлением фрэка; equity имеет взрывной потенциал от исполнения LPI, но критический risk — нулевое количество подписанных bankable ESA (energy service agreements).</p>
+    </div>
+    <div class="report-analysis">
+      <div class="report-analysis-title">Развёрнутый анализ</div>
+      <p>Автор предполагает, что гиперскейлеры тратят $600B+ в год на CapEx дата-центров, что создаёт огромный адресуемый рынок для распределённой генерации. LPI-экономика: $1,5–1,6 млн capex на МВт → $300 тыс./МВт годовой EBITDA. Целевая мощность 3 ГВт = $900 млн EBITDA к 2029 году. Однако на текущий момент у LPI только 1 предварительное соглашение (Vantage, 400 МВт), а в январе ESA на 330 МВт было расторгнуто через 2 месяца — серьёзный красный флаг.</p>
+      <p>Оценка: frac-only equity стоит $10–14/акцию; при текущей цене $27,20 рынок закладывает $13–17 опциональности LPI. При использовании инфраструктурных мультипликаторов и полном исполнении 3 ГВт — потенциал до $49+/акцию. Восстановление фрэка прогнозируется с 13,5% (Q3'25) → 15% (H2'26) → 17% (2027). Для достижения 3 ГВт необходимо подписывать 600–700 МВт/год — единственный point of failure: конвертация коммерческого pipeline в bankable project-financed контракты.</p>
+    </div>
+    <div class="report-ideas">
+      <div class="report-ideas-title">🎯 Инвестиционные выводы</div>
+      <div class="report-ideas-item">LBRT equity: frac-only $10-14; с LPI до $49+ при исполнении</div>
+      <div class="report-ideas-item">Converts 0% (2031/2032): безопасны при восстановлении фрэка</div>
+      <div class="report-ideas-item">⚠️ Ключевой риск: 0 подписанных bankable ESA</div>
+    </div>
+  </div>
+
+  <!-- REPORT 7: OpenClaw GTC 2026 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div class="report-card-title">SemiconAlpha — OpenClaw's GTC 2026 Moment</div>
+      <div class="report-card-meta">William Martin Keating / SemiconAlpha, PDF, 13 апреля 2026</div>
+    </div>
+    <div class="report-summary-block">
+      <p>Анализ ключевого события GTC 2026: OpenClaw достиг беспрецедентного темпа adoption (превысив 30-летнюю историю Linux за недели). NVIDIA ответила запуском NemoClaw — distribution layer для облачного инференса и маршрутизации. Ключевой тезис: OpenClaw — парадигменный сдвиг (агенты как ОС), а NemoClaw позиционирует NVIDIA как критический инфраструктурный слой между каждым enterprise-агентом и inference endpoint. Зарождается «token economy».</p>
+    </div>
+    <div class="report-analysis">
+      <div class="report-analysis-title">Развёрнутый анализ</div>
+      <p>Автор предполагает, что OpenClaw попал в идеальное временное окно: frontier-модели (Claude, GPT-4o, Gemini) одновременно пересекли порог «полезности для реальной работы». OpenShell обеспечивает безопасность на уровне среды (реальная граница), а не на уровне промптов (система чести). Это означает, что безопасность агентов перестаёт быть теоретической проблемой и становится инженерной задачей с решением. Кривая adoption OpenClaw «не имеет прецедентов в истории open-source».</p>
+      <p>NemoClaw стратегически позиционирует NVIDIA: «privacy router» по умолчанию направляет инференс на NVIDIA Nemotron 3, вставляя NVIDIA между каждым enterprise-агентом и inference endpoint. Сигналы token economy: сотрудники получают token budgets как часть компенсации («половина базовой зарплаты в токенах»); Meta отслеживает потребление токенов сотрудниками на dashboards после GTC. Рыночная возможность оценивается в $2 трлн при стандартизации token economy. Долгосрочный спрос на инференс может превысить прогнозы.</p>
+    </div>
+    <div class="report-ideas">
+      <div class="report-ideas-title">🎯 Инвестиционные выводы</div>
+      <div class="report-ideas-item">NVIDIA: критический инфраструктурный слой через NemoClaw</div>
+      <div class="report-ideas-item">Token economy: потенциал $2 трлн при стандартизации</div>
+      <div class="report-ideas-item">Long-term inference demand может превысить прогнозы</div>
+    </div>
+  </div>
+
+  <!-- REPORT 8: CoreWeave -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div class="report-card-title">Jason's Chips — CoreWeave: The Ultimate Levered AGI Degen Play</div>
+      <div class="report-card-meta">Jason's Chips, PDF, 10 апреля 2026</div>
+    </div>
+    <div class="report-summary-block">
+      <p>Контрариарный бычий тезис по CoreWeave, опровергающий медвежий консенсус ($20B+ долга, 3x capex-to-revenue, 25% short interest). Ключевой аргумент: генерационное устаревание GPU — это бычий, а не медвежий сценарий, если ты получаешь новые чипы первым. OpenClaw и агентные workloads структурно благоприятствуют GPU общего назначения vs кастомных ASIC, обеспечивая ценовую власть CoreWeave.</p>
+    </div>
+    <div class="report-analysis">
+      <div class="report-analysis-title">Развёрнутый анализ</div>
+      <p>Автор предполагает, что медвежий тезис («commodity GPU rental с огромным долгом») упускает микроэкономику: NVIDIA поставляет CoreWeave новейшие чипы ПЕРВЫМИ — приоритетнее AWS и гиперскейлеров. Это позволяет CoreWeave назначать премию 10–15% за GPU по сравнению с конкурентами (Nebius, Crusoe, Lambda, FluidStack). Клиентская база (OpenAI, Meta, Jane Street) создаёт self-reinforcing gap — компания имеет единственный Platinum рейтинг SemiAnalysis ClusterMAX.</p>
+      <p>OpenClaw-workloads (динамическое ветвление, tool-calling, накопление контекста) нарушают предпосылки ASIC-оптимизации — Anthropic запретила OpenClaw именно потому, что она ломает TPU efficiency stack. Это означает структурный сдвиг в пользу GPU общего назначения и cloud-провайдеров с GPU-first инфраструктурой. Софтверный moat: тысячи инженерных часов решения проблем extreme-scale создают барьеры, которые сложно реплицировать. Situational Awareness LP (Leopold Aschenbrenner) — вероятно крупнейший long holder, что подтверждает институциональную убеждённость в тезисе.</p>
+    </div>
+    <div class="report-ideas">
+      <div class="report-ideas-title">🎯 Инвестиционные выводы</div>
+      <div class="report-ideas-item">CoreWeave: GPU-first moat + NVIDIA priority access</div>
+      <div class="report-ideas-item">Агентный сдвиг = структурное преимущество GPU vs ASIC</div>
+      <div class="report-ideas-item">⚠️ Высокий leverage ($20B+) — risk/reward для опытных инвесторов</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. КЛЮЧЕВЫЕ ОБСУЖДЕНИЯ ИЗ X ===== -->
+<section class="x-discussions">
+  <h2>🐦 Ключевые обсуждения из X</h2>
+  <p class="section-intro">Отобранные публикации из X (Twitter) с высокой инвестиционной ценностью за период дайджеста. Источник данных: Grok (xAI).</p>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@KobeissiLetter</div>
+      <div class="x-card-meta">13 апреля 2026, 04:10 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/KobeissiLetter/status/2043542331958108316" target="_blank">x.com/KobeissiLetter →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Количество рабочих мест, необходимых для стабильности безработицы в США, рухнуло до <strong>−3 000</strong> в месяц (ранее ~250 000 в середине 2023). Причина — обвал нетто-иммиграции: нетто-нелегальная иммиграция стала отрицательной с февраля 2025 (−55 000/мес.), за весь 2025 — <strong>−548 000</strong>. Трудовые ресурсы сжимаются, и экономике больше не нужен прежний приток найма для поддержания низкой безработицы. Это структурный сдвиг рынка труда.</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Слабые данные по payrolls теперь могут не сигнализировать о рецессии, а отражать сжатие предложения труда. Снижает давление на зарплаты и инфляцию, но ограничивает потенциал ВВП. Для ФРС усложняет оценку «мягкой посадки».</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> маскировка реального ослабления экономики; замедление потребительского спроса в строительстве, сельском хозяйстве, услугах. <strong>Возможности:</strong> компании с высокой автоматизацией и ИИ; energy и utilities; активы, чувствительные к ставкам (tech growth, REITs).</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«Если экономике нужно меньше рабочих мест только потому, что пул сужается — это не устойчивость, а снижение мощности»; «Япония уже 30 лет живёт в этой динамике — низкая безработица и стагнация». Тон нейтрально-медвежий.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@KobeissiLetter</div>
+      <div class="x-card-meta">13 апреля 2026, 01:27 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/KobeissiLetter/status/2043501207948329022" target="_blank">x.com/KobeissiLetter →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Китай имеет колоссальную экономическую экспозицию на Ближнем Востоке: с 2005 года инвестиции и контракты на строительство превысили <strong>$269 млрд</strong>. Лидеры — Саудовская Аравия ($82 млрд), ОАЭ ($48 млрд), Ирак ($40 млрд), Иран ($25 млрд). Торговля Ближний Восток–Китай удвоилась с 2017 года до <strong>$317 млрд</strong> — почти в 4 раза больше торговли с США ($85 млрд).</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Эскалация (блокада Ормуза) напрямую бьёт по китайским поставкам энергии и BRI-проектам. ~40% импорта нефти Китая проходит через Ормуз. Повышает волатильность commodities, CNY и глобальных компаний с экспозицией на регион.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> рост цен энергоносителей, перебои поставок для Китая; давление на маржу экспортёров. <strong>Возможности:</strong> US/GCC energy producers; LNG и альтернативные маршруты; defense и logistics.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«$269 млрд — это заложники, а не преимущество»; «Китай должен выбирать сторону: IRGC или GCC+США». Тон нейтрально-медвежий по Китаю.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@KobeissiLetter</div>
+      <div class="x-card-meta">12 апреля 2026, 23:55 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/KobeissiLetter/status/2043478014046941308" target="_blank">x.com/KobeissiLetter →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Китай вышел из самой длинной дефляции PPI в истории: <strong>+0,5% г/г</strong> в марте (выше ожиданий +0,4%), завершив 41 месяц падения. М/м рост <strong>+1,0%</strong> — максимум с августа 2022. Главный драйвер — рост энергоцен после нарушения поставок из-за войны (газ в Китае +25% с начала войны). CPI +1,0% г/г — 7-й месяц положительной инфляции.</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Конец «экспорта дефляции» из Китая меняет глобальную инфляционную картину: рост издержек передаётся в импортные цены США/Европы, снижая пространство ФРС для смягчения.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> ускорение глобальной инфляции издержек; давление на маржу экспортёров. <strong>Возможности:</strong> long commodities/energy; китайские производители с ценовой силой; materials, industrials.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«Это не восстановление спроса, а инфляция издержек»; «41 месяц дефляции закончился войной, а не ростом». Медвежий взгляд на маржу.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@elerianm</div>
+      <div class="x-card-meta">12 апреля 2026, 23:18 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/elerianm/status/2043468673499730074" target="_blank">x.com/elerianm →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Как и ожидалось, в азиатской торговле нефть резко выросла: Brent и WTI вновь превысили <strong>$100/барр.</strong></p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Рост выше $100 подтверждает материализацию геополитических рисков в ценах. Прямой инфляционный шок для импортёров, поддержка energy-сектора.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> рост энергоиздержек для глобальной экономики. <strong>Возможности:</strong> long нефть, газ, coal; energy equities и upstream-сервисы.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«Ожидаемо, но дорого обойдётся». Тон — признание риска без паники.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@elerianm</div>
+      <div class="x-card-meta">12 апреля 2026, 18:44 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/elerianm/status/2043399656009343459" target="_blank">x.com/elerianm →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Анализ «блокады блокады» Ормузского пролива: кто под дополнительным риском? Иран (потеря доходов от экспорта); страны-импортёры (Китай, Пакистан); США (военные активы и риск прямого столкновения); глобальная экономика (рост цен на энергию, гелий, удобрения).</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Чётко очерчивает каналы передачи рисков: от регионального конфликта к глобальной инфляции. Ключевой фактор для позиционирования в energy, commodities и defensive активах.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> цепная реакция на цены энергии; эскалация с Китаем/Пакистаном. <strong>Возможности:</strong> energy producers; gold и inflation-hedges; компании с альтернативными маршрутами.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«Каждый сценарий требует бинарного выбора»; «Все стороны в проигрыше». Реалистичный, нейтрально-медвежий тон.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@RenMacLLC</div>
+      <div class="x-card-meta">12 апреля 2026, 22:19 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/RenMacLLC/status/2043454016018113013" target="_blank">x.com/RenMacLLC →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Нефтяной рынок переоценивает риски в реальном времени. Сигнал: «немедленная опасность снижена», но одновременно закладывается более высокая вероятность <strong>летнего спайка</strong>. Время-критичный отчёт по нефти.</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Контекстный фреймворк: рынок различает краткосрочное снижение риска и среднесрочный (лето). Полезно для тайминга energy-позиций.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> летний спайк при сохранении геополитики. <strong>Возможности:</strong> long front-end curve при short back-end; energy equities с хеджированием.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>Реакции позитивные по аналитике: «timely framework». Профессиональный тон, фокус на curve dynamics.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@TheValueist</div>
+      <div class="x-card-meta">13 апреля 2026, 03:18 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/TheValueist/status/2043529162074247358" target="_blank">x.com/TheValueist →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Перспектива вечера: spot CL <strong>+8,6%</strong>, но Dec-2027 + всего <strong>0,40%</strong>. Рынок считает, что найдётся решение — значительная часть ормузского производства будет перенаправлена или конфликт разрешится рационально.</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Backwardation сигнализирует веру в разрешение — важно для долгосрочных energy-стратегий. Рынок не закладывает затяжной конфликт.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> если разрешения нет — резкий contango. <strong>Возможности:</strong> long front-month vs short long-dated futures.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«Рынок верит в разрешение». Аналитический тон, фокус на curve.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@zerohedge</div>
+      <div class="x-card-meta">13 апреля 2026, 09:45 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/zerohedge/status/2043626524058792035" target="_blank">x.com/zerohedge →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>PJM планирует добавить <strong>15 ГВт</strong> новой генерации для удовлетворения бума дата-центров.</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Прямой сигнал взрывного спроса на мощности от ИИ. Ускоряет capex в utilities, gas, nuclear и transmission.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> задержки interconnection queue и рост цен. <strong>Возможности:</strong> utilities/power producers в PJM; equipment; data-center REITs.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«Бутылочное горлышко становится физическим»; «15 ГВт — огромный сигнал». Бычий тон по AI-infra.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@trendforce</div>
+      <div class="x-card-meta">13 апреля 2026, 04:05 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/trendforce/status/2043541003186184379" target="_blank">x.com/trendforce →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Panel-level packaging набирает обороты: TSMC готовит пилотную линию <strong>CoPoS</strong> в июне (Тайвань), второй сайт в Аризоне (2029–2030) включит SoIC и CoPoS.</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Решение ключевого bottleneck в advanced packaging для AI-чипов. Ускоряет альтернативы CoWoS.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> задержки ramp. <strong>Возможности:</strong> TSMC и ecosystem (equipment, materials); AI-semiconductor leaders.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«Следующий большой решатель bottleneck». Позитивный тон, фокус на AI-scaling.</em></p>
+    </div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-card-header">
+      <div class="x-card-handle">@aleabitoreddit</div>
+      <div class="x-card-meta">13 апреля 2026, 07:59 UTC</div>
+      <div class="x-card-link"><a href="https://x.com/aleabitoreddit/status/2043599807487652112" target="_blank">x.com/aleabitoreddit →</a></div>
+    </div>
+    <div class="x-card-body">
+      <p>Институционалы копируют розничных трейдеров: <strong>$IQE</strong> (photonics/epi-wafers, критичен для hyperscaler supply chain) взлетел параболически после скупки Point72. Аналогично <strong>$SIVE</strong> (лазерный поставщик для $MRVL, $JBL и CPO-трансиверов).</p>
+    </div>
+    <div class="x-card-investor">
+      <div class="x-card-subtitle">Значение для инвесторов</div>
+      <p>Подтверждает институциональный интерес к deep-tier AI supply chain (photonics, epi-wafers). $IQE — один из немногих западных поставщиков с valuation disconnect при интеграции в TPU/hyperscaler цепочки.</p>
+    </div>
+    <div class="x-card-risks">
+      <div class="x-card-subtitle">Риски и возможности</div>
+      <p><strong>Риски:</strong> dilution, net debt ($IQE). <strong>Возможности:</strong> long $IQE, $SIVE, $ALRIB как upstream AI-photonics plays.</p>
+    </div>
+    <div class="x-card-community">
+      <div class="x-card-subtitle">Комментарии сообщества</div>
+      <p><em>«Бро, ты сделал мой YTD»; «Святой триумвират горит» ($IQE/$SIVE/$ALRIB); «Институты слишком медленные». Розница ликует.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. ЧТО ВПЕРЕДИ ===== -->
+<section>
+  <h2>📅 Что впереди (14–20 апреля)</h2>
+
+  <h3>Экономический календарь (США)</h3>
+  <table>
+    <thead><tr><th>Дата</th><th>Событие</th><th>Пред.</th><th>Прогноз</th></tr></thead>
+    <tbody>
+      <tr><td>14 апр</td><td>Core PPI м/м (март)</td><td>0,5%</td><td>0,6%</td></tr>
+      <tr><td>14 апр</td><td>Core PPI г/г (март)</td><td>3,9%</td><td>4,2%</td></tr>
+      <tr><td>14 апр</td><td>Выступления ФРС: Goolsbee, Barkin, Collins</td><td>—</td><td>—</td></tr>
+      <tr><td>15 апр</td><td>Выступления ФРС: Barr, Bowman</td><td>—</td><td>—</td></tr>
+      <tr><td>15 апр</td><td>Beige Book ФРС</td><td>—</td><td>—</td></tr>
+      <tr><td>16 апр</td><td>Initial Jobless Claims (11 апр)</td><td>219K</td><td>215K</td></tr>
+      <tr><td>16 апр</td><td>Industrial Production м/м (март)</td><td>0,2%</td><td>0,1%</td></tr>
+      <tr><td>16 апр</td><td>Philly Fed Manufacturing (апрель)</td><td>18,1</td><td>9,0</td></tr>
+      <tr><td>16 апр</td><td>Выступление ФРС: Williams</td><td>—</td><td>—</td></tr>
+      <tr><td>17 апр</td><td>Выступления ФРС: Barkin, Waller</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Календарь отчётностей (капитализация &gt; $5 млрд)</h3>
+  <table>
+    <thead><tr><th>Дата</th><th>Тикер</th><th>Компания</th><th>EPS (прогн.)</th><th>Выручка (прогн.)</th></tr></thead>
+    <tbody>
+      <tr><td>14 апр</td><td><strong>JPM</strong></td><td>JPMorgan Chase</td><td>$5,46</td><td>$49,1B</td></tr>
+      <tr><td>14 апр</td><td><strong>C</strong></td><td>Citigroup</td><td>$2,64</td><td>$23,5B</td></tr>
+      <tr><td>14 апр</td><td><strong>JNJ</strong></td><td>Johnson & Johnson</td><td>$2,67</td><td>$23,6B</td></tr>
+      <tr><td>14 апр</td><td><strong>WFC</strong></td><td>Wells Fargo</td><td>$1,57</td><td>$21,8B</td></tr>
+      <tr><td>14 апр</td><td>BLK</td><td>BlackRock</td><td>$11,96</td><td>$6,6B</td></tr>
+      <tr><td>15 апр</td><td><strong>BAC</strong></td><td>Bank of America</td><td>$0,99</td><td>$29,9B</td></tr>
+      <tr><td>15 апр</td><td><strong>ASML</strong></td><td>ASML Holding</td><td>€7,71</td><td>€10,1B</td></tr>
+      <tr><td>15 апр</td><td><strong>MS</strong></td><td>Morgan Stanley</td><td>$3,02</td><td>$19,7B</td></tr>
+      <tr><td>15 апр</td><td>PGR</td><td>Progressive</td><td>$4,82</td><td>$23,0B</td></tr>
+      <tr><td>15 апр</td><td>PNC</td><td>PNC Financial</td><td>$4,10</td><td>$6,2B</td></tr>
+      <tr><td>16 апр</td><td><strong>TSM</strong></td><td>Taiwan Semiconductor</td><td>$3,29</td><td>$35,4B</td></tr>
+      <tr><td>16 апр</td><td><strong>NFLX</strong></td><td>Netflix</td><td>$0,76</td><td>$12,2B</td></tr>
+      <tr><td>16 апр</td><td>PEP</td><td>PepsiCo</td><td>$1,55</td><td>$18,9B</td></tr>
+      <tr><td>16 апр</td><td>ABT</td><td>Abbott Labs</td><td>$1,14</td><td>$11,0B</td></tr>
+      <tr><td>16 апр</td><td>TRV</td><td>Travelers</td><td>$6,97</td><td>$10,7B</td></tr>
+      <tr><td>16 апр</td><td>SCHW</td><td>Charles Schwab</td><td>$1,36</td><td>$6,5B</td></tr>
+      <tr><td>16 апр</td><td>INFY</td><td>Infosys</td><td>$0,20</td><td>$5,0B</td></tr>
+      <tr><td>17 апр</td><td>ERIC</td><td>Ericsson</td><td>$0,12</td><td>$5,5B</td></tr>
+      <tr><td>17 апр</td><td>TFC</td><td>Truist Financial</td><td>$1,00</td><td>$5,2B</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</div>
+
+<footer>
+  Создано с помощью Claude AI · Данные: FMP, Finnhub, Massive Market Data, Perplexity Finance, Grok (xAI)<br>
+  © 2026 NDV Financial Research
+</footer>
+
+</body>
+</html>
