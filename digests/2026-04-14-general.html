@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дайджест фондового рынка · 13–14 апреля 2026</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #F0F2F8;
+  color: #1a1a2e;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.header {
+  background: linear-gradient(135deg, #2828E0 0%, #4040FF 50%, #2828E0 100%);
+  color: white;
+  padding: 32px 24px 28px;
+  text-align: center;
+}
+.header img { height: 60px; margin-bottom: 12px; }
+.header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+.header .subtitle { font-size: 15px; opacity: 0.9; }
+.container { max-width: 900px; margin: 0 auto; padding: 20px 16px 40px; }
+.top-actions {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;
+}
+.back-link { color: #3333FF; text-decoration: none; font-weight: 600; font-size: 14px; }
+.back-link:hover { text-decoration: underline; }
+.print-btn {
+  background: linear-gradient(135deg, #2828E0, #4040FF); color: white; border: none;
+  padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: opacity 0.2s; box-shadow: 0 2px 6px rgba(40,40,224,0.3);
+}
+.print-btn:hover { opacity: 0.9; }
+.section {
+  background: white; border-radius: 12px; padding: 28px 28px 24px;
+  margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.section h2 {
+  color: #2020CC; font-size: 20px; font-weight: 700; margin-bottom: 18px;
+  padding-bottom: 10px; border-bottom: 2px solid #ECEEFF;
+}
+.section h3 { color: #2020CC; font-size: 17px; font-weight: 700; margin: 22px 0 14px; }
+.news-item { margin-bottom: 18px; }
+.news-item .headline {
+  font-weight: 700; font-size: 15px; color: #1a1a2e; margin-bottom: 4px;
+}
+.news-item .body { color: #333; line-height: 1.65; margin-bottom: 4px; }
+.news-item .source a { color: #3333FF; text-decoration: none; font-size: 13px; }
+.news-item .source a:hover { text-decoration: underline; }
+.green { color: #1B7A3D; font-weight: 600; }
+.red { color: #C0392B; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; border-radius: 8px; overflow: hidden; }
+th { background: #ECEEFF; color: #2020CC; font-weight: 700; text-align: left; padding: 10px 12px; border: 1px solid #E0E0E8; }
+td { padding: 9px 12px; border: 1px solid #E0E0E8; }
+tr:nth-child(even) td { background: #FAFAFF; }
+
+/* Report Cards */
+.report-card {
+  background: #FDFDF8; border: 1px solid #E8E4D0; border-radius: 10px;
+  padding: 20px 22px; margin-bottom: 18px;
+}
+.report-card .report-header {
+  font-weight: 700; font-size: 16px; color: #2020CC; margin-bottom: 4px;
+}
+.report-card .report-meta {
+  font-size: 13px; color: #777; margin-bottom: 12px;
+}
+.report-card .report-summary {
+  background: #F0F0FF; border-left: 3px solid #3333FF; padding: 12px 16px;
+  margin-bottom: 14px; border-radius: 0 6px 6px 0; line-height: 1.65;
+}
+.report-card .report-analysis { margin-bottom: 14px; line-height: 1.65; }
+.report-card .report-analysis p { margin-bottom: 10px; }
+.report-card .report-picks {
+  background: #F0FFF0; border-left: 3px solid #1B7A3D; padding: 12px 16px;
+  border-radius: 0 6px 6px 0; line-height: 1.65;
+}
+.report-card .report-picks-title {
+  font-weight: 700; color: #1B7A3D; margin-bottom: 6px;
+}
+
+/* X/Grok Cards */
+.x-card {
+  background: #FAFBFF; border: 1px solid #E0E4F0; border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 16px;
+}
+.x-card-author { font-weight: 700; font-size: 15px; color: #2020CC; }
+.x-card-date { font-size: 12px; color: #888; margin-top: 2px; margin-bottom: 4px; }
+.x-card-link { font-size: 12px; color: #888; margin-top: 4px; }
+.x-card-link a { color: #3333FF; text-decoration: none; }
+.x-card-link a:hover { text-decoration: underline; }
+.x-card-body { margin-bottom: 14px; line-height: 1.65; color: #1a1a2e; }
+.x-card-subtitle { font-weight: 700; font-size: 14px; color: #B8860B; margin-bottom: 6px; margin-top: 12px; }
+.x-card-investor, .x-card-risks { margin-bottom: 10px; line-height: 1.6; color: #1a1a2e; }
+.x-card-community { margin-top: 10px; line-height: 1.55; color: #555; font-style: italic; }
+
+.footer {
+  text-align: center; padding: 24px; font-size: 13px; color: #888;
+}
+@media print {
+  .top-actions, .print-btn, .back-link { display: none !important; }
+  body { background: white !important; }
+  .section { box-shadow: none !important; break-inside: avoid; }
+  .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+@media (max-width: 640px) {
+  .section { padding: 18px 16px 16px; }
+  .header h1 { font-size: 21px; }
+  table { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="../logo.png" alt="NDV">
+  <h1>Дайджест фондового рынка</h1>
+  <div class="subtitle">13–14 апреля 2026 · Общий обзор</div>
+</div>
+
+<div class="container">
+
+<div class="top-actions">
+  <a href="../index.html" class="back-link">← Все дайджесты</a>
+  <button onclick="window.print()" class="print-btn">📄 Сохранить в PDF</button>
+</div>
+
+<!-- ===== СЕКЦИЯ 1: ОБЗОР РЫНКА ===== -->
+<div class="section">
+<h2>📊 Обзор рынка</h2>
+<p>Рынки завершили неделю уверенным ростом, отыгрывая потери связанные с иранским конфликтом. S&amp;P 500 прибавил более 1%, полностью восстановив снижение с начала кризиса вокруг Ормузского пролива. Основными драйверами выступили: надежды на деэскалацию после заявлений Трампа о готовности Ирана к переговорам, сильный старт сезона отчётностей (GS, JPM, WFC, C) и ротация в технологический сектор на фоне стабилизации волатильности на рынке облигаций. Нефть остаётся выше $95/барр., но спекулятивная premium сокращается.</p>
+
+<table>
+<tr><th>Индекс</th><th>Значение</th><th>Изменение</th></tr>
+<tr><td>S&amp;P 500</td><td>5,461.08</td><td class="green">+1.02%</td></tr>
+<tr><td>Dow Jones</td><td>40,524.79</td><td class="green">+0.63%</td></tr>
+<tr><td>Nasdaq Composite</td><td>17,382.94</td><td class="green">+1.23%</td></tr>
+</table>
+</div>
+
+<!-- ===== СЕКЦИЯ 2: МАКРОЭКОНОМИКА ===== -->
+<div class="section">
+<h2>🌍 Макроэкономика</h2>
+
+<div class="news-item">
+<div class="headline">Иран сигнализирует о готовности к сделке — новый раунд переговоров может состояться в четверг (14 апреля)</div>
+<div class="body">Президент Трамп заявил, что «нас позвонили с другой стороны» и Иран «хочет заключить сделку». По данным AP, переговоры между США и Ираном могут возобновиться уже в четверг. Блокада Ормузского пролива продолжается, потери Ирана оцениваются в сотни миллионов долларов в день. Ключевой вопрос — мораторий на обогащение урана (США требуют 20 лет). Рынки реагируют позитивно, но скепсис сохраняется.</div>
+<div class="source"><a href="https://x.com/KobeissiLetter/status/2043882612528238650">@KobeissiLetter, 14 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">Добыча OPEC+ рухнула до исторического минимума со времён «Бури в пустыне» (13 апреля)</div>
+<div class="body">По свежим данным, добыча сырой нефти OPEC+ в марте упала до минимума из-за закрытия Ормузского пролива и вынужденных shut-ins в Персидском заливе. Потеряно более 1 млрд баррелей. Физический рынок нефти (Dated Brent) значительно оторвался от бумажного (prompt Brent futures) — классический сигнал острой нехватки реальных баррелей. WTI торгуется около $96, Brent — $99.</div>
+<div class="source"><a href="https://x.com/Rory_Johnston/status/2043755135113863277">@Rory_Johnston, 13 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">Goldman Sachs пересматривает прогноз роста США: нефтяной drag нивелирует фискальный стимул (13 апреля)</div>
+<div class="body">Goldman Sachs существенно снизил прогноз роста американской экономики: негативное влияние высоких цен на нефть практически полностью компенсирует позитивный эффект от фискального закона 2025 года. Усиливается вероятность стагфляционного сценария — более слабый рост на фоне устойчивой инфляции создаёт давление на ФРС и equity-рынки.</div>
+<div class="source"><a href="https://x.com/elerianm/status/2043719606494224640">@elerianm (Mohamed El-Erian), 13 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">Волатильность облигационного рынка обвалилась — MOVE Index на минимумах (14 апреля)</div>
+<div class="body">MOVE Index (аналог VIX для рынка облигаций) резко снизился за последние 2 недели. Объёмы торгов TLT упали до минимума с января 2023. Стабилизация bond market снимает давление с рисковых активов и создаёт условия для продолжения ралли в акциях и growth-секторе.</div>
+<div class="source"><a href="https://x.com/biancoresearch/status/2043882142313173235">@biancoresearch, 14 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">Угроза 50%-ных тарифов и дерискинг цепочек поставок из Китая (13–14 апреля)</div>
+<div class="body">Доля импорта смартфонов в США из Китая рухнула с 90% до 25% — самое чёткое подтверждение системного дерискинга по стратегии China+1. Аналогичный сдвиг в сегменте ПК. Одновременно на фоне угрозы 50%-ных тарифов китайский high-tech экспорт вырос на 30% в Q1 (включая AI hardware — теперь >25% всего экспорта), а отгрузки EV выросли ~60% г/г.</div>
+<div class="source"><a href="https://x.com/SemiAnalysis_/status/2043736083641373057">@SemiAnalysis_, 13 апреля →</a> · <a href="https://x.com/C_Barraud/status/2043937960341488012">@C_Barraud, 14 апреля →</a></div>
+</div>
+
+</div>
+
+<!-- ===== СЕКЦИЯ 3: СЕКТОРАЛЬНЫЕ НОВОСТИ ===== -->
+<div class="section">
+<h2>📈 Секторальные новости</h2>
+
+<h3>🖥️ Software</h3>
+
+<div class="news-item">
+<div class="headline">Oracle +12.7% после Customer Edge Summit — крупнейший рост с 2025 года (14 апреля)</div>
+<div class="body">Акции Oracle (ORCL) подскочили на 12.7% после Customer Edge Summit, где компания представила новые AI-интеграции и расширение облачной платформы. Это крупнейший дневной рост за последний год. Рынок позитивно оценил ускорение монетизации AI в enterprise-сегменте.</div>
+<div class="source"><a href="https://www.cnbc.com">CNBC, 14 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">SaaS-сектор пытается восстановиться — софтверные акции отскакивают от минимумов (13–14 апреля)</div>
+<div class="body">После резкого падения в начале апреля (т.н. «SaaSpocalypse») софтверные акции демонстрируют попытку отскока. Индекс IGV вырос на 3.2% за два дня. Лидеры восстановления: CRM (+4.1%), NOW (+3.8%), PANW (+5.2%). Аналитики отмечают, что распродажа была чрезмерной и мультипликаторы вернулись к привлекательным уровням.</div>
+<div class="source"><a href="https://www.bloomberg.com">Bloomberg, 13 апреля →</a></div>
+</div>
+
+<h3>🔬 Semiconductors</h3>
+
+<div class="news-item">
+<div class="headline">Intel — 9-дневная серия роста, +58% от минимумов: Agentic AI как новый драйвер (13–14 апреля)</div>
+<div class="body">Intel (INTC) продолжает впечатляющее ралли — 9 дней непрерывного роста, акции прибавили 58% от мартовских минимумов. Ключевые катализаторы: рост спроса на серверные микропроцессоры для Agentic AI (требует больше CPU на ГВт по сравнению с chat-based AI), ожидаемые сделки по advanced packaging с гиперскейлерами в 2026 и запуск foundry-бизнеса в 2027, а также потенциальное участие в TeraFab с Elon Musk.</div>
+<div class="source"><a href="https://x.com/DanielTNiles/status/2043926633619313026">@DanielTNiles, 14 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">SOXX +14% за 5 сессий — полупроводниковый сектор лидирует в ралли (13–14 апреля)</div>
+<div class="body">Индекс полупроводников SOXX вырос на 14% за последние 5 торговых сессий — самый сильный недельный рост с 2023 года. NVDA торгуется sideways с июля 2025 при PE 24x CY26 (vs 21x у S&amp;P), что аналитики считают недооценённым на фоне рампа Agentic AI и поставок Vera Rubin GPU во 2H 2026. TSMC отчитался за Q1 с ростом выручки +35% г/г.</div>
+<div class="source"><a href="https://www.bloomberg.com">Bloomberg, 14 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">~50% запланированных дата-центров на 2026 будут отложены из-за дефицита электрооборудования (14 апреля)</div>
+<div class="body">Импорт электрооборудования в США (трансформаторы, switchgear, батареи) вырос +78% с 2020 до $411 млрд, но этого недостаточно. Около половины запланированных на 2026 год дата-центров будут отложены или отменены из-за дефицита оборудования. Goldman Sachs повысил прогноз спроса на электроэнергию дата-центров до +220% к 2030 (ранее +175%), до 1 350 TWh.</div>
+<div class="source"><a href="https://x.com/KobeissiLetter/status/2043880139767853323">@KobeissiLetter, 14 апреля →</a> · <a href="https://x.com/KobeissiLetter/status/2043863505284055126">@KobeissiLetter, 14 апреля →</a></div>
+</div>
+
+<h3>⛏️ Materials</h3>
+
+<div class="news-item">
+<div class="headline">Золото обновляет рекорды вблизи $4,760/oz на фоне геополитики (13–14 апреля)</div>
+<div class="body">Золото продолжает ралли, торгуясь вблизи исторического максимума ~$4,760/oz. Спрос поддерживают: неопределённость вокруг Ормуза, инфляционные ожидания (ISM Services prices paid 70.7 — максимум с октября 2022) и покупки центральных банков. Серебро также демонстрирует силу на industrial demand.</div>
+<div class="source"><a href="https://www.bloomberg.com">Bloomberg, 14 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">Медь ~$5.81/lb, алюминий ~$3,544/T — промышленные металлы удерживают позиции (13–14 апреля)</div>
+<div class="body">Медь торгуется около $5.81/lb, алюминий — $3,544/T. Промышленные металлы поддерживает спрос на электрооборудование для дата-центров и энергетической инфраструктуры, а также рост китайского экспорта EV (+60% г/г в Q1). Риск — замедление глобальной экономики на фоне высоких цен на нефть.</div>
+<div class="source"><a href="https://www.cnbc.com">CNBC, 14 апреля →</a></div>
+</div>
+
+<h3>⚡ Energy</h3>
+
+<div class="news-item">
+<div class="headline">Brent ~$99, WTI ~$96 — нефть удерживает высокие уровни на фоне Ормузского кризиса (13–14 апреля)</div>
+<div class="body">Нефтяные цены остаются вблизи многолетних максимумов: Brent ~$99, WTI ~$96. Физический рынок (Dated Brent) значительно дороже бумажного — классический сигнал дефицита реальных баррелей. Добыча OPEC+ упала до минимума со времён Desert Storm 1990. Срок перемирия — 21 апреля; срыв переговоров может отправить нефть выше $120.</div>
+<div class="source"><a href="https://x.com/Rory_Johnston/status/2043869205376688536">@Rory_Johnston, 14 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">Goldman повышает прогноз спроса дата-центров на электроэнергию до +220% к 2030 (14 апреля)</div>
+<div class="body">По обновлённому прогнозу GS, спрос на электроэнергию дата-центров вырастет на 220% с уровня 2023 года до 1 350 TWh к 2030 (ранее +175%). ~60% роста — в США (750 TWh). Ёмкость дата-центров в США вырастет +197% до 95 ГВт. Это structural tailwind для nuclear, gas-fired power, renewables и grid-инфраструктуры.</div>
+<div class="source"><a href="https://x.com/KobeissiLetter/status/2043863505284055126">@KobeissiLetter, 14 апреля →</a></div>
+</div>
+
+<h3>🏦 Finance</h3>
+
+<div class="news-item">
+<div class="headline">Goldman Sachs открывает сезон отчётностей — банковский сектор стартует сильно (13 апреля)</div>
+<div class="body">Goldman Sachs (GS) отчитался 13 апреля, открыв сезон банковских отчётностей. JPMorgan (JPM), Citigroup (C) и Wells Fargo (WFC) отчитываются 14 апреля. Ожидания позитивные: консенсус прогнозирует рост EPS S&amp;P 500 на 12% г/г в Q1 — 6-й подряд квартал двузначного роста, самая длинная серия со времён GFC. AI-инвестиции обеспечивают 40% роста EPS индекса.</div>
+<div class="source"><a href="https://www.cnbc.com">CNBC, 13 апреля →</a></div>
+</div>
+
+<div class="news-item">
+<div class="headline">ISM Services prices paid на максимуме с октября 2022 — инфляционное давление сохраняется (14 апреля)</div>
+<div class="body">ISM Services prices paid index достиг 70.7 — максимума с октября 2022, что исторически соответствует инфляции 5–6%. Однако 1yr US inflation swap торгуется на 3.17%, а 2yr — на 2.83%, что значительно ниже. Deutsche Bank указывает на дислокацию: рынок акций и кредита не закладывает стагфляцию, а рынок ставок — закладывает (10yr Treasury +38 б.п. за 6 недель).</div>
+<div class="source"><a href="https://www.bloomberg.com">Bloomberg, 14 апреля →</a></div>
+</div>
+
+</div>
+
+<!-- ===== СЕКЦИЯ 4: ОБЗОРЫ ОТЧЁТОВ ===== -->
+<div class="section">
+<h2>📑 Обзоры аналитических отчётов</h2>
+
+<!-- Report 1: GS Q1 Earnings Playbook -->
+<div class="report-card">
+<div class="report-header">Goldman Sachs — Q1 Earnings Playbook</div>
+<div class="report-meta">Goldman Sachs · Апрель 2026</div>
+
+<div class="report-summary">
+GS ожидает солидный Q1 2026 с ростом EPS S&amp;P 500 на 12% г/г — выше консенсуса и 6-й подряд квартал двузначного роста (самая длинная серия с GFC). Реальный рост ВВП в 3% в Q1 исторически соответствует двузначному росту прибылей. AI-инвестиции обеспечивают ~40% роста EPS индекса, при этом позиционирование в Mag7 находится на 50-м перцентиле (net) и 22-м (gross) — самая чистая точка входа за год.
+</div>
+
+<div class="report-analysis">
+<p><strong>Mag7 как двигатель рынка.</strong> GS исходит из того, что семёрка крупнейших tech-компаний обеспечит 63% роста EPS S&amp;P 500 в Q1 при собственном росте прибыли на 36%. NVDA — абсолютный лидер с ростом EPS 118% и вкладом 35% в рост всего индекса. MU демонстрирует феноменальные +682% EPS. На весь 2026 год доля Mag7 остаётся доминирующей — 57% при росте EPS 45%. Это означает, что без tech-сектора рост прибылей S&amp;P 500 был бы однозначным.</p>
+
+<p><strong>Гиперскейлеры на пике капекса.</strong> Совокупные капитальные расходы гиперскейлеров в Q1 2026 достигают $149 млрд (+92% г/г) — это пик цикла. GS прогнозирует замедление до +72% в Q2, +49% в Q3 и +11% в Q4. Reinvestment rates достигли 87% operating cash flow. Ключевой вопрос: будет ли замедление капекса воспринято рынком как зрелость AI-цикла или как сигнал снижения спроса.</p>
+
+<p><strong>Позиционирование создаёт асимметрию.</strong> Net allocation в Mag7 — на 50-м перцентиле за 3 года, gross — на 22-м. Это самый чистый setup за год: институциональные инвесторы снизили exposure, создавая потенциал для short squeeze при сильных отчётах. При этом historical excess return для EPS beats составляет +202 б.п., а для misses — всего (128) б.п., что подтверждает асимметрию в пользу лонгов.</p>
+
+<p><strong>Риски: нефть и guidance.</strong> GS предупреждает, что рост цен на нефть и укрепление USD сжимают beat magnitude. Michigan Sentiment — на минимуме за ~75 лет, что создаёт риск для consumer discretionary. Компании могут выбрать стратегию «kick the can» — сильный Q1, но осторожный guidance, что ограничит реакцию рынка.</p>
+</div>
+
+<div class="report-picks">
+<div class="report-picks-title">Ключевые crowded позиции (по данным GS Prime, 9 апреля)</div>
+TMT Crowded Longs: TSM, LRCX, ASML, WDC, LITE · Healthcare Crowded Longs: JNJ, GILD, THC · Energy Crowded Longs: MPC, PARR, BP · Utilities Crowded Longs: VST, NRG, AEP · Financials Crowded Longs: BK, CFG, IBKR, CME, C
+</div>
+</div>
+
+<!-- Report 2: GS Amazon Q1 Preview -->
+<div class="report-card">
+<div class="report-header">Goldman Sachs — Amazon (AMZN) Q1'26 Preview · Buy, PT $275 (upside 15.4%)</div>
+<div class="report-meta">Goldman Sachs · 13 апреля 2026 · Текущая цена: $238.38</div>
+
+<div class="report-summary">
+GS подтверждает рейтинг Buy для Amazon с целевой ценой $275 (upside 15.4%). Четыре ключевых дебата: темпы роста AWS, влияние роста цен на нефть на транспортные расходы, монетизация спутникового проекта Amazon Leo и forward guidance на фоне потенциального ускорения капекса. GS прогнозирует Q1 revenue $177.2 млрд (на уровне консенсуса), но EPS $7.17 ниже Street ($7.72) из-за energy headwinds.
+</div>
+
+<div class="report-analysis">
+<p><strong>AWS остаётся главным драйвером стоимости.</strong> GS прогнозирует рост выручки AWS на +26% г/г в Q1 и +25% за полный 2026 год. AWS приближается к $100 млрд annualized run-rate. Backlog demand остаётся значительным, при этом AWS остаётся capacity-constrained. Кастомные чипы (TPU от Google, Tranium от Amazon, Maia от Microsoft) отъедают долю у GPU в training/inference, но Agentic AI делает NVDA выгодоприобретателем благодаря superior complex reasoning.</p>
+
+<p><strong>Нефтяной headwind — ключевой риск для маржи.</strong> Brent вырос на +108% с начала года (напоминая Q1'22, когда AMZN явно указывал на energy headwinds). По модели GS, каждые 10% роста цен на энергию = ~$200 млн headwind к квартальному EBIT. При текущих ценах потенциальный удар по Q1 EBIT составляет $400–500 млн, по Q2 — $1.0–1.1 млрд. Частичный offset: 3.5% fuel/logistics surcharge, запущенный в конце Q1, и хеджирование.</p>
+
+<p><strong>Amazon Leo — новый опциональный upside.</strong> Коммерциализация спутниковой сети Leo запланирована на середину 2026 (FCC дедлайн — июль 2026). Уже подписаны ранние контракты с Delta, JetBlue, AT&amp;T. Инвестиции превысили $1 млрд через 2025 год. Переговоры о приобретении GSAT для спутниковой инфраструктуры продолжаются (Apple владеет ~20% Globalstar).</p>
+
+<p><strong>Валюация: blend DCF + EV/EBITDA.</strong> PT $275 основана на 50/50 blend: EV/GAAP EBITDA 17.0x (NTM+1) и DCF через EV/FCF-SBC. P/E сжимается с 30.0x (2026E) до 20.1x (2028E). Downside сценарий — $150 (-37%), upside — $405 (+70%). Ключевой мультипликатор: EV/EBITDA-to-growth 0.59x при NTM+1 EBITDA margin 27.3%.</p>
+</div>
+
+<div class="report-picks">
+<div class="report-picks-title">Ключевые оценки GS для AMZN</div>
+Revenue FY26E: $788.3 млрд · EPS FY26E: $7.72 (diluted) · Capex FY26E: $201.7 млрд · AWS NTM revenue: $88.7 млрд · FCF FY27E: $18.1 млрд · P/E FY28E: 20.1x
+</div>
+</div>
+
+<!-- Report 3: DB Market Dislocations -->
+<div class="report-card">
+<div class="report-header">Deutsche Bank — Thematic Research: Крупнейшие рыночные дислокации</div>
+<div class="report-meta">Deutsche Bank · 13 апреля 2026 · Henry Allen, Macro Strategist</div>
+
+<div class="report-summary">
+DB выявляет критические противоречия в ценообразовании активов на фоне иранского конфликта. Главная дислокация: рынок акций (-0.9% от старта конфликта) и кредита (HY spreads всего +13–15 б.п.) практически не закладывают стагфляцию, тогда как рынок ставок явно её pricing (10yr US Treasury +38 б.п. за 6 недель, Bund на максимуме с 2011). Кто-то из этих рынков ошибается.
+</div>
+
+<div class="report-analysis">
+<p><strong>ISM vs. инфляционные свопы — расхождение исторического масштаба.</strong> ISM Services prices paid достиг 70.7 — максимума с октября 2022, что исторически соответствует инфляции 5–6%. Но 1yr US inflation swap — лишь 3.17%, а 2yr — 2.83%. Manufacturing prices paid ещё выше — 78.3. DB отмечает, что это уже 6–7-й год инфляции выше таргета ФРС в представлении рынка, и при этом фьючерсы на Fed Funds pricing следующий шаг ФРС скорее как снижение, чем повышение. Это логическое противоречие.</p>
+
+<p><strong>Equities vs. Rates — два разных мира.</strong> S&amp;P 500 снизился всего на 0.9% от уровня 28 февраля (начало конфликта), STOXX 600 — на 3.7%. US HY spreads расширились лишь на 13 б.п. Это не выглядит как стагфляционный шок. Но рынок ставок рассказывает другую историю: 10yr Bund — на постарте с 2011 (+41 б.п.), 10yr UST — +38 б.п. ECB overnight index swaps pricing 67 б.п. повышений к декабрю. Кто-то из этих рынков неправ — и корректировка будет болезненной.</p>
+
+<p><strong>Нефтяная кривая сигнализирует о дислокации.</strong> Несмотря на то что конфликт длится уже >6 недель (дольше, чем многие ожидали), фьючерсная кривая нефти остаётся резко нисходящей: 12-месячный фьючерс на $23/барр. ниже спота. Рынок закладывает, что конфликт разрешится, но если затянется (как в 2022), форвардные цены начнут расти, creating forced short covering.</p>
+</div>
+
+<div class="report-picks">
+<div class="report-picks-title">Тактические выводы DB</div>
+Главный trade: rates vs. equities — один из рынков должен скорректироваться. Нефтяная backwardation ($23/барр. разрыв spot-12m) — risk/reward в пользу лонга на дальнем конце кривой. ECB pricing 67 б.п. повышений при underperformance европейских активов — внутреннее противоречие.
+</div>
+</div>
+
+<!-- Report 4: GS AI/Data Center Power Demand -->
+<div class="report-card">
+<div class="report-header">Goldman Sachs SUSTAIN — AI/Data Center Power Demand: Revised Upward</div>
+<div class="report-meta">Goldman Sachs · 23 февраля 2026 · Brian Singer et al.</div>
+
+<div class="report-summary">
+GS повышает прогноз роста спроса на электроэнергию дата-центров до +220% к 2030 (с +175% ранее), до 1 350 TWh. ~60% роста придётся на США. Капитальные расходы гиперскейлеров пересмотрены вверх на >$300 млрд в 2026–27, reinvestment rates достигли 87% operating cash flow. Ёмкость дата-центров в США вырастет +197% до 95 ГВт. Расходы на US grid — >$600 млрд до 2030.
+</div>
+
+<div class="report-analysis">
+<p><strong>Reliability Supercycle как инвестиционная тема.</strong> GS исходит из того, что AI-бум упирается не столько в чипы, сколько в физическую инфраструктуру: электроэнергию, сети, трансформаторы, cooling. Прогноз повышен из-за более высоких ожиданий по отгрузкам AI-серверов и перехода на более энергоёмкие системы (Vera Rubin generation). Ключевой фреймворк «6 Ps»: Pervasiveness, Productivity, Price, Policy, Parts, People — все указывают на structural рост спроса.</p>
+
+<p><strong>Гиперскейлеры готовы платить premium.</strong> Average Green Reliability Premium в США: $40–48/МВт·ч. Reinvestment rates гиперскейлеров достигли 87% от operating cash flow (рекорд). Capex + R&amp;D превысит $1 трлн в 2026E. При этом CROCI (cash return on cash invested) остаётся здоровым — 28.7% в 2027E, что поддерживает дальнейшие инвестиции. EV/GCI мультипликаторы упали с ~5.0x до 2.0x — инвестиции не переоценены.</p>
+
+<p><strong>Bottleneck: люди и оборудование.</strong> США нуждаются в ~510K дополнительных рабочих мест в power &amp; grids, ЕС — ~250K. Дефицит apprenticeships — 78K в базовом сценарии. ~50% запланированных дата-центров на 2026 будут отложены из-за дефицита электрооборудования. Timing и availability constraints толкают гиперскейлеров к behind-the-meter (BTM) решениям и ускоренному sourcing природного газа.</p>
+</div>
+
+<div class="report-picks">
+<div class="report-picks-title">Бенефициары по GS</div>
+123 акции в coverage: Power generation, Utilities, Solar, Battery storage, Electrical components, Cooling, Grid infrastructure. Key Buy-rated: nuclear, gas-fired power, renewables + storage, data-center REITs, grid equipment (ABB, Schneider, Siemens Energy). AI/DC power ecosystem: +41 п.п. outperformance vs MSCI ACWI с 2025.
+</div>
+</div>
+
+<!-- Report 5: GS US Digital Ad Q1 -->
+<div class="report-card">
+<div class="report-header">Goldman Sachs — US Digital Ad Q1'26 Preview</div>
+<div class="report-meta">Goldman Sachs · 13 апреля 2026 · Eric Sheridan et al.</div>
+
+<div class="report-summary">
+GS анализирует операционную среду для цифровой рекламы в Q1 2026: mixed sentiment с идиосинкразическим поведением бюджетов и muted активностью брендов. META US CPMs снизились ~20% QoQ и ~12% YoY. Ключевые темы: AI/ML в programmatic, бюджетный сдвиг в direct response, emergence creator commerce и agentic commerce. Top Buys: GOOGL ($400 PT, +26%), META ($840 PT, +33%), PINS ($23 PT, +25%).
+</div>
+
+<div class="report-analysis">
+<p><strong>META CPMs под давлением, но рост Reels компенсирует.</strong> US CPMs META снизились ~20% QoQ и ~12% YoY, что хуже чем лэп +22% YoY годом ранее. Однако Instagram Reels CPMs выросли +10% YoY, а доля Reels в потреблении контента достигла ~49% (в подаче рекламы — 53%). GS считает, что переход к short-form video и AI-оптимизация рекламных кампаний поддержат рост выручки несмотря на давление на CPMs.</p>
+
+<p><strong>Agentic commerce — новая угроза и возможность.</strong> ChatGPT и аналогичные answer engines создают конкуренцию традиционному поиску, что потенциально угрожает рекламной модели Google. GS выделяет risk для GOOGL от agentic commerce, но сохраняет Buy с PT $400 (+26%) благодаря YouTube ($86 млрд revenue 2027E), Google Cloud ($118.7 млрд) и доминированию в Search.</p>
+
+<p><strong>Pinterest и Reddit — истории роста.</strong> Pinterest демонстрирует +13% user growth и +13% time spent YoY — самый здоровый рост среди mid-cap платформ. Reddit — самый быстрый рост MAU в comp set. GS снижает PT Reddit с $206 до $180 (EV/Sales с 10.0x до 8.0x) на фоне macro headwinds, но сохраняет Neutral. PINS — Buy с PT $23 (EV/EBITDA 16.0x).</p>
+</div>
+
+<div class="report-picks">
+<div class="report-picks-title">Рейтинги и целевые цены GS</div>
+Buy: GOOGL $400 (+26%), META $840 (+33%), PINS $23 (+25%), OPRA $23.50 (+59%), LIFE $31 (+124%) · Neutral: APP $535, RDDT $180, SNAP $8, DV $10.50 · Sell: IBTA $23 (-28%)
+</div>
+</div>
+
+<!-- Report 6: Stifel Macro & Portfolio Strategy -->
+<div class="report-card">
+<div class="report-header">Stifel — Americas Macro &amp; Portfolio Strategy: Tax Week</div>
+<div class="report-meta">Stifel · 12 апреля 2026 · Barry Bannister, Thomas Carroll</div>
+
+<div class="report-summary">
+Stifel анализирует влияние «One Big Beautiful Bill Act» на рынки. Главный вывод: налоговые льготы максимально стимулируют корпоративный EPS/capex (особенно в капиталоёмких секторах), но ограниченно влияют на потребление домохозяйств из-за снижения трансфертов и давления на реальные доходы. Фискальный дефицит 2026 ожидается -5.8% ВВП (оценка CBO). Реальный рост ВВП не соответствует двузначному росту S&amp;P 500.
+</div>
+
+<div class="report-analysis">
+<p><strong>Tax cuts = корпоративный EPS, а не потребительский бум.</strong> Stifel исходит из того, что крупнейшими бенефициарами закона станут капиталоёмкие отрасли: Water Utilities (ранг 2.22), Internet Media (2.07), Industrial Services (1.88), Multi-Utilities (1.71), Electric Utilities (1.60). Это объясняется тем, что ускоренная амортизация и investment tax credits непропорционально выгодны компаниям с высокими capex и depreciation.</p>
+
+<p><strong>Потребитель ослабевает.</strong> Real personal transfer receipts снижаются (стимулы эпохи пандемии и ACA исчерпаны). Real aggregate labor income замедляется при давлении на реальные зарплаты. Потребление — 64% ВВП — находится под давлением. Stifel прогнозирует, что AI capex и спрос на инфраструктуру частично компенсируют замедление потребления, но double-digit рост S&amp;P 500 выглядит неустойчивым.</p>
+
+<p><strong>Value over Growth.</strong> Large Cap Value vs. Growth торгуется на уровне 1.03 — исторически tax cuts в капиталоёмких секторах поддерживают value. Stifel рекомендует overweight в Utilities, Energy, Industrials и Technology — секторах, наиболее выигрывающих от фискального стимула и AI-инфраструктурного бума.</p>
+</div>
+
+<div class="report-picks">
+<div class="report-picks-title">Секторы-бенефициары «One Big Beautiful Bill»</div>
+Top: Utilities (Water + Electric + Multi), Internet Media &amp; Services, Industrial Services · Покрытие Stifel-аналитиков: Utilities (Ayod), Energy (Boyd, Glengan), Industrials (Brophy, Jones, Chain, Carter), Tech (Reback, Kelley, Borg)
+</div>
+</div>
+
+</div>
+
+<!-- ===== СЕКЦИЯ 5: КЛЮЧЕВЫЕ ОБСУЖДЕНИЯ ИЗ X ===== -->
+<div class="section">
+<h2>🐦 Ключевые обсуждения из X</h2>
+<p style="margin-bottom:16px; color:#555; font-size:14px;">Источник: Grok (xAI) · Инвестиционный дайджест · 14 апреля 2026 (UTC). Отобрано 9 публикаций с высокой инвестиционной ценностью. Введение: за последние 24 часа доминировали три главные темы: геополитические подвижки вокруг переговоров США и Ирана, инфраструктурные bottlenecks в AI (дефицит электрооборудования, взрывной рост спроса на мощности дата-центров и derisking цепочек поставок из Китая), а также макро-сигналы слабости американского потребителя и жилья на фоне стабилизации волатильности на рынке облигаций.</p>
+
+<!-- X Post 1 -->
+<div class="x-card">
+<div class="x-card-author">@KobeissiLetter</div>
+<div class="x-card-date">14 апреля 2026, 02:42 UTC</div>
+<div class="x-card-link"><a href="https://x.com/KobeissiLetter/status/2043882612528238650">Открыть пост →</a></div>
+<div class="x-card-body">Президент Трамп заявил, что «нас позвонили с другой стороны» и Иран «хочет заключить сделку». По данным AP, новый раунд переговоров между США и Ираном может состояться уже в четверг. Это происходит на фоне действующего перемирия, блокады Ормузского пролива и продолжающегося давления на иранскую экономику (потери Ирана оцениваются в сотни миллионов долларов в день). Переговоры касаются долгосрочного моратория на обогащение урана (США требуют 20 лет, Иран предлагает меньше). Рынки реагируют позитивно на любую новость о деэскалации, но скепсис сохраняется — многие видят в этом повторяющийся нарратив «переговоров ради переговоров».</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">Новости о возможной деэскалации напрямую влияют на нефтяные цены и риск-премию в энергетике. Любое реальное открытие Ормуза снимет часть давления на глобальные поставки нефти (~20% мирового экспорта), что поддержит рисковые активы и ослабит инфляционные ожидания. Однако пока это лишь сигналы — реальное разрешение конфликта может занять недели.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Если переговоры сорвутся (срок перемирия — 21 апреля), возможен новый виток эскалации с закрытием Ормуза, ростом нефти выше $100–120 и stagflationary шоком для глобальных рынков.<br>Возможности: Успех переговоров откроет длинные позиции в нефтесервисе, авиакомпаниях и циклических секторах ($XLE, $XOP, логистика); одновременно — ротацию из defensive energy в tech и growth.</div>
+<div class="x-card-community">Тон преимущественно скептический и медвежий по отношению к заявлениям Трампа («опять фейковые переговоры для пампа рынка», «Иран звонит после блокады — это не победа»). Доминируют комментарии о «recycled script» и риске dump'а в пятницу. Часть пользователей видит экономическое давление как реальный драйвер («$400 млн потерь в день заставляют Иран идти на сделку»). Общий настрой — осторожный, с акцентом на то, что «рынок уже устал от этого нарратива».</div>
+</div>
+
+<!-- X Post 2 -->
+<div class="x-card">
+<div class="x-card-author">@Rory_Johnston</div>
+<div class="x-card-date">14 апреля 2026, 01:49 UTC</div>
+<div class="x-card-link"><a href="https://x.com/Rory_Johnston/status/2043869205376688536">Открыть пост →</a></div>
+<div class="x-card-body">Dated Brent (физический бенчмарк) значительно оторвался от prompt Brent futures (бумажный контракт). Разрыв сохраняется на фоне геополитических рисков по Ормузу. Автор подчёркивает: физический рынок сейчас гораздо tighter, чем бумажный, и это классический сигнал острой нехватки реальных баррелей в ближайшие недели.</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">Разрыв между физическим и бумажным рынком Brent — ключевой индикатор реальной tightness поставок. В условиях сохраняющейся неопределённости по Ормузу это усиливает риск-премию и поддерживает цены на нефть даже при кажущемся «спокойствии» фьючерсов.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Если физический разрыв не закроется быстро (через EFP-арбитраж и forced short covering), возможен резкий squeeze при экспирации контрактов.<br>Возможности: Лонги в upstream-компаниях и нефтесервисе ($XOM, $CVX, $SLB), а также в бумажных инструментах, которые вынуждены будут догонять физический рынок.</div>
+<div class="x-card-community">Комментарии подчёркивают манипуляцию бумажным рынком («фьючерсы искусственно занижены»), необходимость арбитража и вопрос «почему никто не закрывает гэп». Тон нейтрально-бычий по нефти: физика сильнее бумаг. Многие ссылаются на детальный разбор @CRUDEOIL231 о структуре North Sea market.</div>
+</div>
+
+<!-- X Post 3 -->
+<div class="x-card">
+<div class="x-card-author">@Rory_Johnston</div>
+<div class="x-card-date">13 апреля 2026, 18:16 UTC</div>
+<div class="x-card-link"><a href="https://x.com/Rory_Johnston/status/2043755135113863277">Открыть пост →</a></div>
+<div class="x-card-body">По свежим данным OPEC+ добыча сырой нефти в марте упала до исторического минимума из-за закрытия Ормуза и вынужденных shut-ins в Персидском заливе. Добыча original OPEC достигла минимума со времён Desert Storm 1990 года. Автор отмечает, что война полностью «сломала» все его графики.</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">Реальное сокращение добычи OPEC+ (более 1 млрд баррелей потеряно) + shut-ins в заливе создают структурный дефицит. Это усиливает давление на цены и подтверждает, что текущий «рынок игнорирует» физические реалии.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Длительное закрытие Ормуза приведёт к дальнейшему падению добычи и inventory drawdown'ам.<br>Возможности: Сильный tailwind для нефтедобывающих компаний, сервисников и стран-экспортёров; особенно выгодны Canadian и US shale-производители как quick-to-respond.</div>
+<div class="x-card-community">Реакция — шок и признание серьёзности: «рынки всё ещё не понимают», «графики сломаны». Тон бычий по нефти и energy в целом.</div>
+</div>
+
+<!-- X Post 4 -->
+<div class="x-card">
+<div class="x-card-author">@KobeissiLetter</div>
+<div class="x-card-date">14 апреля 2026, 02:32 UTC</div>
+<div class="x-card-link"><a href="https://x.com/KobeissiLetter/status/2043880139767853323">Открыть пост →</a></div>
+<div class="x-card-body">Импорт США основного электрооборудования (трансформаторы, switchgear, батареи) вырос +4,7% г/г в 2025 году до $411 млрд. С 2020 года импорт вырос на $180,8 млрд (+78%). Причина — гонка AI-компаний за дата-центрами при отставании внутреннего производства. В результате ~50% запланированных дата-центров на 2026 год будут отложены или отменены из-за дефицита оборудования.</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">AI-бум упирается не только в чипы, но и в физическую инфраструктуру. Дефицит электрооборудования — ключевой bottleneck, который ограничивает масштабирование дата-центров и создаёт долгосрочный спрос на power-infra и related компании.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Дальнейшие задержки дата-центров могут замедлить монетизацию AI-инвестиций hyperscalers.<br>Возможности: Сильный tailwind для производителей трансформаторов, switchgear и grid-компаний (ABB, Schneider, Siemens Energy, Hitachi); также выгодны on-site power решения ($BE и аналоги).</div>
+<div class="x-card-community">Тон бычий по инфраструктуре: «hardware — новый oil», «power и grid теперь важнее чипов», «инвестируйте в transformers и energy». Многие называют это ротацией из чистого AI в picks-and-shovels. Упоминаются конкретные бенефициары ($BE, power-инфраструктура).</div>
+</div>
+
+<!-- X Post 5 -->
+<div class="x-card">
+<div class="x-card-author">@KobeissiLetter</div>
+<div class="x-card-date">14 апреля 2026, 01:26 UTC</div>
+<div class="x-card-link"><a href="https://x.com/KobeissiLetter/status/2043863505284055126">Открыть пост →</a></div>
+<div class="x-card-body">По прогнозу Goldman Sachs спрос на электроэнергию дата-центров вырастет +220% с уровня 2023 года (+905 TWh) до рекордных 1 350 TWh к 2030 году (ранее ожидалось +175%). ~60% роста придётся на США (750 TWh). Ёмкость дата-центров в США вырастет +197% к 2030 году до 95 ГВт. Причина — более высокие прогнозы по отгрузкам AI-серверов и переход на более энергоёмкие системы.</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">AI — это уже не только софт, а мощнейший драйвер спроса на электроэнергию. Прогноз Goldman резко повышен, что подтверждает structural energy crunch и необходимость инвестиций в генерацию, transmission и on-site power.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Grid constraints и permitting delays могут привести к дальнейшим отменам проектов.<br>Возможности: Явный плюс для nuclear, gas-fired power, renewables + storage и специализированных data-center REITs/операторов; также для поставщиков оборудования.</div>
+<div class="x-card-community">Реакция крайне бычья по energy и infra: «power — настоящий bottleneck», «ядерная энергия вернётся», «это инфраструктурная история века». Упоминаются $CEG, on-site power, utilities. Многие отмечают, что прогнозы Goldman постоянно пересматриваются вверх.</div>
+</div>
+
+<!-- X Post 6 -->
+<div class="x-card">
+<div class="x-card-author">@SemiAnalysis_</div>
+<div class="x-card-date">13 апреля 2026, 17:00 UTC</div>
+<div class="x-card-link"><a href="https://x.com/SemiAnalysis_/status/2043736083641373057">Открыть пост →</a></div>
+<div class="x-card-body">Доля импорта смартфонов в США из Китая рухнула с 90% до 25%. Сеть final assembly Foxconn в Китае теряет центральную роль в производстве Apple. Это самое чёткое подтверждение forced, systematic derisking consumer electronics supply chain по стратегии China+1. Аналогичный сдвиг (ещё более выраженный) произошёл в сегменте ПК.</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">Derisking цепочек поставок из Китая перешёл из фазы планирования в реальное исполнение. Это долгосрочный позитив для Vietnam/India/Мексики как новых хабов, но также создаёт давление на маржу и логистику для Apple и других.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Переход сборки повышает затраты и может временно ударить по марже tech-гигантов.<br>Возможности: Выигрывают компании с diversified supply chain и exposure к Vietnam/India ($AAPL поставщики, contract manufacturers в новых регионах); также тема «China+1» для всего consumer electronics.</div>
+<div class="x-card-community">Обсуждение фокусируется на том, что «это только final assembly, компоненты всё равно из Китая», но признаётся реальный сдвиг. Тон нейтрально-позитивный по derisking: «Индия и Вьетнам забирают долю», «Apple платит за геополитику». Многие отмечают, что upstream (компоненты) остаётся уязвимым.</div>
+</div>
+
+<!-- X Post 7 -->
+<div class="x-card">
+<div class="x-card-author">@C_Barraud</div>
+<div class="x-card-date">14 апреля 2026, 06:22 UTC</div>
+<div class="x-card-link"><a href="https://x.com/C_Barraud/status/2043937960341488012">Открыть пост →</a></div>
+<div class="x-card-body">По данным Bloomberg Economics: китайский сектор электромобилей — главный бенефициар роста цен на топливо (отгрузки +~60% г/г в Q1 против +21% в 2025). High-tech экспорт, включая AI hardware, теперь >25% всего экспорта и вырос на 30% в Q1 (было +7% годом ранее).</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">Китай демонстрирует resilience экспорта несмотря на геополитику и войну в Иране: EV и high-tech/AI — драйверы роста. Это поддерживает китайские акции в green tech и semiconductor/AI-сегментах.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Глобальный slowdown или новые тарифы могут ударить по экспорту.<br>Возможности: Лонги в китайских EV-производителях, AI hardware и high-tech экспортёрах; также позитив для поставщиков в цепочке (батареи, чипы).</div>
+<div class="x-card-community">Комментарии подчёркивают силу китайского экспорта в новых секторах («EV выигрывает от дорогой нефти», «high-tech уже 25%+»). Тон позитивный по Китаю как бенефициару energy crisis.</div>
+</div>
+
+<!-- X Post 8 -->
+<div class="x-card">
+<div class="x-card-author">@biancoresearch</div>
+<div class="x-card-date">14 апреля 2026, 02:40 UTC</div>
+<div class="x-card-link"><a href="https://x.com/biancoresearch/status/2043882142313173235">Открыть пост →</a></div>
+<div class="x-card-body">MOVE Index (bond market VIX, волатильность 30-дневных опционов по 2–30Y treasuries) обвалился за последние 2 недели. Это полностью соответствует коллапсу объёмов торгов TLT (объём сегодня — минимум с января 2023, 5-дневный средний — минимум с апреля 2023).</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">Резкое падение волатильности на рынке treasuries + рекордно низкие объёмы TLT сигнализируют о снижении страха и стабилизации облигационного рынка несмотря на геополитику и oil shock. Это создаёт комфорт для рисковых активов.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Низкая волатильность может быть признаком complacency перед новым шоком.<br>Возможности: Позитив для equities и growth-акций; снижение bond vol часто предшествует ралли в S&amp;P и tech.</div>
+<div class="x-card-community">Комментарии трактуют как «рынок прошёл войну», «bond stress resolved». Тон бычий по рисковым активам: «coast is clear», «волатильность рухнула — equities могут расти».</div>
+</div>
+
+<!-- X Post 9 -->
+<div class="x-card">
+<div class="x-card-author">@DanielTNiles</div>
+<div class="x-card-date">14 апреля 2026, 05:37 UTC</div>
+<div class="x-card-link"><a href="https://x.com/DanielTNiles/status/2043926633619313026">Открыть пост →</a></div>
+<div class="x-card-body">Автор ранее рекомендовал $INTC (рост >50% с 29 марта) на фоне Agentic AI, требующего больше server microprocessors на GW по сравнению с chat-based AI. Прогнозирует дальнейший upside за счёт advanced packaging deals с hyperscalers в 2026 и foundry в 2027, плюс возможное участие в TeraFab с Elon Musk. Custom ASICs ($GOOGL TPU, $AMZN Tranium, $MSFT Maia) отъедают долю у GPU в training/inference, но Agentic AI (OpenClaw) делает $NVDA выгодоприобретателем благодаря superior complex reasoning. Приводит пример сделки Anthropic + Coreweave (первые поставки Vera Rubin GPU во 2H 2026). $NVDA торгуется sideways с июля 2025 при сильном росте выручки/EPS; текущий PE 24x CY26 vs 21x у S&amp;P.</div>
+<div class="x-card-subtitle">Значение для инвесторов</div>
+<div class="x-card-investor">Agentic AI меняет баланс между custom ASICs и GPU. $NVDA и $INTC получают структурный tailwind, а hyperscalers ускоряют capex в advanced packaging и foundry.</div>
+<div class="x-card-subtitle">Риски и возможности</div>
+<div class="x-card-risks">Риски: Конкуренция ASICs и circular financing concerns могут давить на мультипликаторы.<br>Возможности: Лонги $NVDA (undervalued на Agentic ramp) и $INTC (packaging + foundry + Musk); также $GOOGL, $AMZN, $MSFT как потребители.</div>
+<div class="x-card-community">Тон позитивный и аналитический: обсуждение Agentic AI как game-changer, сравнение с training workloads. Многие соглашаются с upside в $NVDA и $INTC. Комментарии фокусируются на фундаментальных драйверах, а не хайпе.</div>
+</div>
+
+</div>
+
+<!-- ===== СЕКЦИЯ 6: ЧТО ВПЕРЕДИ ===== -->
+<div class="section">
+<h2>📅 Что впереди (15–21 апреля)</h2>
+
+<h3>Экономический календарь (США)</h3>
+<table>
+<tr><th>Дата</th><th>Событие</th></tr>
+<tr><td>16 апреля (ср)</td><td>Initial Jobless Claims (еженедельные)</td></tr>
+<tr><td>16 апреля (ср)</td><td>Philadelphia Fed Manufacturing Index</td></tr>
+<tr><td>17 апреля (чт)</td><td>Выступления представителей ФРС</td></tr>
+<tr><td>21 апреля (пн)</td><td>Retail Sales (март)</td></tr>
+<tr><td>21 апреля (пн)</td><td>Срок истечения перемирия Иран — ключевой геополитический триггер</td></tr>
+</table>
+
+<h3>Календарь отчётностей (Market Cap > $5B)</h3>
+<table>
+<tr><th>Дата</th><th>Тикер</th><th>Компания</th><th>Market Cap</th><th>EPS Est.</th></tr>
+<tr><td>15 апреля</td><td>ASML</td><td>ASML Holding N.V.</td><td>$350B</td><td>$7.72</td></tr>
+<tr><td>16 апреля</td><td>ABT</td><td>Abbott Laboratories</td><td>$180B</td><td>$1.14</td></tr>
+<tr><td>16 апреля</td><td>AA</td><td>Alcoa Corporation</td><td>$13B</td><td>$1.44</td></tr>
+<tr><td>17 апреля</td><td>ALLY</td><td>Ally Financial</td><td>$18B</td><td>$0.96</td></tr>
+<tr><td>20 апреля</td><td>ALK</td><td>Alaska Air Group</td><td>$10B</td><td>$(1.49)</td></tr>
+<tr><td>21 апреля</td><td>UNH</td><td>UnitedHealth Group</td><td>$510B</td><td>$6.63</td></tr>
+<tr><td>21 апреля</td><td>RTX</td><td>RTX Corporation</td><td>$140B</td><td>$1.52</td></tr>
+<tr><td>21 апреля</td><td>MMM</td><td>3M Company</td><td>$75B</td><td>$2.02</td></tr>
+<tr><td>21 апреля</td><td>ADC</td><td>Analog Devices</td><td>$75B</td><td>$0.48</td></tr>
+</table>
+
+<p style="margin-top: 14px;">Ключевые отчёты на неделе: <strong>ASML</strong> (15 апреля) — индикатор спроса на литографическое оборудование и здоровья semi-цикла; <strong>UnitedHealth</strong> (21 апреля) — крупнейшая компания в healthcare ($510B); <strong>Abbott Labs</strong> (16 апреля) — индикатор медицинского спроса; <strong>RTX</strong> (21 апреля) — оборонный сектор в контексте Ормузского кризиса. Также 21 апреля — срок истечения перемирия между США и Ираном, что может стать ключевым триггером для нефтяного рынка и risk assets.</p>
+</div>
+
+</div>
+
+<div class="footer">
+  Создано с помощью Claude AI · Данные: FMP, Finnhub, Massive Market Data, Grok (xAI)<br>
+  © NDV · 14 апреля 2026
+</div>
+
+</body>
+</html>
